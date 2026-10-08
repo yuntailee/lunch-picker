@@ -73,6 +73,7 @@ export function buildRestaurants(hits) {
     for (const place of places) {
       if (place.businessStatus && place.businessStatus !== "OPERATIONAL") continue;
       const entry = byId.get(place.id) ?? {
+        placeId: place.id,
         name: place.displayName.text,
         tags: [],
         address: place.shortFormattedAddress ?? "",

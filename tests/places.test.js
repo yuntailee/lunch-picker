@@ -5,6 +5,7 @@ import { toCandidate } from "../places.js";
 
 test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址", () => {
   const candidate = toCandidate({
+    id: "ChIJ-abc",
     displayName: "阿嬤雞肉飯",
     rating: 4.25,
     userRatingCount: 1234,
@@ -17,6 +18,7 @@ test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址
     reviewSummary: { text: "招牌雞肉飯很香。\n\n部分評論提到排隊很久。" },
   });
   assert.deepEqual(candidate, {
+    placeId: "ChIJ-abc",
     name: "阿嬤雞肉飯",
     detail: "$1–200",
     rating: "4.3（1,234）",

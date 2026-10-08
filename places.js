@@ -42,6 +42,7 @@ function loadMaps(apiKey) {
 export function toCandidate(place) {
   const price = toPrice(place.priceRange);
   return {
+    placeId: place.id,
     name: place.displayName,
     detail: formatPrice(price),
     rating: formatRating(place.rating, place.userRatingCount),

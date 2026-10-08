@@ -42,6 +42,7 @@ const place = (id, name, businessStatus = "OPERATIONAL", openHour = 11) => ({
 
 test("buildRestaurants 保留價格、評分、午餐營業日與評論摘要第一段", () => {
   const [restaurant] = buildRestaurants([{ category: "飯", places: [place("1", "雞肉飯")] }]);
+  assert.equal(restaurant.placeId, "1");
   assert.deepEqual(restaurant.price, { start: 1, end: 200 });
   assert.equal(restaurant.rating, 4.2);
   assert.equal(restaurant.ratingCount, 88);

@@ -2,6 +2,7 @@ import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
 import { searchNearby } from "./places.js";
+import { previewOnHover } from "./preview.js";
 import {
   filterByPrice,
   filterByTag,
@@ -42,6 +43,7 @@ const els = {
   result: document.querySelector("#result"),
   count: document.querySelector("#count"),
   list: document.querySelector("#list"),
+  preview: document.querySelector("#preview"),
 };
 
 async function init() {
@@ -124,6 +126,7 @@ async function loadCandidates() {
 
 function fromList(restaurant) {
   return {
+    placeId: restaurant.placeId,
     name: restaurant.name,
     detail: [restaurant.tags.join("、"), formatPrice(restaurant.price)].filter(Boolean).join(" · "),
     rating: formatRating(restaurant.rating, restaurant.ratingCount),
@@ -179,6 +182,7 @@ function candidateItem(candidate) {
   const li = document.createElement("li");
   li.append(heading);
   if (candidate.summary) li.append(summaryEl("summary", candidate.summary));
+  previewOnHover(els.preview, li, candidate.placeId);
   return li;
 }
 
