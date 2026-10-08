@@ -1,7 +1,7 @@
+import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
+
 const MAPS_CALLBACK = "__foodToolMapsReady";
-export const SEARCH_RADIUS_M = 800;
 const CACHE_TTL_MS = 30 * 60 * 1000;
-const METERS_PER_DEGREE_LAT = 111_320;
 // rating / userRatingCount 屬於 Text Search Enterprise SKU（每月免費額度約 1,000 次）
 const FIELDS = ["displayName", "formattedAddress", "googleMapsURI", "rating", "userRatingCount"];
 
@@ -26,12 +26,6 @@ function loadMaps(apiKey) {
     document.head.append(script);
   });
   return mapsReady;
-}
-
-export function boundsAround({ lat, lng }, radiusMeters) {
-  const dLat = radiusMeters / METERS_PER_DEGREE_LAT;
-  const dLng = radiusMeters / (METERS_PER_DEGREE_LAT * Math.cos((lat * Math.PI) / 180));
-  return { north: lat + dLat, south: lat - dLat, east: lng + dLng, west: lng - dLng };
 }
 
 export function toCandidate(place) {

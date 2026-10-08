@@ -1,17 +1,19 @@
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
-import { SEARCH_RADIUS_M, searchNearby } from "./places.js";
-import { filterByTag, mapUrl, pickRandom, tagsOf } from "./recommender.js";
+import { SEARCH_RADIUS_M } from "./geo.js";
+import { searchNearby } from "./places.js";
+import { filterByTag, pickRandom } from "./recommender.js";
 
 const LOCATION_KEY = "food-tool:location";
 const ALL_TAGS = "全部";
-const MODES = { pocket: "口袋名單", explore: "探索附近" };
+const MODES = { list: "每日清單", live: "即時搜尋" };
 const SPIN_TICKS = 12;
 const SPIN_INTERVAL_MS = 60;
 
 const state = {
+  updatedAt: null,
   locations: [],
   location: null,
-  mode: "pocket",
+  mode: "list",
   tag: null,
   candidates: [],
   requestId: 0,
@@ -32,7 +34,9 @@ const els = {
 
 async function init() {
   const response = await fetch("data/restaurants.json", { cache: "no-cache" });
-  state.locations = (await response.json()).locations;
+  const data = await response.json();
+  state.updatedAt = new Date(data.updatedAt);
+  state.locations = data.locations;
   const saved = localStorage.getItem(LOCATION_KEY);
   state.location = state.locations.find((l) => l.name === saved) ?? state.locations[0];
 
@@ -47,8 +51,8 @@ async function init() {
 function render() {
   renderChips(els.locations, state.locations.map((l) => l.name), state.location.name, selectLocation);
   renderChips(els.modes, Object.values(MODES), MODES[state.mode], selectMode);
-  renderChips(els.tags, [ALL_TAGS, ...tagsOf(state.location.restaurants)], state.tag ?? ALL_TAGS, selectTag);
-  els.keywordForm.hidden = state.mode !== "explore";
+  renderChips(els.tags, [ALL_TAGS, ...state.location.tags], state.tag ?? ALL_TAGS, selectTag);
+  els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
   els.result.hidden = true;
   loadCandidates();
@@ -74,8 +78,8 @@ function selectTag(tag) {
 async function loadCandidates() {
   const requestId = ++state.requestId;
 
-  if (state.mode === "pocket") {
-    showCandidates(filterByTag(state.location.restaurants, state.tag).map(fromPocket));
+  if (state.mode === "list") {
+    showCandidates(filterByTag(state.location.restaurants, state.tag).map(fromList));
     return;
   }
   if (!GOOGLE_MAPS_API_KEY) {
@@ -96,12 +100,12 @@ async function loadCandidates() {
   }
 }
 
-function fromPocket(restaurant) {
+function fromList(restaurant) {
   return {
     name: restaurant.name,
     detail: restaurant.tags.join("、"),
-    address: "",
-    mapUrl: mapUrl(restaurant, state.location.area),
+    address: restaurant.address,
+    mapUrl: restaurant.mapUrl,
   };
 }
 
@@ -118,8 +122,9 @@ function showMessage(text) {
 }
 
 function countText(count) {
-  if (state.mode === "pocket") {
-    return `${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間`;
+  if (state.mode === "list") {
+    const updated = state.updatedAt.toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" });
+    return `${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間（${updated} 更新）`;
   }
   const target = state.tag ? `「${state.tag}」` : "餐廳";
   return `${SEARCH_RADIUS_M} 公尺內營業中的${target}共 ${count} 間`;
