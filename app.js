@@ -128,6 +128,7 @@ function fromList(restaurant) {
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
     price: restaurant.price,
+    summary: restaurant.summary,
   };
 }
 
@@ -168,8 +169,12 @@ function renderChips(container, labels, active, onSelect) {
 }
 
 function candidateItem(candidate) {
+  const row = document.createElement("div");
+  row.className = "row";
+  row.append(mapLink(candidate.mapUrl, candidate.name), textEl("span", "tags", candidate.detail));
   const li = document.createElement("li");
-  li.append(mapLink(candidate.mapUrl, candidate.name), textEl("span", "tags", candidate.detail));
+  li.append(row);
+  if (candidate.summary) li.append(textEl("p", "summary", candidate.summary));
   return li;
 }
 
@@ -203,6 +208,7 @@ function showResult(candidate) {
     textEl("p", "result-name", candidate.name),
     textEl("p", "tags", candidate.detail),
     ...(candidate.address ? [textEl("p", "tags", candidate.address)] : []),
+    ...(candidate.summary ? [textEl("p", "result-summary", `💬 ${candidate.summary}`)] : []),
     link,
   );
   els.result.classList.add("done");

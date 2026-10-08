@@ -140,12 +140,32 @@ h2 {
 }
 
 .list li {
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.list .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 12px 4px;
-  border-bottom: 1px solid var(--border);
+}
+
+.summary {
+  display: -webkit-box;
+  margin: 4px 0 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.result .result-summary {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .list a {

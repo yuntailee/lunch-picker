@@ -1,10 +1,18 @@
 import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
-import { formatPrice, formatRating, toPrice } from "./recommender.js";
+import { formatPrice, formatRating, summaryHighlight, toPrice } from "./recommender.js";
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
 const CACHE_TTL_MS = 30 * 60 * 1000;
-// rating / priceRange 屬於 Text Search Enterprise SKU（每月免費額度約 1,000 次）
-const FIELDS = ["displayName", "formattedAddress", "googleMapsURI", "rating", "userRatingCount", "priceRange"];
+// reviewSummary 屬於 Enterprise + Atmosphere SKU（每月免費 1,000 次，與每週爬蟲共用）
+const FIELDS = [
+  "displayName",
+  "formattedAddress",
+  "googleMapsURI",
+  "rating",
+  "userRatingCount",
+  "priceRange",
+  "reviewSummary",
+];
 
 let mapsReady;
 
@@ -40,6 +48,7 @@ export function toCandidate(place) {
     address: place.formattedAddress ?? "",
     mapUrl: place.googleMapsURI,
     price,
+    summary: summaryHighlight(place.reviewSummary?.text),
   };
 }
 

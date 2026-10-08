@@ -1,10 +1,10 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 import { boundsAround, SEARCH_RADIUS_M } from "../geo.js";
-import { toPrice } from "../recommender.js";
+import { summaryHighlight, toPrice } from "../recommender.js";
 
 const ENDPOINT = "https://places.googleapis.com/v1/places:searchText";
-// priceRange / rating 屬於 Enterprise SKU（每月免費 1,000 次），所以爬蟲只能每週跑一次
+// reviewSummary 屬於 Enterprise + Atmosphere SKU（每月免費 1,000 次），所以爬蟲只能每週跑一次
 const FIELD_MASK = [
   "places.id",
   "places.displayName",
@@ -14,6 +14,7 @@ const FIELD_MASK = [
   "places.priceRange",
   "places.rating",
   "places.userRatingCount",
+  "places.reviewSummary",
   "nextPageToken",
 ].join(",");
 // Text Search (New) 每個查詢最多回傳 3 頁、共 60 筆
@@ -76,6 +77,7 @@ export function buildRestaurants(hits) {
         price: toPrice(place.priceRange),
         rating: place.rating ?? null,
         ratingCount: place.userRatingCount ?? 0,
+        summary: summaryHighlight(place.reviewSummary?.text?.text),
       };
       if (category && !entry.tags.includes(category)) entry.tags.push(category);
       byId.set(place.id, entry);

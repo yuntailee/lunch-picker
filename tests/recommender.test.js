@@ -8,8 +8,14 @@ import {
   formatRating,
   pickRandom,
   priceBucket,
+  summaryHighlight,
   toPrice,
 } from "../recommender.js";
+
+test("summaryHighlight 只取評論摘要第一段", () => {
+  assert.equal(summaryHighlight("招牌肉燥麵很好吃。\n\n部分評論提到很擠。"), "招牌肉燥麵很好吃。");
+  assert.equal(summaryHighlight(undefined), "");
+});
 
 const restaurants = [
   { name: "雞肉飯", tags: ["飯"], price: { start: 1, end: 200 } },

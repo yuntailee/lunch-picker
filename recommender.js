@@ -35,6 +35,10 @@ export function formatRating(rating, ratingCount) {
   return rating ? `⭐ ${rating.toFixed(1)}（${(ratingCount ?? 0).toLocaleString()}）` : "";
 }
 
+export function summaryHighlight(text) {
+  return text?.split("\n")[0].trim() ?? "";
+}
+
 export function pickRandom(items, random = Math.random) {
   return items.length ? items[Math.floor(random() * items.length)] : null;
 }

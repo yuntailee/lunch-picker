@@ -12,13 +12,15 @@ const place = (id, name, businessStatus = "OPERATIONAL") => ({
   priceRange: { startPrice: { units: "1" }, endPrice: { units: "200" } },
   rating: 4.2,
   userRatingCount: 88,
+  reviewSummary: { text: { text: `${name}的招牌菜很受歡迎。\n\n部分評論提到等很久。` } },
 });
 
-test("buildRestaurants 保留價格與評分", () => {
+test("buildRestaurants 保留價格、評分與評論摘要第一段", () => {
   const [restaurant] = buildRestaurants([{ category: "飯", places: [place("1", "雞肉飯")] }]);
   assert.deepEqual(restaurant.price, { start: 1, end: 200 });
   assert.equal(restaurant.rating, 4.2);
   assert.equal(restaurant.ratingCount, 88);
+  assert.equal(restaurant.summary, "雞肉飯的招牌菜很受歡迎。");
 });
 
 test("buildRestaurants 依搜尋分類歸類並合併重複店家", () => {
