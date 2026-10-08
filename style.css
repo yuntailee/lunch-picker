@@ -118,6 +118,21 @@ h2 {
   opacity: 0.6;
 }
 
+.random.rolling .icon {
+  animation: dice-roll 0.36s linear infinite;
+}
+
+@keyframes dice-roll {
+  from { transform: rotate(0deg) scale(1.15); }
+  to { transform: rotate(360deg) scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .random.rolling .icon {
+    animation: none;
+  }
+}
+
 .result {
   margin-top: 16px;
   padding: 20px;

@@ -239,6 +239,7 @@ function spin() {
 
   state.spinning = true;
   els.random.disabled = true;
+  els.random.classList.add("rolling");
   els.result.hidden = false;
   els.result.classList.remove("done");
 
@@ -253,6 +254,7 @@ function spin() {
     showResult(pickRandom(candidates));
     state.spinning = false;
     els.random.disabled = false;
+    els.random.classList.remove("rolling");
   }, SPIN_INTERVAL_MS);
 }
 
