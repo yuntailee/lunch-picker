@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T09:51:40.422Z",
+  "updatedAt": "2026-10-08T10:10:21.259Z",
   "locations": [
     {
       "name": "內湖",
@@ -22,6 +22,7 @@
       ],
       "restaurants": [
         {
+          "placeId": "ChIJJQe9dmGsQjQRIG8KFGwFgkw",
           "name": "168早餐",
           "tags": [
             "早午餐"
@@ -46,6 +47,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJw7_ixCmtQjQR7FkLVwa-sMk",
           "name": "323熱炒飯",
           "tags": [
             "便當"
@@ -67,7 +69,7 @@
             5,
             6
           ],
-          "gist": "口味濃郁且份量十足",
+          "gist": "口味濃郁、份量十足",
           "dishes": [
             "蓋飯",
             "肉",
@@ -76,6 +78,7 @@
           ]
         },
         {
+          "placeId": "ChIJ5_h2w2OsQjQRerspm65w54Y",
           "name": "737巷義麵屋",
           "tags": [
             "麵",
@@ -102,9 +105,9 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJObnbomOsQjQRiF7soYkDWN8",
           "name": "737素食麵線",
           "tags": [
-            "麵",
             "素食"
           ],
           "address": "港富里內湖路一段737巷8弄16號",
@@ -126,6 +129,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJbQbmtk6tQjQRmqDdRTy_dyY",
           "name": "一巴掌麻辣小鍋",
           "tags": [
             "火鍋"
@@ -147,15 +151,16 @@
             5,
             6
           ],
-          "gist": "湯頭風味十足且口感滑嫩",
+          "gist": "湯頭風味十足、口感滑嫩入味",
           "dishes": [
-            "麻辣湯頭",
+            "麻辣湯",
             "麻奶湯底",
             "鴨血",
             "豆腐"
           ]
         },
         {
+          "placeId": "ChIJd2Vxl_utQjQRGxNO1a9Jeg0",
           "name": "一番地 內湖宏匯店",
           "tags": [
             "火鍋"
@@ -181,6 +186,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJjeMzumOsQjQRJyhOYqpXwUA",
           "name": "七三七老山東牛肉麵",
           "tags": [
             "麵"
@@ -205,6 +211,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJl2RLPoitQjQRVg5b353JUD8",
           "name": "七號 CHi HAO 西湖",
           "tags": [
             "韓式",
@@ -230,6 +237,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJn5YawzitQjQRUaq8-23eaWQ",
           "name": "九井自慢料理",
           "tags": [
             "火鍋",
@@ -253,6 +261,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJex4u5LKtQjQRueW1KfZ1xb0",
           "name": "八時牛堂 牛肉麵所",
           "tags": [
             "麵"
@@ -271,15 +280,15 @@
             4,
             5
           ],
-          "gist": "湯頭濃郁牛肉軟嫩",
+          "gist": "湯頭濃郁、牛肉軟嫩、麵條Q彈",
           "dishes": [
             "牛肉麵",
-            "牛肉",
             "花干",
             "嗆拌土豆絲"
           ]
         },
         {
+          "placeId": "ChIJUf0oikqtQjQRWPN9QmuR9fE",
           "name": "十四牛肉麵",
           "tags": [
             "麵"
@@ -304,6 +313,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJfXpjbSytQjQRU3l0SOekTiE",
           "name": "十鷄食堂",
           "tags": [
             "飯",
@@ -327,7 +337,7 @@
             5,
             6
           ],
-          "gist": "主餐美味且份量充足",
+          "gist": "主餐美味、份量充足",
           "dishes": [
             "滷雞腿",
             "炸雞排",
@@ -335,6 +345,7 @@
           ]
         },
         {
+          "placeId": "ChIJ2eyleHusQjQR1yxXoHKZXoo",
           "name": "三元花園韓式餐廳 瑞光店",
           "tags": [
             "韓式"
@@ -356,7 +367,7 @@
             5,
             6
           ],
-          "gist": "肉品美味且小菜無限供應",
+          "gist": "肉品美味、小菜無限量供應",
           "dishes": [
             "韓式烤肉",
             "牛小排",
@@ -365,6 +376,7 @@
           ]
         },
         {
+          "placeId": "ChIJa50krQ6tQjQRUAxkai9vr4A",
           "name": "三本亭壽喜燒",
           "tags": [
             "火鍋"
@@ -386,7 +398,7 @@
             5,
             6
           ],
-          "gist": "肉品新鮮湯頭甜鹹適中",
+          "gist": "肉品新鮮、湯頭甜鹹適中",
           "dishes": [
             "肉品",
             "有機蔬菜",
@@ -395,6 +407,7 @@
           ]
         },
         {
+          "placeId": "ChIJcScEMkytQjQRo7rvSfpb8_s",
           "name": "丸勝燒肉便當 內湖店",
           "tags": [
             "便當"
@@ -420,6 +433,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJxYI7fhutQjQRonXqjb3P6ak",
           "name": "大莊牛肉麵",
           "tags": [
             "麵"
@@ -441,7 +455,7 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁且牛肉軟嫩",
+          "gist": "湯頭濃郁、牛肉軟嫩多汁",
           "dishes": [
             "牛肉麵",
             "清燉牛肉麵",
@@ -450,6 +464,7 @@
           ]
         },
         {
+          "placeId": "ChIJk_-RvWOsQjQRIP4W6V91Jxk",
           "name": "大陳記古早味麵店",
           "tags": [
             "麵",
@@ -480,6 +495,7 @@
           ]
         },
         {
+          "placeId": "ChIJncAQtGGsQjQR88wpyzdS0dg",
           "name": "大湖餐館 內湖",
           "tags": [
             "速食"
@@ -507,6 +523,7 @@
           ]
         },
         {
+          "placeId": "ChIJucCtu9mtQjQRMygDXo7N4Hw",
           "name": "大衛薯薯（帝國創始攤）",
           "tags": [
             "速食"
@@ -527,9 +544,9 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJmaKBQBOtQjQRWjj5JmMiybQ",
           "name": "大衛薯薯義大利麵餐盒（帝國店）",
           "tags": [
-            "麵",
             "速食"
           ],
           "address": "港墘里瑞光路298號",
@@ -547,7 +564,7 @@
             4,
             5
           ],
-          "gist": "風味十足且份量充足",
+          "gist": "風味十足、份量充足",
           "dishes": [
             "義大利麵",
             "番茄雞肉",
@@ -556,6 +573,7 @@
           ]
         },
         {
+          "placeId": "ChIJxWdNcY-tQjQRbWOwzp_FrJA",
           "name": "小米食光 港墘店",
           "tags": [
             "便當"
@@ -575,7 +593,7 @@
             4,
             5
           ],
-          "gist": "餐點健康且主菜多樣",
+          "gist": "餐點健康美味、份量充足",
           "dishes": [
             "健康餐盒",
             "孜然豬",
@@ -584,6 +602,7 @@
           ]
         },
         {
+          "placeId": "ChIJJdPh_AqtQjQR5iJTIri_SIs",
           "name": "小周紅燒牛肉麵",
           "tags": [
             "麵"
@@ -607,11 +626,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJTQB-XGOsQjQRrH6oYs22bf4",
           "name": "小南亭 和風洋食 創意居酒屋 內湖科學園區店",
           "tags": [
             "飯",
-            "日式",
-            "素食"
+            "日式"
           ],
           "address": "港墘里江南街69號",
           "mapUrl": "https://maps.google.com/?cid=18333510651334917804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -630,7 +649,7 @@
             5,
             6
           ],
-          "gist": "餐點豐盛且份量充足",
+          "gist": "定食豐盛、份量十足",
           "dishes": [
             "定食",
             "炒青菜",
@@ -639,6 +658,7 @@
           ]
         },
         {
+          "placeId": "ChIJdUh_TNGtQjQRQVbtYiPl_1w",
           "name": "小庭院泰食",
           "tags": [
             "其他"
@@ -663,6 +683,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJGRJlXAAdaDQRqm__6VifW5Q",
           "name": "小新飯食 小韓室飯捲 雲端廚房 內湖店",
           "tags": [
             "飯",
@@ -688,6 +709,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ12bqWWOsQjQR-I0ao24hNTM",
           "name": "小辣椒早餐坊",
           "tags": [
             "早午餐"
@@ -712,6 +734,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJjUwXm26sQjQR7m5vw-drWx8",
           "name": "小廚櫃素食",
           "tags": [
             "素食"
@@ -731,20 +754,19 @@
             4,
             5
           ],
-          "gist": "乾淨新鮮又健康",
+          "gist": "素食餐點乾淨新鮮",
           "dishes": [
-            "素食餐點",
             "蔬菜",
             "豆製品",
             "水果"
           ]
         },
         {
+          "placeId": "ChIJhaEW8GWsQjQRXsxarMEI5lk",
           "name": "小學日燒肉丼食堂(內湖店)",
           "tags": [
             "飯",
-            "日式",
-            "韓式"
+            "日式"
           ],
           "address": "麗山里內湖路一段411巷9弄28號",
           "mapUrl": "https://maps.google.com/?cid=6477874741932379230&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -765,6 +787,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJH0yo1m_QDRQRLdX5iHYlgaE",
           "name": "山西刀切蕃茄牛肉麵",
           "tags": [
             "麵"
@@ -785,7 +808,7 @@
             4,
             5
           ],
-          "gist": "風味十足且價格實惠",
+          "gist": "風味十足、價格實惠",
           "dishes": [
             "番茄肉絲刀削麵",
             "燙青菜",
@@ -793,11 +816,13 @@
           ]
         },
         {
+          "placeId": "ChIJdzSUoMGrQjQRx0s1ASOhSYc",
           "name": "五漁村丼飯屋",
           "tags": [
             "飯",
             "小吃",
             "日式",
+            "韓式",
             "火鍋"
           ],
           "address": "西湖里內湖路一段285巷59弄14號",
@@ -821,6 +846,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJP0ym7zetQjQR0pyiq9StMRk",
           "name": "五燈獎 台北內湖店",
           "tags": [
             "便當"
@@ -846,6 +872,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJi53z8x-tQjQRWCX24UycbP8",
           "name": "元榆牧場｜內湖港墘店",
           "tags": [
             "其他"
@@ -871,6 +898,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJkdCwYG-sQjQRvQBH3Ej3wRA",
           "name": "內湖山東餃子館",
           "tags": [
             "小吃"
@@ -891,7 +919,7 @@
             5,
             6
           ],
-          "gist": "水餃大顆多汁且內餡飽滿",
+          "gist": "水餃大顆多汁、內餡飽滿",
           "dishes": [
             "水餃",
             "蒸餃",
@@ -899,6 +927,31 @@
           ]
         },
         {
+          "placeId": "ChIJQRD_nGKsQjQR_DMnUq8xvcw",
+          "name": "內湖太祖魷魚羹1996",
+          "tags": [
+            "小吃"
+          ],
+          "address": "瑞阳里文德路90巷22號1樓",
+          "mapUrl": "https://maps.google.com/?cid=14753002583402951676&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.1,
+          "ratingCount": 307,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ82GvfICsQjQRey8st1BvYjM",
           "name": "六品小館內湖店",
           "tags": [
             "其他"
@@ -928,6 +981,7 @@
           ]
         },
         {
+          "placeId": "ChIJmzQH-S6tQjQRyYZhUj2X024",
           "name": "天菜溫泉雞（江南店）",
           "tags": [
             "飯",
@@ -950,7 +1004,7 @@
             4,
             5
           ],
-          "gist": "雞肉軟嫩且可免費加飯",
+          "gist": "雞肉軟嫩無骨",
           "dishes": [
             "雞肉飯",
             "蒸蛋",
@@ -958,10 +1012,10 @@
           ]
         },
         {
+          "placeId": "ChIJ210CKd6rQjQRe03BPkTRGIk",
           "name": "太子洺町壽司",
           "tags": [
-            "日式",
-            "義式"
+            "日式"
           ],
           "address": "港都里港墘路44號",
           "mapUrl": "https://maps.google.com/?cid=9878875873678019963&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -979,7 +1033,7 @@
             5,
             6
           ],
-          "gist": "海鮮新鮮美味定食豐盛",
+          "gist": "新鮮美味、定食份量豐盛",
           "dishes": [
             "壽司",
             "生魚片",
@@ -987,6 +1041,7 @@
           ]
         },
         {
+          "placeId": "ChIJjbGt8VutQjQRmtyIR5G-4pE",
           "name": "太朗飯糰 ボ—クたまご專門店 內湖店",
           "tags": [
             "日式"
@@ -1012,10 +1067,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJkVoHr1WtQjQRq0dWcR5WRtg",
           "name": "巴豆夭百元火鍋內湖737",
           "tags": [
-            "火鍋",
-            "素食"
+            "韓式",
+            "火鍋"
           ],
           "address": "港富里內湖路一段737巷61弄2號",
           "mapUrl": "https://maps.google.com/?cid=15584238249312667563&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -1034,7 +1090,7 @@
             5,
             6
           ],
-          "gist": "食材豐富且選擇多樣",
+          "gist": "食材豐富、選擇多樣",
           "dishes": [
             "蔬菜",
             "火鍋食材",
@@ -1043,6 +1099,7 @@
           ]
         },
         {
+          "placeId": "ChIJD044UFytQjQRc2pdLITKvgE",
           "name": "巴特咬吐司",
           "tags": [
             "早午餐"
@@ -1063,7 +1120,7 @@
             5,
             6
           ],
-          "gist": "口味豐富且份量足",
+          "gist": "口味豐富、份量很足",
           "dishes": [
             "蘑菇鐵板麵",
             "法式吐司",
@@ -1071,6 +1128,7 @@
           ]
         },
         {
+          "placeId": "ChIJGx-m8oatQjQRR2jqfPdVyMg",
           "name": "文湖21雞湯麵",
           "tags": [
             "麵",
@@ -1092,7 +1150,7 @@
             5,
             6
           ],
-          "gist": "湯清爽麵Q彈肉軟嫩",
+          "gist": "湯清爽、麵Q彈、肉軟嫩",
           "dishes": [
             "雞湯蕎麥麵",
             "小菜",
@@ -1100,30 +1158,7 @@
           ]
         },
         {
-          "name": "文德鍋貼",
-          "tags": [
-            "素食"
-          ],
-          "address": "瑞陽里文德路22巷44弄1號",
-          "mapUrl": "https://maps.google.com/?cid=16680659768901296016&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.3,
-          "ratingCount": 896,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJ_bXtNZGtQjQR3Xd3oxnD2L4",
           "name": "斗六門米粉湯",
           "tags": [
             "小吃"
@@ -1144,13 +1179,14 @@
             5,
             6
           ],
-          "gist": "湯頭新鮮香甜份量足",
+          "gist": "湯頭新鮮香甜、份量充足",
           "dishes": [
             "米粉湯",
             "小菜"
           ]
         },
         {
+          "placeId": "ChIJLfgpQCqtQjQR4fIg1ExMlEU",
           "name": "日吉壽司店",
           "tags": [
             "日式"
@@ -1171,7 +1207,7 @@
             5,
             6
           ],
-          "gist": "海鮮新鮮品質優良",
+          "gist": "海鮮新鮮、份量大",
           "dishes": [
             "生魚片",
             "蒲燒鰻魚飯",
@@ -1179,6 +1215,7 @@
           ]
         },
         {
+          "placeId": "ChIJp8JDrIOtQjQRly8ulWGg4ds",
           "name": "水剌韓式料理 內湖瑞光店",
           "tags": [
             "韓式"
@@ -1203,6 +1240,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJTcyum2SsQjQR9RRgnYwWI24",
           "name": "火鍋106-粵式豬肚煲鍋內湖店",
           "tags": [
             "火鍋"
@@ -1224,7 +1262,7 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁夠味食材新鮮",
+          "gist": "湯頭濃郁夠味、食材新鮮",
           "dishes": [
             "粵式胡椒豬肚湯",
             "肉品",
@@ -1232,6 +1270,7 @@
           ]
         },
         {
+          "placeId": "ChIJI2fxWmOsQjQReDU2-Jd7QgE",
           "name": "牛上野番茄牛肉麵",
           "tags": [
             "麵"
@@ -1255,6 +1294,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJoQnu0W6sQjQRpK9sKZ2-S7c",
           "name": "牛耳精緻麵館",
           "tags": [
             "麵"
@@ -1275,14 +1315,16 @@
             5,
             6
           ],
-          "gist": "牛肉軟嫩湯頭濃郁份量足",
+          "gist": "牛肉軟嫩、份量十足",
           "dishes": [
             "牛肉",
+            "牛肉湯",
             "洛神花茶",
             "仙草甜點"
           ]
         },
         {
+          "placeId": "ChIJUwnv6q6tQjQRFiJVFn3igfY",
           "name": "牛將軍小館",
           "tags": [
             "速食"
@@ -1303,7 +1345,7 @@
             5,
             6
           ],
-          "gist": "麵條Q彈米飯粒粒分明",
+          "gist": "麵條Q彈、米飯粒粒分明",
           "dishes": [
             "番茄牛肉麵",
             "炒飯",
@@ -1311,6 +1353,7 @@
           ]
         },
         {
+          "placeId": "ChIJRcR3MWOsQjQRLLKNe8c9Fqw",
           "name": "牛閣精緻麵館-內科店",
           "tags": [
             "麵"
@@ -1335,6 +1378,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJw_nwVgCtQjQRhbf9uBbDlyg",
           "name": "王山而熟成雞肉飯",
           "tags": [
             "飯"
@@ -1358,10 +1402,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJibIlTHusQjQRq4vQyCApYm0",
           "name": "王家福州乾拌麵",
           "tags": [
-            "麵",
-            "小吃"
+            "麵"
           ],
           "address": "港墘里江南街119號",
           "mapUrl": "https://maps.google.com/?cid=7881907518636592043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -1382,6 +1426,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJt7q2W1etQjQR5enSm2KBcXs",
           "name": "丘一司早午餐瑞光|特色吐司|酥皮蛋餅|高蛋白餐",
           "tags": [
             "早午餐"
@@ -1401,7 +1446,7 @@
             4,
             5
           ],
-          "gist": "早餐美味且富有創意",
+          "gist": "創意早午餐、口感酥脆",
           "dishes": [
             "蛋餅",
             "法式吐司三明治",
@@ -1409,6 +1454,7 @@
           ]
         },
         {
+          "placeId": "ChIJ8ehj7GWsQjQRW776JasFz1U",
           "name": "兄弟麵館內湖店",
           "tags": [
             "麵"
@@ -1428,7 +1474,7 @@
             4,
             5
           ],
-          "gist": "麵食美味份量充足",
+          "gist": "麵食美味獨特、份量充足",
           "dishes": [
             "獅頭煨麵",
             "紹興雞麵",
@@ -1436,6 +1482,7 @@
           ]
         },
         {
+          "placeId": "ChIJQTtOzG6sQjQRmKbRlBmVq1M",
           "name": "包子&ME 嘉義火雞肉飯",
           "tags": [
             "飯",
@@ -1456,7 +1503,7 @@
             4,
             5
           ],
-          "gist": "雞肉飯香氣十足",
+          "gist": "油蔥酥香氣十足、小菜風味佳",
           "dishes": [
             "雞肉飯",
             "滷肉",
@@ -1464,28 +1511,7 @@
           ]
         },
         {
-          "name": "包青天手工蔬菜包",
-          "tags": [
-            "素食"
-          ],
-          "address": "港富里內湖路二段3號",
-          "mapUrl": "https://maps.google.com/?cid=16820792783886654306&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 200,
-            "end": 400
-          },
-          "rating": 4.2,
-          "ratingCount": 132,
-          "lunchDays": [
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJ66Kx7WWsQjQRXmSyVdc-VWs",
           "name": "北方水餃(麵)",
           "tags": [
             "麵",
@@ -1506,7 +1532,7 @@
             4,
             5
           ],
-          "gist": "麵食美味且小菜可口",
+          "gist": "麵食與水餃深受喜愛",
           "dishes": [
             "水餃",
             "牛肉湯餃",
@@ -1515,6 +1541,31 @@
           ]
         },
         {
+          "placeId": "ChIJt7g5t_2tQjQRNFofgN3YmCk",
+          "name": "北方蔥抓餅",
+          "tags": [
+            "早午餐"
+          ],
+          "address": "港墘里江南街120號",
+          "mapUrl": "https://maps.google.com/?cid=2997383997863975476&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.5,
+          "ratingCount": 62,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJbUrPw4ytQjQRRaBKX_FbHOM",
           "name": "卡洛貍健康餐盒_內湖瑞光店 Calorie healthy box",
           "tags": [
             "便當"
@@ -1534,7 +1585,7 @@
             4,
             5
           ],
-          "gist": "健康美味且份量足",
+          "gist": "健康美味、份量足",
           "dishes": [
             "風味雞胸肉",
             "椒鹽鱸魚",
@@ -1542,6 +1593,7 @@
           ]
         },
         {
+          "placeId": "ChIJbZ5rz2OsQjQR285yI314oko",
           "name": "古城古早麵 內湖店",
           "tags": [
             "麵",
@@ -1564,15 +1616,16 @@
             5,
             6
           ],
-          "gist": "鵝肉軟嫩且餐點美味",
+          "gist": "鵝肉軟嫩、麵食美味",
           "dishes": [
-            "麵食",
+            "傳統麵食",
             "風味湯品",
-            "鵝肉",
+            "去骨鵝肉",
             "小菜"
           ]
         },
         {
+          "placeId": "ChIJpSLkimKsQjQRV3P6SI-arGs",
           "name": "可來富麵包蛋餅店（內湖店）",
           "tags": [
             "速食",
@@ -1595,7 +1648,7 @@
             5,
             6
           ],
-          "gist": "餡料豐富且現做美味",
+          "gist": "餡料豐富、現做酥脆",
           "dishes": [
             "蛋餅",
             "漢堡",
@@ -1603,40 +1656,11 @@
           ]
         },
         {
-          "name": "台北牛津牛雜湯",
-          "tags": [
-            "麵"
-          ],
-          "address": "麗山里內湖路一段411巷9弄18號",
-          "mapUrl": "https://maps.google.com/?cid=6208838847891880776&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 200,
-            "end": 400
-          },
-          "rating": 3.8,
-          "ratingCount": 202,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "內餡飽滿且餐點豐盛",
-          "dishes": [
-            "餃子",
-            "滷肉飯",
-            "牛肉麵",
-            "燙青菜"
-          ]
-        },
-        {
+          "placeId": "ChIJ4Zhg82OsQjQR7bQxGHmwIxU",
           "name": "台記家傳手勁麵",
           "tags": [
             "麵",
-            "小吃",
-            "火鍋"
+            "小吃"
           ],
           "address": "港都里港墘路110號",
           "mapUrl": "https://maps.google.com/?cid=1523255133124801773&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -1654,13 +1678,14 @@
             5,
             6
           ],
-          "gist": "麵條Q彈湯頭風味十足",
+          "gist": "麵條Q彈、湯頭風味十足",
           "dishes": [
             "牛肉麵",
             "蔥油餅"
           ]
         },
         {
+          "placeId": "ChIJJRf3xmWsQjQRa1S9RU3dPoA",
           "name": "台灣小吃",
           "tags": [
             "小吃"
@@ -1686,6 +1711,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ9VzxCbKtQjQRQlxE6ZBZOb8",
           "name": "外婆家高雄古早味三明治",
           "tags": [
             "速食"
@@ -1707,7 +1733,7 @@
             5,
             6
           ],
-          "gist": "三明治厚實且紅茶牛奶美味",
+          "gist": "三明治厚實入味、飲品美味",
           "dishes": [
             "三明治",
             "豬排",
@@ -1716,29 +1742,7 @@
           ]
         },
         {
-          "name": "巨森早餐吧（陽光街）",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "湖元里陽光街345巷2號",
-          "mapUrl": "https://maps.google.com/?cid=3884029977411069657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.5,
-          "ratingCount": 115,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJ7wS6wmKsQjQRxU50zTjtGg0",
           "name": "布克湖義式坊",
           "tags": [
             "速食",
@@ -1760,7 +1764,7 @@
             5,
             6
           ],
-          "gist": "義大利麵美味且份量慷慨",
+          "gist": "食材新鮮、份量慷慨",
           "dishes": [
             "義大利麵",
             "香蒜海鮮義大利麵",
@@ -1768,6 +1772,7 @@
           ]
         },
         {
+          "placeId": "ChIJgdCeYHitQjQRBzjNBNjV2dM",
           "name": "弍食穗（內湖店）輕食·餐盒",
           "tags": [
             "便當"
@@ -1787,13 +1792,14 @@
             4,
             5
           ],
-          "gist": "餐點美味夠味且份量充足",
+          "gist": "餐點夠味、份量充足",
           "dishes": [
             "健康便當",
             "泡菜"
           ]
         },
         {
+          "placeId": "ChIJkwSIgu2tQjQRI3PluwY2a1Q",
           "name": "永宝餐廳",
           "tags": [
             "其他"
@@ -1814,7 +1820,7 @@
             5,
             6
           ],
-          "gist": "山東菜美味且價格實惠",
+          "gist": "山東菜美味、價格實惠",
           "dishes": [
             "山東燒雞",
             "韭菜水餃",
@@ -1822,6 +1828,7 @@
           ]
         },
         {
+          "placeId": "ChIJSw8DxmWsQjQRXbwgAZ2AS14",
           "name": "田鄉池上飯包",
           "tags": [
             "便當"
@@ -1846,8 +1853,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJFRwCvjitQjQRIUW3FrHbvlw",
           "name": "白菜小姐義式坊",
           "tags": [
+            "早午餐",
             "義式"
           ],
           "address": "港墘里江南街71巷16弄40號",
@@ -1869,6 +1878,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ481XlnysQjQRH0Xetqh7_Cc",
           "name": "白暮蛋餅先生-瑞光店",
           "tags": [
             "早午餐"
@@ -1890,14 +1900,15 @@
             5,
             6
           ],
-          "gist": "蛋餅受歡迎且口味獨特",
+          "gist": "蛋餅皮脆、口味獨特",
           "dishes": [
             "脆皮蛋餅",
             "皮蛋肉鬆蛋餅",
-            "菜頭粿"
+            "手工菜頭粿"
           ]
         },
         {
+          "placeId": "ChIJc8IWarmtQjQRt3WcheCSNFA",
           "name": "禾盛小料理-港墘店",
           "tags": [
             "日式"
@@ -1909,7 +1920,7 @@
             "end": 400
           },
           "rating": 4.8,
-          "ratingCount": 32,
+          "ratingCount": 33,
           "lunchDays": [
             0,
             1,
@@ -1922,35 +1933,7 @@
           "dishes": []
         },
         {
-          "name": "立來永和豆漿",
-          "tags": [
-            "素食"
-          ],
-          "address": "港都里港墘路80號",
-          "mapUrl": "https://maps.google.com/?cid=11596970454626433147&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.4,
-          "ratingCount": 461,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "餐點美味可口，份量適中。",
-          "dishes": [
-            "鹹豆漿",
-            "蛋餅",
-            "蔥抓餅"
-          ]
-        },
-        {
+          "placeId": "ChIJ4Q0LbRmtQjQRdY73rlCGMeY",
           "name": "合點壽司 がってん寿司 內湖店",
           "tags": [
             "日式"
@@ -1972,37 +1955,16 @@
             5,
             6
           ],
-          "gist": "壽司美味新鮮，品項豐富。",
+          "gist": "壽司美味新鮮、選擇多樣",
           "dishes": [
-            "比目魚壽司",
-            "鮭魚壽司"
+            "壽司",
+            "比目魚",
+            "鮭魚",
+            "炙燒壽司"
           ]
         },
         {
-          "name": "吉得堡早餐（內湖）",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "港富里內湖路二段76巷26號",
-          "mapUrl": "https://maps.google.com/?cid=17857140128744374326&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.2,
-          "ratingCount": 49,
-          "lunchDays": [
-            0,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJWaE7SXusQjQRQKm7-QgxBXE",
           "name": "名廚燒臘店",
           "tags": [
             "便當",
@@ -2025,10 +1987,33 @@
             5,
             6
           ],
-          "gist": "配菜可客製化，湯品與飲料免費。",
+          "gist": "配菜豐富，湯品飲料免費",
           "dishes": []
         },
         {
+          "placeId": "ChIJaUl_MCatQjQRmIKV14SruSs",
+          "name": "地方媽媽食堂",
+          "tags": [
+            "小吃"
+          ],
+          "address": "西湖里內湖路一段285巷65弄9號",
+          "mapUrl": "https://maps.google.com/?cid=3150738001363305112&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": null,
+          "rating": 4,
+          "ratingCount": 2,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJJ5dw5GOsQjQR4vBOQ6CwSwQ",
           "name": "好米家池上飯包",
           "tags": [
             "飯",
@@ -2054,6 +2039,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJfdVFfQCtQjQRg1_BSkpokgc",
           "name": "好味道麵食堂",
           "tags": [
             "麵"
@@ -2077,6 +2063,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ79p73JStQjQRhDL36eDRCc4",
           "name": "好食多涮涮鍋西湖店",
           "tags": [
             "火鍋"
@@ -2101,6 +2088,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJt3_pvnOtQjQRbb87I3W5_pA",
           "name": "好食圓滿 玖五牛肉麵",
           "tags": [
             "麵"
@@ -2124,6 +2112,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJgaDTXm-sQjQRGb56sBcdikY",
           "name": "成都抄手",
           "tags": [
             "小吃"
@@ -2143,37 +2132,15 @@
             4,
             5
           ],
-          "gist": "風味獨特，麵條Q彈且份量充足。",
+          "gist": "雞肉風味獨特，麵條Q彈份量足",
           "dishes": [
             "怪味雞",
+            "麵條",
             "燙青菜"
           ]
         },
         {
-          "name": "早安日和",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "港富里內湖路一段737巷33弄4號1樓",
-          "mapUrl": "https://maps.google.com/?cid=6884886518952674159&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.7,
-          "ratingCount": 173,
-          "lunchDays": [
-            0,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJJ4YjboutQjQRgIIkUP7xWhk",
           "name": "早安美芝城北市內湖概念店",
           "tags": [
             "速食",
@@ -2196,13 +2163,14 @@
             5,
             6
           ],
-          "gist": "餐點美味，香氣十足。",
+          "gist": "吐司美味，蘿蔔糕香氣十足",
           "dishes": [
             "丹麥奶酥吐司",
             "蘿蔔糕"
           ]
         },
         {
+          "placeId": "ChIJj_HPMGOsQjQR7kDT2gbVrtU",
           "name": "江南傳奇涮涮鍋",
           "tags": [
             "火鍋",
@@ -2229,6 +2197,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJVbXrKgCtQjQRSyVIG61AjnY",
           "name": "百味麵坊牛肉麵",
           "tags": [
             "麵"
@@ -2250,12 +2219,13 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁，牛肉軟嫩厚實。",
+          "gist": "湯頭濃郁，牛肉軟嫩厚實",
           "dishes": [
             "牛肉麵"
           ]
         },
         {
+          "placeId": "ChIJecvGN2msQjQROxrobkAqz_E",
           "name": "百魚鮮食屋",
           "tags": [
             "飯",
@@ -2281,6 +2251,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJJ0qa6mWsQjQRewVjQjddczk",
           "name": "米好屋 ｜咖哩飯· 丼飯｜(內湖美食)",
           "tags": [
             "飯"
@@ -2299,13 +2270,15 @@
             4,
             5
           ],
-          "gist": "咖哩風味濃郁，份量充足。",
+          "gist": "風味濃郁，口感豐富份量足",
           "dishes": [
+            "咖哩",
             "雞肉咖哩",
             "牛肉咖哩"
           ]
         },
         {
+          "placeId": "ChIJr8hPvmGsQjQR2ALhJcCGXMs",
           "name": "米粒",
           "tags": [
             "其他"
@@ -2330,29 +2303,7 @@
           "dishes": []
         },
         {
-          "name": "老大爺煎餅果子",
-          "tags": [
-            "素食"
-          ],
-          "address": "麗山里內湖路一段413號",
-          "mapUrl": "https://maps.google.com/?cid=3357516656574673310&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.5,
-          "ratingCount": 568,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJZ1gVcsytQjQRRG9Ug5cvjPs",
           "name": "老皮の麵館",
           "tags": [
             "麵",
@@ -2374,13 +2325,15 @@
             5,
             6
           ],
-          "gist": "風味十足且份量充足。",
+          "gist": "麵條風味十足，湯頭濃郁清爽",
           "dishes": [
             "皮蛋麵",
+            "雙椒皮蛋麵",
             "筍片湯"
           ]
         },
         {
+          "placeId": "ChIJv3Lx3W6sQjQRdZZ5evnzp-Q",
           "name": "老家池上飯包",
           "tags": [
             "飯",
@@ -2405,6 +2358,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJab6xBumtQjQRR3voAHioTJw",
           "name": "自由食間 內湖時代廣場店",
           "tags": [
             "便當"
@@ -2427,35 +2381,7 @@
           "dishes": []
         },
         {
-          "name": "艾堤早午餐/E&T CAFE /早餐店/早午餐/咖啡/外送/輕食/下午茶",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "瑞陽里文德路22巷27弄5號",
-          "mapUrl": "https://maps.google.com/?cid=16090089146444191904&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.7,
-          "ratingCount": 54,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "風味十足，健康不油膩。",
-          "dishes": [
-            "烤餅",
-            "熱壓三明治",
-            "水果三明治"
-          ]
-        },
-        {
+          "placeId": "ChIJq8I7FoutQjQR5OTZfasxjwQ",
           "name": "艾嘉食坊",
           "tags": [
             "便當"
@@ -2475,37 +2401,14 @@
             4,
             5
           ],
-          "gist": "便當份量大方，主菜美味。",
+          "gist": "便當份量十足，主菜選擇多樣",
           "dishes": [
             "無骨辣雞腿",
             "香煎豬肉"
           ]
         },
         {
-          "name": "西湖涼麵",
-          "tags": [
-            "麵"
-          ],
-          "address": "西湖里內湖路一段323巷4弄18號",
-          "mapUrl": "https://maps.google.com/?cid=17516106626186949008&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.1,
-          "ratingCount": 335,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJiRuFOOqtQjQRAkq6l9-TfEw",
           "name": "西湖雞腿王",
           "tags": [
             "便當"
@@ -2527,18 +2430,19 @@
             5,
             6
           ],
-          "gist": "雞腿選擇多樣，份量充足。",
+          "gist": "雞腿選擇多樣，份量充足實惠",
           "dishes": [
             "炸雞腿",
             "滷雞腿",
-            "烤雞腿"
+            "烤雞腿",
+            "油雞腿"
           ]
         },
         {
+          "placeId": "ChIJY-C7v4msQjQRXLokFNqZrqI",
           "name": "初心菓寮",
           "tags": [
-            "日式",
-            "義式"
+            "日式"
           ],
           "address": "瑞陽里文德路86號",
           "mapUrl": "https://maps.google.com/?cid=11722476042011851356&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -2558,6 +2462,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJFyIsUACtQjQRaBtKIUrCUmI",
           "name": "初心CP早午餐店",
           "tags": [
             "早午餐"
@@ -2578,7 +2483,7 @@
             5,
             6
           ],
-          "gist": "食材新鮮，餐點美味。",
+          "gist": "食材新鮮，蛋餅酥脆肉質軟嫩",
           "dishes": [
             "蛋餅",
             "雞肉",
@@ -2586,6 +2491,7 @@
           ]
         },
         {
+          "placeId": "ChIJY0UJ9HysQjQRCsbv2XfyxxU",
           "name": "君悅排骨內湖店",
           "tags": [
             "便當"
@@ -2607,39 +2513,13 @@
             5,
             6
           ],
-          "gist": "排骨美味酥脆又多汁。",
+          "gist": "排骨外酥內嫩又多汁",
           "dishes": [
             "炸排骨"
           ]
         },
         {
-          "name": "吳家大腸麵線",
-          "tags": [
-            "麵"
-          ],
-          "address": "港富里內湖路一段737巷79號",
-          "mapUrl": "https://maps.google.com/?cid=10814421639128666677&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4,
-          "ratingCount": 510,
-          "lunchDays": [
-            0,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "湯頭清爽，臭豆腐香酥。",
-          "dishes": [
-            "麵線",
-            "炸臭豆腐"
-          ]
-        },
-        {
+          "placeId": "ChIJZxYePwCtQjQRpfaMua_uzL0",
           "name": "妙觀音素食-台北內湖店",
           "tags": [
             "素食"
@@ -2661,13 +2541,14 @@
             5,
             6
           ],
-          "gist": "素食菜餚風味獨特美味。",
+          "gist": "菜餚風味獨特，素食美味精緻",
           "dishes": [
             "素麻婆抄手",
             "猴頭菇"
           ]
         },
         {
+          "placeId": "ChIJGXUkMXusQjQRICBr10ev6FU",
           "name": "宏泰泰式料理",
           "tags": [
             "其他"
@@ -2689,13 +2570,14 @@
             5,
             6
           ],
-          "gist": "泰式料理美味且份量充足。",
+          "gist": "泰式料理美味，份量充足",
           "dishes": [
             "蝦醬高麗菜",
             "綠咖哩"
           ]
         },
         {
+          "placeId": "ChIJfTT4yzatQjQRTEqNeg2vtS4",
           "name": "宏麵線",
           "tags": [
             "麵"
@@ -2716,7 +2598,7 @@
             5,
             6
           ],
-          "gist": "麵線風味十足，食材新鮮。",
+          "gist": "麵線風味十足，配料新鮮入味",
           "dishes": [
             "麵線",
             "蚵仔",
@@ -2725,30 +2607,7 @@
           ]
         },
         {
-          "name": "我們咖哩",
-          "tags": [
-            "素食"
-          ],
-          "address": "西湖里內湖路一段323巷4弄10號",
-          "mapUrl": "https://maps.google.com/?cid=4037621092596677783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.8,
-          "ratingCount": 330,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJt_ZrmmKsQjQRWRQes2f1f1I",
           "name": "李家小館",
           "tags": [
             "小吃",
@@ -2771,13 +2630,14 @@
             5,
             6
           ],
-          "gist": "份量十足，炒飯風味獨特。",
+          "gist": "牛肉麵份量大，炒飯風味獨特",
           "dishes": [
             "牛肉麵",
             "炒飯"
           ]
         },
         {
+          "placeId": "ChIJhary_zutQjQRBz5h20VTSW4",
           "name": "汨拾美味便當 西湖店 | 開發票 | 百元餐盒 | 線上訂餐",
           "tags": [
             "便當"
@@ -2798,10 +2658,11 @@
             5,
             6
           ],
-          "gist": "熱炒料理口味美味，份量充足。",
+          "gist": "熱炒口味美味，份量充足",
           "dishes": []
         },
         {
+          "placeId": "ChIJibK8j6itQjQRBUWsi7MDeT8",
           "name": "沐暮·食光",
           "tags": [
             "便當"
@@ -2825,6 +2686,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJa3AnfWGsQjQR2vz2MWcy9qw",
           "name": "男子漢拉麵食堂內湖737店",
           "tags": [
             "麵",
@@ -2847,7 +2709,7 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁，叉燒軟嫩。",
+          "gist": "湯頭濃郁夠味，叉燒軟嫩",
           "dishes": [
             "拉麵",
             "叉燒",
@@ -2855,6 +2717,7 @@
           ]
         },
         {
+          "placeId": "ChIJ_wzpZ2GsQjQR64f0fl7U1KA",
           "name": "秀羽素食 創始店",
           "tags": [
             "素食"
@@ -2875,10 +2738,11 @@
             4,
             5
           ],
-          "gist": "餐點精緻美味，食材新鮮。",
+          "gist": "素食餐點精緻，食材新鮮優質",
           "dishes": []
         },
         {
+          "placeId": "ChIJmQAs0N-tQjQRvJTjwvbNNjU",
           "name": "究醬韓式便當",
           "tags": [
             "便當",
@@ -2903,6 +2767,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJO12n2H2sQjQRIoxDm5wordw",
           "name": "貝斯特複合式餐館",
           "tags": [
             "便當"
@@ -2926,6 +2791,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJVccFLAetQjQRRGz6b7piReU",
           "name": "龟覓の鍋物",
           "tags": [
             "火鍋",
@@ -2946,36 +2812,14 @@
             5,
             6
           ],
-          "gist": "食材新鮮，湯底美味。",
+          "gist": "食材新鮮，湯底藥膳濃郁",
           "dishes": [
             "藥膳排骨湯",
             "霜淇淋"
           ]
         },
         {
-          "name": "亞記牛肉河粉",
-          "tags": [
-            "小吃"
-          ],
-          "address": "麗山里內湖路一段437巷4弄9號",
-          "mapUrl": "https://maps.google.com/?cid=15940691434738933679&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.3,
-          "ratingCount": 561,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJYTWoK7WtQjQR8we117P7Ao8",
           "name": "亞羚古早味",
           "tags": [
             "小吃"
@@ -2997,6 +2841,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJbdExnTWtQjQRwEC38VJttO4",
           "name": "享奇鷄健康土鷄肉飯-江南店",
           "tags": [
             "飯"
@@ -3016,13 +2861,14 @@
             4,
             5
           ],
-          "gist": "雞肉軟嫩多汁，雞湯清爽。",
+          "gist": "雞肉軟嫩多汁，雞湯清爽美味",
           "dishes": [
             "煙燻雞肉",
             "雞湯"
           ]
         },
         {
+          "placeId": "ChIJiemqFACtQjQREQxavp1Lec0",
           "name": "享奇鷄健康土鷄肉飯-瑞湖店",
           "tags": [
             "飯"
@@ -3042,13 +2888,14 @@
             4,
             5
           ],
-          "gist": "餐點美味健康。",
+          "gist": "餐點美味健康，雞湯風味十足",
           "dishes": [
             "雞肉料理",
             "雞湯"
           ]
         },
         {
+          "placeId": "ChIJJcIo6aOtQjQRn62z8OyxcKI",
           "name": "享健康輕食餐盒",
           "tags": [
             "素食"
@@ -3068,12 +2915,14 @@
             4,
             5
           ],
-          "gist": "風味清爽，雞肉鮮嫩。",
+          "gist": "口味清爽健康，雞肉鮮嫩",
           "dishes": [
-            "鮮嫩雞肉"
+            "雞肉",
+            "青蔥"
           ]
         },
         {
+          "placeId": "ChIJh6DUsmasQjQRmSs4J3wkR6k",
           "name": "來有早午餐店",
           "tags": [
             "早午餐"
@@ -3099,9 +2948,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ68DtaNStQjQR7FSLR2W3b1M",
           "name": "味屋居食 西湖店",
           "tags": [
-            "日式"
+            "日式",
+            "義式"
           ],
           "address": "內湖區洲子街74號1樓",
           "mapUrl": "https://maps.google.com/?cid=6012225673182794988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -3122,6 +2973,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ4dodPYatQjQRQq3yC-qvesE",
           "name": "呷尚寶內湖店",
           "tags": [
             "速食"
@@ -3143,10 +2995,11 @@
             5,
             6
           ],
-          "gist": "餐點美味，咖啡香醇。",
+          "gist": "早午餐美味，咖啡香醇",
           "dishes": []
         },
         {
+          "placeId": "ChIJI-BXzG6sQjQReXKd5zYBR5w",
           "name": "奇津小吃水餃",
           "tags": [
             "小吃"
@@ -3172,6 +3025,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJpyT3uyWtQjQRkwawluneM24",
           "name": "定盒所-創意餐盒（最後點餐時間 19:45）",
           "tags": [
             "韓式"
@@ -3192,13 +3046,14 @@
             5,
             6
           ],
-          "gist": "烤肉美味，肉質軟嫩。",
+          "gist": "烤肉料理美味，肉質軟嫩",
           "dishes": [
             "牛舌",
             "雞肉"
           ]
         },
         {
+          "placeId": "ChIJD2i93G6sQjQRZ9J_CXncWSU",
           "name": "宜品福州乾拌麵",
           "tags": [
             "麵",
@@ -3221,10 +3076,11 @@
             5,
             6
           ],
-          "gist": "麵食料理美味多樣。",
+          "gist": "麵食種類多樣，方便快速",
           "dishes": []
         },
         {
+          "placeId": "ChIJuwo3UWKsQjQRVZp-XyvcSsY",
           "name": "尚品池上飯包",
           "tags": [
             "飯",
@@ -3250,6 +3106,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJNelO4jitQjQRx1xiR2MQ39E",
           "name": "延三溫體牛-李記",
           "tags": [
             "火鍋"
@@ -3274,6 +3131,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ4c71132sQjQRBEhql4f2YAA",
           "name": "怡客咖啡 瑞光76店",
           "tags": [
             "速食"
@@ -3299,34 +3157,7 @@
           "dishes": []
         },
         {
-          "name": "拉亞漢堡 內湖江南",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "港墘路127巷16弄2號",
-          "mapUrl": "https://maps.google.com/?cid=7126124266451308759&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.7,
-          "ratingCount": 356,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "蘿蔔糕香酥，漢堡多汁。",
-          "dishes": [
-            "蘿蔔糕",
-            "珍珠米漢堡"
-          ]
-        },
-        {
+          "placeId": "ChIJr2PsqSGtQjQR9a7aBciVG4Y",
           "name": "拌路食事",
           "tags": [
             "飯",
@@ -3353,6 +3184,33 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJYxZAdnWtQjQRKTfO5wukDKU",
+          "name": "旺吉手作蛋餅＆韭菜盒子",
+          "tags": [
+            "早午餐"
+          ],
+          "address": "內湖路一段737巷73號",
+          "mapUrl": "https://maps.google.com/?cid=11893061087019284265&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.9,
+          "ratingCount": 28,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJTb1ZwmKsQjQRERFw9EjchBw",
           "name": "明月圓古早味-豬腸冬粉",
           "tags": [
             "飯",
@@ -3375,7 +3233,7 @@
             5,
             6
           ],
-          "gist": "餐點美味且份量充足。",
+          "gist": "主食美味，份量充足",
           "dishes": [
             "豬腳飯",
             "排骨飯",
@@ -3383,6 +3241,7 @@
           ]
         },
         {
+          "placeId": "ChIJ6V3DAwCtQjQRazE7EnXPX4k",
           "name": "東引小吃店-內湖店",
           "tags": [
             "麵",
@@ -3409,6 +3268,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ47EHKgCtQjQR7kjxVNnWlJc",
           "name": "東夯肉飯",
           "tags": [
             "飯"
@@ -3432,6 +3292,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJF22dNnusQjQRLAH1mPaURcQ",
           "name": "東葉豬腳飯",
           "tags": [
             "飯",
@@ -3452,13 +3313,14 @@
             4,
             5
           ],
-          "gist": "味道濃郁，肉質軟嫩鹹度適中。",
+          "gist": "味道濃郁，肉質軟嫩鹹度適中",
           "dishes": [
             "滷肉",
             "滷豬腳"
           ]
         },
         {
+          "placeId": "ChIJX6SqTU-tQjQRKWVfjlTk0RU",
           "name": "松旺豬腳",
           "tags": [
             "飯",
@@ -3479,12 +3341,13 @@
             4,
             5
           ],
-          "gist": "豬腳好吃，配菜新鮮。",
+          "gist": "豬腳美味，配菜新鮮多樣",
           "dishes": [
             "豬腳"
           ]
         },
         {
+          "placeId": "ChIJYVkPuW6sQjQRbO6WRMH9SGc",
           "name": "林家麵館",
           "tags": [
             "麵"
@@ -3508,6 +3371,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJk8r0WpKtQjQR7dSh5fLvnyM",
           "name": "林記海南雞飯 內湖店-內湖海南雞 內湖美食 內湖小吃",
           "tags": [
             "飯",
@@ -3530,13 +3394,14 @@
             5,
             6
           ],
-          "gist": "雞肉鮮嫩，肉骨茶風味十足。",
+          "gist": "雞肉鮮嫩，肉骨茶風味十足",
           "dishes": [
             "海南雞肉",
             "肉骨茶"
           ]
         },
         {
+          "placeId": "ChIJs-rJjGOsQjQRwgyK01kKQx4",
           "name": "欣榮鵝肉店",
           "tags": [
             "麵",
@@ -3563,6 +3428,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ9Vd0J46tQjQR34oVMrqCP3U",
           "name": "肯德基KFC-內湖瑞光餐廳",
           "tags": [
             "速食"
@@ -3584,10 +3450,11 @@
             5,
             6
           ],
-          "gist": "早餐美味可口。",
+          "gist": "早餐美味，餐點選擇豐富",
           "dishes": []
         },
         {
+          "placeId": "ChIJKfUp6W6sQjQRMwZneUitLvc",
           "name": "芳琳魯肉飯",
           "tags": [
             "飯",
@@ -3608,7 +3475,7 @@
             4,
             5
           ],
-          "gist": "滷肉飯美味，鯖魚風味獨特。",
+          "gist": "滷肉飯份量大，鯖魚風味獨特",
           "dishes": [
             "滷肉飯",
             "烤鯖魚",
@@ -3616,6 +3483,7 @@
           ]
         },
         {
+          "placeId": "ChIJp8NlGtGtQjQRYbo41NN_dtc",
           "name": "芸妞妞米干",
           "tags": [
             "小吃"
@@ -3635,37 +3503,14 @@
             4,
             5
           ],
-          "gist": "風味十足，湯頭濃郁不油膩。",
+          "gist": "湯頭濃郁不膩，豬肉軟嫩",
           "dishes": [
             "雲南米干",
             "米線"
           ]
         },
         {
-          "name": "金口福醉雞",
-          "tags": [
-            "小吃"
-          ],
-          "address": "港富里內湖路一段737巷50弄6號麗山市場內",
-          "mapUrl": "https://maps.google.com/?cid=15736790834668811976&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 1200
-          },
-          "rating": 4.3,
-          "ratingCount": 23,
-          "lunchDays": [
-            0,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJP_m0wWWsQjQRhL_xygikxlE",
           "name": "金仙滷肉飯",
           "tags": [
             "飯",
@@ -3687,13 +3532,14 @@
             4,
             5
           ],
-          "gist": "雞排大塊厚實多汁。",
+          "gist": "雞排大塊厚實多汁，排骨美味",
           "dishes": [
             "炸排骨",
             "炸雞排"
           ]
         },
         {
+          "placeId": "ChIJp6vUmi6tQjQRkWX6v0MNO8g",
           "name": "金春喜韓廚-台北內湖店",
           "tags": [
             "韓式"
@@ -3719,10 +3565,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJwR4GmmOsQjQRPuezqIdCLA4",
           "name": "阿香麵店",
           "tags": [
-            "麵",
-            "小吃"
+            "麵"
           ],
           "address": "港富里內湖路一段737巷8弄8號",
           "mapUrl": "https://maps.google.com/?cid=1021264365924640574&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -3744,10 +3590,12 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ181MfGGsQjQRKhTeRw_s6hA",
           "name": "阿桑古早麵",
           "tags": [
             "麵",
-            "小吃"
+            "小吃",
+            "早午餐"
           ],
           "address": "港富里内湖路一段737巷67號一 號",
           "mapUrl": "https://maps.google.com/?cid=1219046199531541546&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -3765,12 +3613,13 @@
             5,
             6
           ],
-          "gist": "麵食美味，內臟新鮮。",
+          "gist": "麵食美味，內臟處理新鮮",
           "dishes": [
             "乾麵"
           ]
         },
         {
+          "placeId": "ChIJ2ZGy9hitQjQRR4HxkdSHkZQ",
           "name": "阿華圓環肉羹",
           "tags": [
             "便當"
@@ -3794,6 +3643,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ1-FjymasQjQRBub3A4dlLSM",
           "name": "阿嬤的早餐店",
           "tags": [
             "早午餐"
@@ -3815,15 +3665,16 @@
             5,
             6
           ],
-          "gist": "蛋餅香酥Q彈，內餡豐富。",
+          "gist": "蛋餅香酥Q彈，內餡豐富",
           "dishes": [
             "手工蛋餅",
             "飯糰",
-            "自製豆漿",
-            "加蛋蘿蔔糕"
+            "豆漿",
+            "蘿蔔糕"
           ]
         },
         {
+          "placeId": "ChIJuZsR0mWsQjQRpb6zeMjnXHY",
           "name": "青松義大利麵/胡椒兄弟",
           "tags": [
             "麵",
@@ -3846,13 +3697,14 @@
             5,
             6
           ],
-          "gist": "青醬風味濃郁，食材新鮮。",
+          "gist": "青醬風味濃郁，食材新鮮",
           "dishes": [
             "義大利麵",
             "燉飯"
           ]
         },
         {
+          "placeId": "ChIJ4-a6VwCtQjQRb99Ql08KCIM",
           "name": "哈妮早樂子咖啡早午餐",
           "tags": [
             "早午餐"
@@ -3874,17 +3726,17 @@
             5,
             6
           ],
-          "gist": "早午餐美味健康，口味酥脆風味十足",
+          "gist": "早午餐健康美味，可頌酥脆",
           "dishes": [
             "可頌",
             "烤時蔬"
           ]
         },
         {
+          "placeId": "ChIJQ2CBmm-sQjQRS_oeQ54rbA4",
           "name": "客意直火比薩 (內科西湖店)",
           "tags": [
             "飯",
-            "素食",
             "義式"
           ],
           "address": "港墘里瑞光路513巷37號貝塔科技大樓1樓",
@@ -3908,6 +3760,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJBao-TG6sQjQRSPZBdnvF7Bw",
           "name": "巷上食璞川菜客家菜",
           "tags": [
             "其他"
@@ -3929,15 +3782,14 @@
             5,
             6
           ],
-          "gist": "道地的客家菜與川菜，美味又豐富",
+          "gist": "客家與川菜道地，米粉芋頭香濃",
           "dishes": [
             "旗魚芋頭米粉",
-            "四方封肉",
-            "客家菜",
-            "川菜"
+            "四方封肉"
           ]
         },
         {
+          "placeId": "ChIJZVXM-ZutQjQRGiYfD8dVM9k",
           "name": "拾午弁當",
           "tags": [
             "便當"
@@ -3961,6 +3813,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ7xlPP26sQjQRFmHtKSJPw-c",
           "name": "春水堂 西湖店",
           "tags": [
             "麵"
@@ -3982,7 +3835,7 @@
             5,
             6
           ],
-          "gist": "茶飲與麵食滷味皆美味可口",
+          "gist": "珍奶與功夫麵美味，滷味入味",
           "dishes": [
             "珍珠奶茶",
             "功夫麵",
@@ -3990,6 +3843,7 @@
           ]
         },
         {
+          "placeId": "ChIJpZYxfWGsQjQRiw5hiTtfF78",
           "name": "珍好味蚵仔麵線",
           "tags": [
             "麵"
@@ -4014,6 +3868,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJwXqeGbStQjQR0mIZxBeSWkE",
           "name": "珍煲-酸白菜小火鍋",
           "tags": [
             "火鍋"
@@ -4034,14 +3889,14 @@
             5,
             6
           ],
-          "gist": "鍋物風味十足，食材新鮮份量充足",
+          "gist": "湯頭風味十足，食材新鮮份量足",
           "dishes": [
             "酸白菜火鍋",
-            "番茄火鍋",
-            "火鍋"
+            "番茄火鍋"
           ]
         },
         {
+          "placeId": "ChIJgV9nKrWtQjQRSJnLTjDC7eU",
           "name": "美好拾光cafe&brunch",
           "tags": [
             "早午餐"
@@ -4063,7 +3918,7 @@
             5,
             6
           ],
-          "gist": "早餐品項美味豐盛，口感酥脆",
+          "gist": "早餐品項豐盛，蛋捲餅酥脆",
           "dishes": [
             "蛋捲餅",
             "可頌",
@@ -4071,6 +3926,7 @@
           ]
         },
         {
+          "placeId": "ChIJk2QGnWKsQjQRry6CO34BVm8",
           "name": "美好食光",
           "tags": [
             "早午餐"
@@ -4093,6 +3949,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJjRuv832sQjQRlUmTblCXRQg",
           "name": "美味屋早餐",
           "tags": [
             "早午餐"
@@ -4113,10 +3970,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJgcjK7WWsQjQR-YUHbPvHkOk",
           "name": "苗栗江記",
           "tags": [
-            "便當",
-            "小吃"
+            "便當"
           ],
           "address": "丽山里内湖路一段437巷4弄1號號",
           "mapUrl": "https://maps.google.com/?cid=16830171690146694649&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -4137,10 +3994,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJr9EiPmGsQjQR3PiQCbt534E",
           "name": "食初靡中式料理",
           "tags": [
-            "飯",
-            "素食"
+            "飯"
           ],
           "address": "港富里港墘路15號",
           "mapUrl": "https://maps.google.com/?cid=9358332394925521116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -4162,6 +4019,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJFWTRDACtQjQRdbdk1gSmvL4",
           "name": "香港飯店0410_Paik’s Noodle",
           "tags": [
             "韓式",
@@ -4184,13 +4042,14 @@
             5,
             6
           ],
-          "gist": "道地的韓式中華料理，風味美味",
+          "gist": "道地的韓式風味，美味多汁",
           "dishes": [
             "炸醬麵",
             "糖醋肉"
           ]
         },
         {
+          "placeId": "ChIJKao2HH2sQjQRATt9MZ-XgNA",
           "name": "香鍋自助石頭火鍋",
           "tags": [
             "火鍋"
@@ -4212,12 +4071,13 @@
             5,
             6
           ],
-          "gist": "湯頭香氣濃郁，石頭火鍋風味十足",
+          "gist": "湯頭香氣濃郁，食材新鮮",
           "dishes": [
             "石頭火鍋"
           ]
         },
         {
+          "placeId": "ChIJd4SPH8mtQjQRKeEOWO5zAws",
           "name": "修緣素食",
           "tags": [
             "素食"
@@ -4242,6 +4102,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJFyh5Xm-sQjQRZ708la6jMp8",
           "name": "宸燕素食便當店",
           "tags": [
             "便當",
@@ -4269,6 +4130,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJY0DF02WsQjQR8lu98O0-o0M",
           "name": "泰鄉食坊",
           "tags": [
             "其他"
@@ -4293,6 +4155,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJd7J75mWsQjQRwV7MwYqGDdc",
           "name": "泰雅軒",
           "tags": [
             "其他"
@@ -4313,7 +4176,7 @@
             5,
             6
           ],
-          "gist": "道地泰式料理，份量充足風味十足",
+          "gist": "泰式風味十足，份量充足",
           "dishes": [
             "檸檬魚",
             "打拋豬",
@@ -4321,6 +4184,7 @@
           ]
         },
         {
+          "placeId": "ChIJ5SzXPwCtQjQRGKZ1UB2lr6w",
           "name": "泰滾 mini 個人鍋物 • 無限吧",
           "tags": [
             "火鍋"
@@ -4342,7 +4206,7 @@
             5,
             6
           ],
-          "gist": "泰式湯底風味十足，雪花冰受好評",
+          "gist": "湯底風味十足，食材豐富",
           "dishes": [
             "冬蔭功",
             "綠咖哩",
@@ -4350,6 +4214,7 @@
           ]
         },
         {
+          "placeId": "ChIJq9bOldqtQjQRw0P6iwr9JPA",
           "name": "烤食煮盒便當 內湖店",
           "tags": [
             "便當"
@@ -4371,13 +4236,43 @@
             5,
             6
           ],
-          "gist": "餐點美味健康不油膩，肉質軟嫩",
+          "gist": "健康美味，清爽不油膩",
           "dishes": [
             "烤雞腿",
             "豬肉"
           ]
         },
         {
+          "placeId": "ChIJxR7-z2OsQjQRuIp4576K4uY",
+          "name": "真味肉圓",
+          "tags": [
+            "小吃"
+          ],
+          "address": "港富里內湖路一段737巷53號",
+          "mapUrl": "https://maps.google.com/?cid=16637012525991889592&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.8,
+          "ratingCount": 672,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "外皮軟嫩，湯頭清澈順口",
+          "dishes": [
+            "清蒸肉圓",
+            "四神湯"
+          ]
+        },
+        {
+          "placeId": "ChIJI9LAMwCtQjQRp3PLXTBooS0",
           "name": "真芳碳烤吐司-內湖港墘店 台北早餐三明治",
           "tags": [
             "早午餐"
@@ -4399,13 +4294,14 @@
             5,
             6
           ],
-          "gist": "吐司與蛋餅口感軟Q美味",
+          "gist": "口感豐富，滋味美味",
           "dishes": [
             "碳烤吐司三明治",
-            "台式粉漿蛋餅"
+            "粉漿蛋餅"
           ]
         },
         {
+          "placeId": "ChIJxeiwak6tQjQR3m6NxTPwA8c",
           "name": "真福記烤鴨莊-內湖店（Jen Fu Ji Roast Duck）",
           "tags": [
             "其他"
@@ -4426,12 +4322,13 @@
             5,
             6
           ],
-          "gist": "烤鴨軟嫩多汁，搭配醬料風味十足",
+          "gist": "軟嫩多汁，份量充足",
           "dishes": [
             "烤鴨"
           ]
         },
         {
+          "placeId": "ChIJd065_2KsQjQR5CwMlF2956Y",
           "name": "神來一鍋 (內湖店)",
           "tags": [
             "火鍋"
@@ -4448,12 +4345,13 @@
             0,
             6
           ],
-          "gist": "食材新鮮多樣，花雕雞火鍋受好評",
+          "gist": "食材新鮮，湯頭獨特",
           "dishes": [
             "花雕雞火鍋"
           ]
         },
         {
+          "placeId": "ChIJ1XfV9-ysQjQRuCI03eUCbNw",
           "name": "素心園健康素食館",
           "tags": [
             "素食"
@@ -4477,6 +4375,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJLy11RGOsQjQRrEPn4etm6iw",
           "name": "素食之家",
           "tags": [
             "素食"
@@ -4500,10 +4399,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJpT5vwm6sQjQRyHkLgi93KC4",
           "name": "素食養生屋",
           "tags": [
-            "素食",
-            "義式"
+            "素食"
           ],
           "address": "西湖里內湖路一段323巷4弄12號",
           "mapUrl": "https://maps.google.com/?cid=3326039370742069704&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -4524,6 +4423,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJKcezcQCtQjQR1ApWkMx-oag",
           "name": "託你の福Tony’s Food 豬排",
           "tags": [
             "飯",
@@ -4546,15 +4446,15 @@
             5,
             6
           ],
-          "gist": "炸豬排鮮嫩多汁，咖哩濃郁夠味",
+          "gist": "鮮嫩多汁，濃郁夠味",
           "dishes": [
             "炸豬排",
             "梅花豬排",
-            "巧克力咖哩",
-            "味噌湯"
+            "巧克力咖哩"
           ]
         },
         {
+          "placeId": "ChIJqYzDBO6tQjQRBRbCYRSLkU8",
           "name": "高雄五福扁食 K.H.Wufu 內湖港墘店",
           "tags": [
             "小吃"
@@ -4580,6 +4480,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJb8FiCACtQjQRiE8ASwSflIo",
           "name": "鬼匠拉麵",
           "tags": [
             "日式"
@@ -4605,6 +4506,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJe6UTUEStQjQRW-YLzIJmvMA",
           "name": "庶民經濟便當",
           "tags": [
             "飯",
@@ -4627,16 +4529,17 @@
             5,
             6
           ],
-          "gist": "羊肉鮮嫩，炸雞風味十足",
+          "gist": "肉質鮮嫩，風味十足",
           "dishes": [
             "羊肉",
             "炸雞"
           ]
         },
         {
+          "placeId": "ChIJ4bzGS-CrQjQRGBbH1PMfzWg",
           "name": "張家傳統肉羹",
           "tags": [
-            "麵"
+            "早午餐"
           ],
           "address": "港富里內湖路一段737巷64號",
           "mapUrl": "https://maps.google.com/?cid=7551727282277520920&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -4654,13 +4557,14 @@
             5,
             6
           ],
-          "gist": "油飯香氣十足粒粒分明，羹湯風味獨特",
+          "gist": "香氣十足，粒粒分明",
           "dishes": [
             "油飯",
             "魷魚嘴羹湯"
           ]
         },
         {
+          "placeId": "ChIJB28-SdOtQjQRThNp9TOvMBQ",
           "name": "御吉YUJI 日式便當專賣",
           "tags": [
             "便當"
@@ -4680,12 +4584,13 @@
             4,
             5
           ],
-          "gist": "健康便當份量大方，口味令人滿足",
+          "gist": "份量大方，口感滿足",
           "dishes": [
             "健康便當"
           ]
         },
         {
+          "placeId": "ChIJ-Zht4oStQjQRwQXsshMEGcU",
           "name": "捲捲 Roll Roll",
           "tags": [
             "早午餐"
@@ -4706,13 +4611,14 @@
             5,
             6
           ],
-          "gist": "捲餅份量十足美味，口味選擇多樣",
+          "gist": "份量十足，口味多樣",
           "dishes": [
             "捲餅",
             "草莓鮮奶茶"
           ]
         },
         {
+          "placeId": "ChIJZzE8YIutQjQRREgiEW6frcY",
           "name": "晚安早餐 內湖港墘店",
           "tags": [
             "早午餐"
@@ -4734,12 +4640,13 @@
             5,
             6
           ],
-          "gist": "創意脆皮蛋餅口味獨特美味",
+          "gist": "口感酥脆，口味獨特",
           "dishes": [
             "脆皮蛋餅"
           ]
         },
         {
+          "placeId": "ChIJ2RuSn9mtQjQRuH2f-XZ2kwM",
           "name": "晨食鹿早午餐",
           "tags": [
             "早午餐"
@@ -4764,6 +4671,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJM4xcsBOtQjQRBQmrBHuYkkg",
           "name": "梁社漢排骨-內湖一店",
           "tags": [
             "便當"
@@ -4789,6 +4697,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJc39syLitQjQRl1ezEefYgjo",
           "name": "梁記北平良田刀削麵",
           "tags": [
             "麵"
@@ -4808,7 +4717,7 @@
             4,
             5
           ],
-          "gist": "番茄牛肉麵風味十足，麵條Q彈有嚼勁",
+          "gist": "湯頭風味十足，麵條Q彈",
           "dishes": [
             "番茄牛肉麵",
             "手工刀削麵",
@@ -4816,29 +4725,7 @@
           ]
         },
         {
-          "name": "涼麵舖子",
-          "tags": [
-            "麵"
-          ],
-          "address": "麗山里內湖路一段437巷4弄8號",
-          "mapUrl": "https://maps.google.com/?cid=8817490409876539413&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.1,
-          "ratingCount": 176,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJzRDbD3usQjQRMehq-gyr_Ew",
           "name": "淬義義大利餐廳",
           "tags": [
             "速食",
@@ -4861,7 +4748,7 @@
             5,
             6
           ],
-          "gist": "披薩餅皮香Q有嚼勁，配料新鮮",
+          "gist": "餅皮香Q，配料新鮮",
           "dishes": [
             "披薩",
             "提拉米蘇",
@@ -4869,6 +4756,7 @@
           ]
         },
         {
+          "placeId": "ChIJJ3M-X2-sQjQRYbRz7sFq3mw",
           "name": "第一劇場魚丸店",
           "tags": [
             "麵",
@@ -4889,13 +4777,14 @@
             4,
             5
           ],
-          "gist": "炸豆腐與魚丸湯美味令人滿意",
+          "gist": "口感酥嫩，湯頭美味",
           "dishes": [
             "炸豆腐",
             "魚丸湯"
           ]
         },
         {
+          "placeId": "ChIJKeGET2SsQjQRvzeM1quHrw4",
           "name": "莫宰羊-內湖港墘店",
           "tags": [
             "火鍋"
@@ -4917,14 +4806,14 @@
             5,
             6
           ],
-          "gist": "羊肉鮮嫩無羶味，風味十足",
+          "gist": "肉質鮮嫩，沒有羶味",
           "dishes": [
             "羊小排",
-            "羊肉爐",
-            "羊肉料理"
+            "羊肉爐"
           ]
         },
         {
+          "placeId": "ChIJF9NzqxGtQjQRbrWbwp2EoRQ",
           "name": "蛋白盒子健康低卡餐盒-港墘店",
           "tags": [
             "便當"
@@ -4944,36 +4833,14 @@
             4,
             5
           ],
-          "gist": "餐點健康清爽，雞胸肉口感軟嫩",
+          "gist": "健康清爽，口感軟嫩",
           "dishes": [
             "海帶雞胸肉",
             "味噌鱸魚"
           ]
         },
         {
-          "name": "這家炒飯J+ fried rice",
-          "tags": [
-            "飯"
-          ],
-          "address": "港墘里港墘路125號豬腳店後方",
-          "mapUrl": "https://maps.google.com/?cid=3618749807233381691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.6,
-          "ratingCount": 139,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJr1emsr6tQjQR2CMqO63kr1c",
           "name": "郭家莊福隆便當",
           "tags": [
             "便當"
@@ -4994,6 +4861,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ83xAFHusQjQRiceCbXY51Qw",
           "name": "都一處 內湖店",
           "tags": [
             "火鍋"
@@ -5015,7 +4883,7 @@
             5,
             6
           ],
-          "gist": "道地北方菜，口味美味酥脆",
+          "gist": "北方道地菜色，風味酥脆",
           "dishes": [
             "酸菜白肉鍋",
             "九轉肥腸",
@@ -5023,6 +4891,7 @@
           ]
         },
         {
+          "placeId": "ChIJaSCYrn2tQjQRZ_gIGTEgiCg",
           "name": "陳記精緻小火鍋",
           "tags": [
             "火鍋"
@@ -5045,6 +4914,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ560vWXusQjQRzVhZY6Tr6Rk",
           "name": "頂呱呱瑞光店",
           "tags": [
             "速食"
@@ -5066,12 +4936,13 @@
             5,
             6
           ],
-          "gist": "招牌呱呱包美味好吃",
+          "gist": "口感酥脆，滋味美味",
           "dishes": [
             "呱呱包"
           ]
         },
         {
+          "placeId": "ChIJB41FR7CtQjQRBcEkKlujH5A",
           "name": "麥可義大利麵",
           "tags": [
             "麵"
@@ -5096,6 +4967,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJT0CZMOutQjQRjYwJPpi4ZS4",
           "name": "麥味登 內湖園區店",
           "tags": [
             "早午餐"
@@ -5117,13 +4989,14 @@
             5,
             6
           ],
-          "gist": "餐點美味份量充足，酥炸餃與蛋餅受好評",
+          "gist": "餐點美味，份量充足",
           "dishes": [
             "酥炸餃",
             "蛋餅"
           ]
         },
         {
+          "placeId": "ChIJC0__ClOtQjQRheX_Z0DaFI4",
           "name": "麥味登 內湖BOSS店｜早餐｜早午餐｜午餐｜brunch｜會議餐點｜外送下午茶｜團體訂餐｜內科下午茶｜漢堡｜蛋餅｜義大利麵｜平價早餐",
           "tags": [
             "早午餐"
@@ -5145,13 +5018,14 @@
             5,
             6
           ],
-          "gist": "餐點美味新鮮，蘿蔔糕酥脆雞肉鮮嫩",
+          "gist": "外酥內嫩，新鮮美味",
           "dishes": [
             "蘿蔔糕",
             "雞肉餐點"
           ]
         },
         {
+          "placeId": "ChIJT3LboWOsQjQRCjy8Ta2zBjo",
           "name": "麥當勞-台北內湖餐廳",
           "tags": [
             "速食"
@@ -5173,10 +5047,11 @@
             5,
             6
           ],
-          "gist": "速食餐點服務快速，環境寬敞乾淨",
+          "gist": "出餐快速，空間寬敞",
           "dishes": []
         },
         {
+          "placeId": "ChIJuyX66yCtQjQRWWwrMrOgCyU",
           "name": "麥當勞-台北瑞光二餐廳",
           "tags": [
             "速食"
@@ -5202,6 +5077,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJT3LboWOsQjQRUB-NFAu1bZg",
           "name": "麥當勞-台北瑞光餐廳",
           "tags": [
             "速食"
@@ -5223,10 +5099,11 @@
             5,
             6
           ],
-          "gist": "速食餐廳地點便利，服務快速親切",
+          "gist": "服務迅速，地點便利",
           "dishes": []
         },
         {
+          "placeId": "ChIJ8Zc06RGtQjQRK2CIKQ_Ynes",
           "name": "麻李麵鋪",
           "tags": [
             "麵"
@@ -5251,6 +5128,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ9TDWZkitQjQRKhozowiEmc0",
           "name": "麻辣天后炒香鍋-內湖737店",
           "tags": [
             "火鍋"
@@ -5270,12 +5148,13 @@
             4,
             5
           ],
-          "gist": "麻辣香鍋辣度可調，美味開胃",
+          "gist": "辣度可調，風味香濃",
           "dishes": [
             "麻辣香鍋"
           ]
         },
         {
+          "placeId": "ChIJG5ulaXetQjQRU1XAiDETEYs",
           "name": "勝太郎和食專門店「湖光門市」",
           "tags": [
             "日式"
@@ -5296,7 +5175,7 @@
             5,
             6
           ],
-          "gist": "炸豬排酥脆軟嫩，咖哩蛋包飯風味十足",
+          "gist": "酥脆軟嫩，風味十足",
           "dishes": [
             "炸豬排",
             "咖哩蛋包飯",
@@ -5304,6 +5183,7 @@
           ]
         },
         {
+          "placeId": "ChIJ5_x-rRqtQjQRT5mSCgBKwcw",
           "name": "喜魚 小酸菜魚-飲料/白飯吃到飽，荔枝鳳梨熱賣中-內湖店",
           "tags": [
             "飯"
@@ -5329,6 +5209,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ9xrXfOKtQjQRnCOVxWRp838",
           "name": "喜魚 小酸菜魚-飲料/白飯吃到飽，荔枝鳳梨熱賣中-內湖麗山店 (19:30為最後點餐)",
           "tags": [
             "飯"
@@ -5354,6 +5235,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ0cBa32KsQjQRtjUihf_r-MI",
           "name": "喬記文德",
           "tags": [
             "飯",
@@ -5374,13 +5256,40 @@
             5,
             6
           ],
-          "gist": "水餃風味十足，麵食份量充足",
+          "gist": "風味十足，份量充足",
           "dishes": [
             "水餃",
             "麵食"
           ]
         },
         {
+          "placeId": "ChIJ-Qdq0mWsQjQRD-WCjyqvFSg",
+          "name": "斌記飲食店",
+          "tags": [
+            "小吃"
+          ],
+          "address": "麗山里麗山街348巷21號",
+          "mapUrl": "https://maps.google.com/?cid=2888407333359248655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.7,
+          "ratingCount": 101,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJZ8B8opWtQjQRWW34u5u1lxs",
           "name": "曾粥道｜內湖排隊小吃｜銅板傳統美食｜人氣必吃｜可外送",
           "tags": [
             "小吃"
@@ -5400,12 +5309,13 @@
             4,
             5
           ],
-          "gist": "粥品實在美味，食材新鮮份量充足",
+          "gist": "食材新鮮，口感實在",
           "dishes": [
             "粥"
           ]
         },
         {
+          "placeId": "ChIJ_yP_tyKtQjQRzGFFaljfGmA",
           "name": "港墘飯包",
           "tags": [
             "飯",
@@ -5432,9 +5342,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJO57ccGGsQjQR2buuoajJeOk",
           "name": "湖水灣",
           "tags": [
-            "早午餐"
+            "早午餐",
+            "義式"
           ],
           "address": "港富里麗山街68巷10號",
           "mapUrl": "https://maps.google.com/?cid=16823418134146759641&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -5455,6 +5367,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJL5ZMN2OsQjQRs6RZyK6t0to",
           "name": "湯膳房",
           "tags": [
             "火鍋"
@@ -5475,14 +5388,16 @@
             4,
             5
           ],
-          "gist": "蔬菜湯頭風味濃郁新鮮，份量給得足",
+          "gist": "蔬菜基底，湯頭濃郁",
           "dishes": [
-            "蔬菜基底火鍋"
+            "綠豆湯"
           ]
         },
         {
+          "placeId": "ChIJ-1B-50GtQjQR8N47UN8PSD4",
           "name": "湯鮮森mini鍋 快速鍋物｜日式拉麵｜滷肉飯 (最後收客時間20:00)",
           "tags": [
+            "飯",
             "日式",
             "火鍋"
           ],
@@ -5501,13 +5416,14 @@
             4,
             5
           ],
-          "gist": "湯頭濃郁不油膩，肉質軟嫩物超所值",
+          "gist": "湯頭濃郁不油膩，肉質軟嫩",
           "dishes": [
             "拉麵",
-            "火鍋"
+            "火鍋料理"
           ]
         },
         {
+          "placeId": "ChIJoc73Ik-tQjQRpNK0oycz6ak",
           "name": "無虞蒔堂",
           "tags": [
             "火鍋"
@@ -5530,6 +5446,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ9YbZARGtQjQRY7-J1VOAuHI",
           "name": "菜鳥 POKÉ｜夏威夷生魚飯專賣店【內湖區波奇碗】",
           "tags": [
             "飯"
@@ -5553,6 +5470,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJzWjUJXCtQjQRpwqoZQmZZG0",
           "name": "賀甲小館",
           "tags": [
             "飯",
@@ -5579,6 +5497,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ5yPCr9StQjQRZdX_Ztm0LaM",
           "name": "越南小吃",
           "tags": [
             "小吃"
@@ -5604,6 +5523,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJz0xO6AutQjQR7boCqLQKYSQ",
           "name": "開軒製粥",
           "tags": [
             "韓式"
@@ -5625,12 +5545,13 @@
             5,
             6
           ],
-          "gist": "粥品口味豐富份量大，食材新鮮",
+          "gist": "口味豐富，食材新鮮",
           "dishes": [
             "粥品"
           ]
         },
         {
+          "placeId": "ChIJE6EjNHusQjQR-Ic-8DCnANg",
           "name": "陽光健康素食自助餐港墘店",
           "tags": [
             "便當",
@@ -5655,6 +5576,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJR-GbSXusQjQRGliZVJ6iaSE",
           "name": "陽光廚坊",
           "tags": [
             "便當"
@@ -5679,6 +5601,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJVwidem-sQjQRNq1w2eqA4jU",
           "name": "飯BAR 內湖創始店",
           "tags": [
             "飯",
@@ -5701,7 +5624,7 @@
             5,
             6
           ],
-          "gist": "中式料理美味有創意，菜色豐富",
+          "gist": "創意中式料理，口味受歡迎",
           "dishes": [
             "東坡肉佐芝麻餅",
             "脆皮雞",
@@ -5709,6 +5632,37 @@
           ]
         },
         {
+          "placeId": "ChIJ-xB2CWOsQjQRAuGtYWpDJ9Y",
+          "name": "新四海豆漿大王",
+          "tags": [
+            "早午餐"
+          ],
+          "address": "港墘里江南街13號",
+          "mapUrl": "https://maps.google.com/?cid=15431376772392673538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.7,
+          "ratingCount": 806,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "傳統早餐品項，風味道地",
+          "dishes": [
+            "豆漿",
+            "燒餅",
+            "飯糰"
+          ]
+        },
+        {
+          "placeId": "ChIJm7-UrAKtQjQRVNAQNwqexwo",
           "name": "極限餐盒",
           "tags": [
             "便當"
@@ -5732,6 +5686,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJJxlqK3CtQjQRSu6J7QRFjUM",
           "name": "源海南雞飯內湖店",
           "tags": [
             "飯",
@@ -5753,7 +5708,7 @@
             4,
             5
           ],
-          "gist": "海南雞肉質軟嫩，雞油飯香氣十足",
+          "gist": "肉質軟嫩，香氣十足",
           "dishes": [
             "海南雞",
             "雞油飯",
@@ -5761,6 +5716,7 @@
           ]
         },
         {
+          "placeId": "ChIJiX-e62WsQjQRulviC-ig9Ng",
           "name": "瑞山韓食",
           "tags": [
             "韓式"
@@ -5784,11 +5740,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJzV8CbVCtQjQRAbqTqbZxVUY",
           "name": "瑞哥雞肉飯內科店",
           "tags": [
             "飯",
-            "便當",
-            "義式"
+            "便當"
           ],
           "address": "麗山里內湖路一段415號",
           "mapUrl": "https://maps.google.com/?cid=5068081985018378753&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -5806,13 +5762,14 @@
             5,
             6
           ],
-          "gist": "雞肉美味軟嫩，配菜用心辣味好吃",
+          "gist": "肉質美味軟嫩，配菜用心",
           "dishes": [
-            "雞肉",
+            "嫩雞",
             "烤雞腿飯"
           ]
         },
         {
+          "placeId": "ChIJn_UmnFGtQjQRQP5JGGBqpVw",
           "name": "瑞哥雞肉飯江南店",
           "tags": [
             "飯",
@@ -5833,39 +5790,14 @@
             4,
             5
           ],
-          "gist": "清爽口感與新鮮食材",
+          "gist": "口感清爽，食材新鮮",
           "dishes": [
             "嫩雞",
             "半熟蛋"
           ]
         },
         {
-          "name": "瑞湖雞肉飯",
-          "tags": [
-            "飯"
-          ],
-          "address": "湖元里瑞湖街84號",
-          "mapUrl": "https://maps.google.com/?cid=15578461850109298569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.3,
-          "ratingCount": 175,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "風味十足且食材新鮮",
-          "dishes": [
-            "嫩雞",
-            "烤雞"
-          ]
-        },
-        {
+          "placeId": "ChIJMe320WWsQjQRIfRGMeO8qIA",
           "name": "萬伽香麗山店",
           "tags": [
             "早午餐"
@@ -5891,6 +5823,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJAdjgF2-sQjQRDxoxizq4Xu8",
           "name": "萬兩食堂",
           "tags": [
             "麵"
@@ -5910,16 +5843,16 @@
             4,
             5
           ],
-          "gist": "湯頭濃郁牛肉軟嫩",
+          "gist": "湯頭濃郁，麵條Q彈酥脆",
           "dishes": [
             "牛肉麵",
             "炸排骨"
           ]
         },
         {
+          "placeId": "ChIJ49G2ynqsQjQRrzO0IRua9sI",
           "name": "義大利小廚房",
           "tags": [
-            "素食",
             "義式"
           ],
           "address": "港墘里瑞光路393巷8號",
@@ -5940,8 +5873,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJMxVCcWGsQjQRlU5Ku18_NDc",
           "name": "義牛車炙燒牛排義大利麵館",
           "tags": [
+            "麵",
             "義式"
           ],
           "address": "港富里麗山街68巷3號1F",
@@ -5960,7 +5895,7 @@
             5,
             6
           ],
-          "gist": "肉品美味軟嫩",
+          "gist": "肉品軟嫩，濃湯香濃",
           "dishes": [
             "牛排",
             "雞排",
@@ -5969,6 +5904,7 @@
           ]
         },
         {
+          "placeId": "ChIJDY3p2retQjQRulLVrOQw7G8",
           "name": "義沐 Eat MU 台北內湖店",
           "tags": [
             "義式"
@@ -5994,8 +5930,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJSbJCOWutQjQRtummm5ilTuk",
           "name": "葛莉莎披薩 Gloriosa Pizza",
           "tags": [
+            "麵",
             "義式"
           ],
           "address": "港墘里江南街107巷8號",
@@ -6016,6 +5954,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJoaSwGG-sQjQR6ROy6p_Rp8A",
           "name": "裘莉早餐屋",
           "tags": [
             "早午餐"
@@ -6040,6 +5979,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJszVU03ysQjQR57S2otBZ9qA",
           "name": "誠信商行",
           "tags": [
             "麵"
@@ -6064,6 +6004,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJlZ4t32KsQjQREgJYHd7VUiA",
           "name": "鼎香小館",
           "tags": [
             "麵",
@@ -6085,13 +6026,14 @@
             4,
             5
           ],
-          "gist": "口味濃郁且份量大",
+          "gist": "口味濃郁且帶有辣度，份量大方",
           "dishes": [
             "重慶酸辣粉",
             "口水雞"
           ]
         },
         {
+          "placeId": "ChIJHVUoAmOsQjQRi6bGpjqzocI",
           "name": "鼎越鴻越南美食館",
           "tags": [
             "其他"
@@ -6113,37 +6055,14 @@
             5,
             6
           ],
-          "gist": "湯頭美味份量大",
+          "gist": "湯頭美味、食材新鮮且份量大",
           "dishes": [
             "河粉",
             "米線"
           ]
         },
         {
-          "name": "嘟比漢堡",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "港墘里港墘路129號",
-          "mapUrl": "https://maps.google.com/?cid=7291740312212960010&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.8,
-          "ratingCount": 360,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJwyatz1WtQjQRcU0hzzQBlLU",
           "name": "嘟姐麵店",
           "tags": [
             "麵"
@@ -6168,6 +6087,36 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJk2ETvGOsQjQRXpMtppQY4hw",
+          "name": "寧府麻辣食堂",
+          "tags": [
+            "小吃"
+          ],
+          "address": "內湖路一段737巷29號1樓",
+          "mapUrl": "https://maps.google.com/?cid=2081253004520821598&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.9,
+          "ratingCount": 572,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "臭豆腐美味，鴨血軟嫩",
+          "dishes": [
+            "臭豆腐",
+            "鴨血"
+          ]
+        },
+        {
+          "placeId": "ChIJqV7N82OsQjQRbSV9ClYEbcY",
           "name": "榛品越南河粉",
           "tags": [
             "小吃",
@@ -6189,7 +6138,7 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁麵條Q彈",
+          "gist": "湯頭濃郁、麵條Q彈，餐點風味十足",
           "dishes": [
             "河粉",
             "炸春捲",
@@ -6197,6 +6146,7 @@
           ]
         },
         {
+          "placeId": "ChIJ90YV0NytQjQRu7MgOPDCZkc",
           "name": "漫時生活",
           "tags": [
             "早午餐",
@@ -6219,7 +6169,7 @@
             5,
             6
           ],
-          "gist": "酥脆披薩風味十足",
+          "gist": "披薩酥脆，義大利麵風味十足，烤雞鮮嫩",
           "dishes": [
             "披薩",
             "義大利麵",
@@ -6227,8 +6177,10 @@
           ]
         },
         {
+          "placeId": "ChIJNXOi9GWsQjQRx7l7vhe2Br4",
           "name": "瑪莎義大利廚房",
           "tags": [
+            "麵",
             "義式"
           ],
           "address": "麗山里內湖路一段411巷9弄21號",
@@ -6250,10 +6202,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJgQyg3G6sQjQRiqa5iwMtKLM",
           "name": "福岡屋拉麵",
           "tags": [
-            "日式",
-            "素食"
+            "日式"
           ],
           "address": "西湖里內湖路一段323巷6號",
           "mapUrl": "https://maps.google.com/?cid=12909617825109878410&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -6275,6 +6227,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ00eGDgCtQjQRpU2ZpQJC1Go",
           "name": "福隆月台便當",
           "tags": [
             "便當"
@@ -6285,8 +6238,8 @@
             "start": 1,
             "end": 200
           },
-          "rating": 4,
-          "ratingCount": 33,
+          "rating": 4.1,
+          "ratingCount": 34,
           "lunchDays": [
             0,
             1,
@@ -6296,13 +6249,14 @@
             5,
             6
           ],
-          "gist": "物超所值配菜豐富",
+          "gist": "主食配料豐富，附贈免費湯品",
           "dishes": [
             "便當",
             "味噌湯"
           ]
         },
         {
+          "placeId": "ChIJxYX_6mWsQjQRu42pzP6Pb2o",
           "name": "福德旺豬腳",
           "tags": [
             "飯",
@@ -6328,60 +6282,10 @@
           "dishes": []
         },
         {
-          "name": "福慧根湯 內湖店",
-          "tags": [
-            "素食"
-          ],
-          "address": "港墘里瑞光路316巷50號",
-          "mapUrl": "https://maps.google.com/?cid=17856504989962801916&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 2000,
-            "end": null
-          },
-          "rating": 4.6,
-          "ratingCount": 294,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
-          "name": "銀象雲泰美食館 Thai food（內湖店 ）",
-          "tags": [
-            "素食"
-          ],
-          "address": "港富里內湖路一段737巷51弄1號1樓",
-          "mapUrl": "https://maps.google.com/?cid=1806474171477581856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 200,
-            "end": 400
-          },
-          "rating": 4.4,
-          "ratingCount": 203,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJM2PnyGWsQjQRJbIU7-s6sFg",
           "name": "鳳味素食",
           "tags": [
             "便當",
-            "小吃",
             "素食"
           ],
           "address": "麗山里內湖路一段591巷11弄2號之3號",
@@ -6402,6 +6306,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJP9VutyytQjQRxHjdgTAK7Ec",
           "name": "鳳城燒臘榮冠茶餐廳 TOGO店",
           "tags": [
             "飯",
@@ -6423,16 +6328,18 @@
             5,
             6
           ],
-          "gist": "風味十足口感令人滿意",
+          "gist": "叉燒令人滿意，烤鴨風味十足",
           "dishes": [
             "叉燒",
             "烤鴨"
           ]
         },
         {
+          "placeId": "ChIJ49N6TWKtQjQR8ApbQwm4rDI",
           "name": "劉老太老潼關肉夾饃",
           "tags": [
-            "麵"
+            "麵",
+            "小吃"
           ],
           "address": "瑞陽里文德路22巷9弄60號",
           "mapUrl": "https://maps.google.com/?cid=3651495747814886128&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -6447,7 +6354,7 @@
             4,
             5
           ],
-          "gist": "肉餡風味十足酸辣爽口",
+          "gist": "肉夾饃酥脆多汁，麵食酸辣夠味",
           "dishes": [
             "肉夾饃",
             "ㄅㄧㄤˊㄅㄧㄤˊ麵",
@@ -6455,6 +6362,7 @@
           ]
         },
         {
+          "placeId": "ChIJG9bs832sQjQR9CIuKJQk-HY",
           "name": "增記小吃店",
           "tags": [
             "麵",
@@ -6479,6 +6387,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJoZg6z2-sQjQRd4ngCj8e8lM",
           "name": "廣東鴨莊(燒臘便當)",
           "tags": [
             "便當"
@@ -6502,6 +6411,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJJaf17HusQjQRVnTrCmOTuTg",
           "name": "摩斯漢堡 內湖亞太店",
           "tags": [
             "速食"
@@ -6523,10 +6433,11 @@
             5,
             6
           ],
-          "gist": "方便的午餐選擇",
+          "gist": "提供多樣速食餐點選擇",
           "dishes": []
         },
         {
+          "placeId": "ChIJQ2Z5mW-sQjQRIUNzgxW3Jxc",
           "name": "摩斯漢堡 內湖港墘店",
           "tags": [
             "速食"
@@ -6548,7 +6459,7 @@
             5,
             6
           ],
-          "gist": "餐點美味拿鐵香醇",
+          "gist": "米漢堡美味，拿鐵香醇",
           "dishes": [
             "米漢堡",
             "玉子米漢堡",
@@ -6556,6 +6467,7 @@
           ]
         },
         {
+          "placeId": "ChIJQ2Z5mW-sQjQRbWo_2EYkcog",
           "name": "摩斯漢堡 瑞光店",
           "tags": [
             "速食"
@@ -6577,13 +6489,14 @@
             5,
             6
           ],
-          "gist": "餐點美味可口",
+          "gist": "漢堡極佳，月亮薯美味可口",
           "dishes": [
             "漢堡",
             "月亮薯"
           ]
         },
         {
+          "placeId": "ChIJw1MQZHytQjQR8saxLl-2RU8",
           "name": "樂莉漢堡麗山店",
           "tags": [
             "早午餐"
@@ -6605,13 +6518,14 @@
             5,
             6
           ],
-          "gist": "早餐品項豐盛美味",
+          "gist": "蛋餅酥脆，早餐品項豐盛",
           "dishes": [
             "蛋餅",
             "牛肉漢堡"
           ]
         },
         {
+          "placeId": "ChIJ1Tm3LDetQjQRRF48aBxvHzQ",
           "name": "樂雅樂餐廳 西湖店",
           "tags": [
             "其他"
@@ -6637,12 +6551,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJKRzEs5KtQjQRglm9M9RwAFA",
           "name": "樂澄日式食堂",
           "tags": [
             "小吃",
-            "日式",
-            "素食",
-            "義式"
+            "日式"
           ],
           "address": "瑞陽里文德路66巷45號",
           "mapUrl": "https://maps.google.com/?cid=5764731579737659778&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -6664,6 +6577,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJrVwMgTStQjQR-4a0ayRRYrQ",
           "name": "歐姆蛋俱樂部Omuriceclub",
           "tags": [
             "日式",
@@ -6685,13 +6599,13 @@
             5,
             6
           ],
-          "gist": "醬料風味獨特雞肉軟嫩",
+          "gist": "口味濃郁帶辣，雞肉軟嫩",
           "dishes": [
-            "歐姆蛋",
-            "叻沙咖哩"
+            "歐姆蛋"
           ]
         },
         {
+          "placeId": "ChIJK0E215itQjQRziFJRrUisTg",
           "name": "歐媽職人鍋燒",
           "tags": [
             "火鍋"
@@ -6713,10 +6627,67 @@
             5,
             6
           ],
-          "gist": "份量充足口味多樣",
+          "gist": "湯底口味多樣，份量充足",
           "dishes": []
         },
         {
+          "placeId": "ChIJEe0WH2-sQjQRZXaBPgE3u9U",
+          "name": "歐嬤德式烘焙 內湖店",
+          "tags": [
+            "早午餐"
+          ],
+          "address": "西湖里內湖路一段335號",
+          "mapUrl": "https://maps.google.com/?cid=15400963829206709861&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 200,
+            "end": 400
+          },
+          "rating": 4.1,
+          "ratingCount": 332,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "麵包與沙拉食材新鮮品質優良",
+          "dishes": [
+            "酸種麵包",
+            "德國扭結麵包",
+            "沙拉"
+          ]
+        },
+        {
+          "placeId": "ChIJj5OfLdCtQjQRXFGKmwWOQYE",
+          "name": "潮味決‧湯滷專門店 內湖江南分社",
+          "tags": [
+            "小吃"
+          ],
+          "address": "港墘里江南街124號",
+          "mapUrl": "https://maps.google.com/?cid=9313881659114410332&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4,
+          "ratingCount": 1036,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "滷味品項選擇多樣且口味美味",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ0SWCQk-tQjQRNhAexjHgLBg",
           "name": "澄食小人屋2《江南店》",
           "tags": [
             "飯",
@@ -6744,6 +6715,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ28TUe8OtQjQRlMc9-UkySZw",
           "name": "澎派海鮮餐廳",
           "tags": [
             "火鍋"
@@ -6765,7 +6737,7 @@
             5,
             6
           ],
-          "gist": "海鮮新鮮品質優良",
+          "gist": "海鮮新鮮且品質優良",
           "dishes": [
             "帝王蟹",
             "金沙炒軟絲",
@@ -6773,6 +6745,7 @@
           ]
         },
         {
+          "placeId": "ChIJ-5eU5satQjQRqXG35HQZV3k",
           "name": "熱咖哩",
           "tags": [
             "飯",
@@ -6793,15 +6766,15 @@
             4,
             5
           ],
-          "gist": "風味濃郁份量充足",
+          "gist": "咖哩濃郁，肉品軟嫩香氣十足",
           "dishes": [
-            "咖哩",
+            "印度咖哩",
             "紅燒牛腩",
-            "紅燒控肉",
-            "印度咖哩"
+            "紅燒控肉"
           ]
         },
         {
+          "placeId": "ChIJc6H_XnStQjQR6G1MjCaRe6w",
           "name": "蔡老師蔬食便當內湖店｜素食便當｜會議便當｜便當外送",
           "tags": [
             "便當",
@@ -6826,6 +6799,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJHyhAlIitQjQRU-qnxn0DUy4",
           "name": "鄧家牛肉麵內湖店",
           "tags": [
             "麵",
@@ -6847,7 +6821,7 @@
             5,
             6
           ],
-          "gist": "風味十足牛肉軟嫩",
+          "gist": "酸辣夠味，雞腿酥脆，牛肉軟嫩",
           "dishes": [
             "酸辣麵",
             "炸雞腿",
@@ -6855,6 +6829,7 @@
           ]
         },
         {
+          "placeId": "ChIJdareuIGtQjQRbEG67MtUTUw",
           "name": "魯肉飯藥燉排骨羊肉",
           "tags": [
             "飯"
@@ -6879,6 +6854,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJM6hwctitQjQRwoZBV9bKtbc",
           "name": "墨竹亭 燃麵本家 內湖瑞光店",
           "tags": [
             "麵",
@@ -6901,13 +6877,39 @@
             5,
             6
           ],
-          "gist": "麵食夠味份量充足",
+          "gist": "麵食美味夠味且份量充足",
           "dishes": [
             "蟹黃拌麵",
             "燃麵"
           ]
         },
         {
+          "placeId": "ChIJRer00XGsQjQR6KmUrfSSufg",
+          "name": "學學食驗室 Xue Xue Taste Lab",
+          "tags": [
+            "其他"
+          ],
+          "address": "西湖里堤頂大道二段207號2樓",
+          "mapUrl": "https://maps.google.com/?cid=17922517771679476200&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 200,
+            "end": 400
+          },
+          "rating": 4.1,
+          "ratingCount": 274,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ89QkcQCtQjQR5jOCwSGoPtc",
           "name": "擁灣晨食所 台北內湖店 |團購早餐會議|下午茶點心|早午餐|",
           "tags": [
             "早午餐"
@@ -6928,7 +6930,7 @@
             5,
             6
           ],
-          "gist": "漢堡多汁美味",
+          "gist": "手打牛肉漢堡美味多汁",
           "dishes": [
             "手打牛肉漢堡",
             "薯條",
@@ -6936,6 +6938,7 @@
           ]
         },
         {
+          "placeId": "ChIJ86JXw_mtQjQRo6c1Cj92TNo",
           "name": "澧瀜號 嚴選茶行/人文茶館",
           "tags": [
             "速食"
@@ -6957,6 +6960,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJF77T2gutQjQRrAlRKepUX78",
           "name": "熹正園大連老菜館",
           "tags": [
             "火鍋"
@@ -6978,7 +6982,7 @@
             5,
             6
           ],
-          "gist": "東北菜道地且份量足",
+          "gist": "東北菜道地美味，份量充足",
           "dishes": [
             "鍋包肉",
             "紅燒茄子",
@@ -6986,6 +6990,7 @@
           ]
         },
         {
+          "placeId": "ChIJXyowT9qtQjQRbpT5ahxiECY",
           "name": "燒肉Smile 台北內湖店",
           "tags": [
             "火鍋"
@@ -7011,6 +7016,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJs3hNV5utQjQRhrO4rx7JYGg",
           "name": "築間幸福鍋物 台北內湖店",
           "tags": [
             "火鍋"
@@ -7036,6 +7042,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ0xVn42KsQjQRdUNQZSlYZ0M",
           "name": "興亨素食小吃",
           "tags": [
             "小吃",
@@ -7060,10 +7067,12 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ18nt_ImsQjQRUSV09dQd4BE",
           "name": "蕃茄小火鍋",
           "tags": [
             "火鍋",
-            "速食"
+            "速食",
+            "義式"
           ],
           "address": "湖濱里內湖路二段154號",
           "mapUrl": "https://maps.google.com/?cid=1288062293916263761&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -7085,6 +7094,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJc6XOWfCtQjQRlHy5ADqBGo8",
           "name": "賴山嶼 麻辣燙內湖旗艦店",
           "tags": [
             "火鍋"
@@ -7106,12 +7116,11 @@
             5,
             6
           ],
-          "gist": "食材新鮮湯底獨特",
-          "dishes": [
-            "青花椒雞白湯"
-          ]
+          "gist": "食材新鮮，湯底風味獨特",
+          "dishes": []
         },
         {
+          "placeId": "ChIJ5Xb2aBCtQjQRo6vA5bcILhw",
           "name": "霑泊鍋物 霑泊餐飲開發",
           "tags": [
             "火鍋"
@@ -7133,13 +7142,40 @@
             5,
             6
           ],
-          "gist": "肉品海鮮新鮮優良",
+          "gist": "海鮮肉品新鮮，牛奶湯底香濃",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ_54Eym6sQjQRHYDOQoJyjaE",
+          "name": "鴨香飽",
+          "tags": [
+            "小吃"
+          ],
+          "address": "西湖里內湖路一段285巷59弄3號",
+          "mapUrl": "https://maps.google.com/?cid=11641086515614744605&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4,
+          "ratingCount": 343,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "鴨肉料理美味，湯頭濃郁",
           "dishes": [
-            "牛奶湯底",
-            "霜淇淋"
+            "去骨鴨肉飯",
+            "鴨肉冬粉",
+            "當歸鴨肉湯"
           ]
         },
         {
+          "placeId": "ChIJi-OllXysQjQRZnvbTewpG2w",
           "name": "徽姑娘小食堂",
           "tags": [
             "素食"
@@ -7163,6 +7199,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJzZyOivmtQjQRDbsKY3o-n9g",
           "name": "鍋咾三 精緻涮涮鍋 港墘店",
           "tags": [
             "火鍋"
@@ -7181,7 +7218,7 @@
             4,
             5
           ],
-          "gist": "食材新鮮湯頭清甜",
+          "gist": "食材新鮮，湯頭自然清甜",
           "dishes": [
             "無骨牛小排",
             "大蝦",
@@ -7189,6 +7226,7 @@
           ]
         },
         {
+          "placeId": "ChIJ4wDfaGOsQjQRc-rBb29Q7f4",
           "name": "鍋博士臭臭鍋-江南店",
           "tags": [
             "火鍋"
@@ -7210,17 +7248,15 @@
             5,
             6
           ],
-          "gist": "平價美味的小火鍋",
-          "dishes": [
-            "個人小火鍋"
-          ]
+          "gist": "個人小火鍋平價美味",
+          "dishes": []
         },
         {
+          "placeId": "ChIJSTA36WWsQjQRww1tYY09Xxc",
           "name": "鍋燒麵 丼飯",
           "tags": [
             "飯",
-            "麵",
-            "火鍋"
+            "麵"
           ],
           "address": "麗山里麗山街393巷7號",
           "mapUrl": "https://maps.google.com/?cid=1684132463094074819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -7241,9 +7277,12 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJDRPd526sQjQR4-XSmUhvk_I",
           "name": "韓國料理裴老師家常飯",
           "tags": [
             "飯",
+            "麵",
+            "小吃",
             "韓式"
           ],
           "address": "西湖里內湖路一段323巷2弄4號",
@@ -7261,7 +7300,7 @@
             4,
             5
           ],
-          "gist": "韓式料理道地份量足",
+          "gist": "韓式料理道地風味十足，份量充足",
           "dishes": [
             "海鮮煎餅",
             "石鍋拌飯",
@@ -7269,6 +7308,7 @@
           ]
         },
         {
+          "placeId": "ChIJGypavlCtQjQRyEVFiZctx1Y",
           "name": "韓膳樓韓式料理",
           "tags": [
             "韓式"
@@ -7294,9 +7334,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJvZnB61etQjQRIWNoq4VhjOQ",
           "name": "鮮食早午餐",
           "tags": [
-            "早午餐"
+            "早午餐",
+            "義式"
           ],
           "address": "港富里內湖路二段51號",
           "mapUrl": "https://maps.google.com/?cid=16468645164121350945&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -7315,7 +7357,7 @@
             5,
             6
           ],
-          "gist": "餐點美味份量十足",
+          "gist": "餐點美味且份量十足",
           "dishes": [
             "三明治",
             "凱薩雞肉沙拉",
@@ -7323,34 +7365,10 @@
           ]
         },
         {
-          "name": "鮮蓓早午餐",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "麗山里內湖路一段437巷3號",
-          "mapUrl": "https://maps.google.com/?cid=5749303067667613624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.4,
-          "ratingCount": 256,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJQaTMfACtQjQRE0O7Te5sgVQ",
           "name": "翻麵turn_noodle-內湖店",
           "tags": [
-            "麵",
-            "日式"
+            "麵"
           ],
           "address": "港墘里瑞光路393巷8號5號櫃位",
           "mapUrl": "https://maps.google.com/?cid=6089267941943755539&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -7371,6 +7389,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJUakkzgutQjQR_DZMWyyRkP0",
           "name": "豐禾便當",
           "tags": [
             "便當"
@@ -7391,13 +7410,14 @@
             5,
             6
           ],
-          "gist": "份量十足口味美味",
+          "gist": "主食美味可口，配菜新鮮份量大",
           "dishes": [
             "炸豬排",
             "雞腿"
           ]
         },
         {
+          "placeId": "ChIJGZNnBACtQjQR7WEFRKMtpRM",
           "name": "豐味十族小餐館",
           "tags": [
             "義式"
@@ -7417,12 +7437,13 @@
             3,
             4
           ],
-          "gist": "湯頭清甜牛肉軟嫩",
+          "gist": "湯頭清甜，牛肉軟嫩麵條Q彈",
           "dishes": [
             "果香牛肉麵"
           ]
         },
         {
+          "placeId": "ChIJK4-PPwCtQjQRnClnNMHtgKk",
           "name": "豐饌麗山",
           "tags": [
             "小吃"
@@ -7446,6 +7467,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJm-RUtsqtQjQRxN7aWmkDfUg",
           "name": "雞湯大叔 內湖店",
           "tags": [
             "火鍋",
@@ -7468,15 +7490,15 @@
             5,
             6
           ],
-          "gist": "湯底濃郁食材新鮮",
-          "dishes": [
-            "雞湯"
-          ]
+          "gist": "雞湯湯底濃郁美味，食材新鮮",
+          "dishes": []
         },
         {
+          "placeId": "ChIJUUVsnLStQjQR_tJqDOkkwss",
           "name": "雞湯桑 Torisan 港墘店",
           "tags": [
             "飯",
+            "麵",
             "日式"
           ],
           "address": "港墘里港墘路157號",
@@ -7496,37 +7518,15 @@
             5,
             6
           ],
-          "gist": "拉麵風味獨特豐富",
+          "gist": "拉麵風味獨特，湯頭濃郁",
           "dishes": [
             "櫻花柚子拉麵",
-            "松露雞白湯",
+            "松露雞白湯拉麵",
             "烤串"
           ]
         },
         {
-          "name": "隴典魚翅肉焿",
-          "tags": [
-            "小吃"
-          ],
-          "address": "港墘里瑞光路287號",
-          "mapUrl": "https://maps.google.com/?cid=137435678664535896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.4,
-          "ratingCount": 18,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJh3MLRXusQjQRdUqcmutSsoU",
           "name": "鬍鬚張魯肉飯 內湖瑞光店",
           "tags": [
             "飯"
@@ -7548,39 +7548,14 @@
             5,
             6
           ],
-          "gist": "餐點美味可口",
+          "gist": "餐點美味好吃",
           "dishes": [
             "炸魚",
-            "蒜泥白肉",
-            "三號餐"
+            "蒜泥白肉"
           ]
         },
         {
-          "name": "麗山早午餐",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "麗山里內湖路一段629巷40弄2號",
-          "mapUrl": "https://maps.google.com/?cid=15167068280865960693&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.2,
-          "ratingCount": 178,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJdYTdlHqtQjQRveJOf6D_cTU",
           "name": "麗媽四季鍋",
           "tags": [
             "火鍋"
@@ -7606,6 +7581,33 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJv7cGYWqtQjQRs6u8khox1OM",
+          "name": "寶米丸手作專門店",
+          "tags": [
+            "日式",
+            "早午餐"
+          ],
+          "address": "港都里港墘路86號1樓",
+          "mapUrl": "https://maps.google.com/?cid=16416800531873049523&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.2,
+          "ratingCount": 128,
+          "lunchDays": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJC8seTm6sQjQR6cLj6hayijk",
           "name": "覺旅咖啡 西湖店",
           "tags": [
             "早午餐",
@@ -7628,15 +7630,15 @@
             5,
             6
           ],
-          "gist": "品項豐富口味美味",
+          "gist": "餐點選擇多樣，甜點冰沙美味",
           "dishes": [
             "義大利麵",
             "沙拉",
-            "蛋糕",
-            "冰沙"
+            "蛋糕"
           ]
         },
         {
+          "placeId": "ChIJT6qEGnysQjQR1PFfUAFLdFk",
           "name": "覺旅咖啡 Journey Kaffe 陽光店",
           "tags": [
             "早午餐",
@@ -7663,35 +7665,7 @@
           "dishes": []
         },
         {
-          "name": "歡樂購特大牛排 內湖店",
-          "tags": [
-            "義式"
-          ],
-          "address": "麗山里內湖路一段411巷13號",
-          "mapUrl": "https://maps.google.com/?cid=4145971251343387468&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 200,
-            "end": 400
-          },
-          "rating": 3.8,
-          "ratingCount": 444,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "牛排美味無限供應",
-          "dishes": [
-            "牛排",
-            "人參湯",
-            "玉米濃湯"
-          ]
-        },
-        {
+          "placeId": "ChIJv9JGURqtQjQRS7-3DQshNzA",
           "name": "鑫吉野烤肉飯(富山藥局隔壁）",
           "tags": [
             "飯",
@@ -7717,6 +7691,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ65qNOnusQjQRencjU0S-G2s",
           "name": "鑫鱻熱炒店",
           "tags": [
             "其他"
@@ -7738,7 +7713,7 @@
             5,
             6
           ],
-          "gist": "獨特菜色適合聚餐",
+          "gist": "菜色獨特多樣，適合聚餐",
           "dishes": [
             "水蓮",
             "三杯雞",
@@ -7746,6 +7721,30 @@
           ]
         },
         {
+          "placeId": "ChIJmTgHtousQjQRcwh-Ogh5dJs",
+          "name": "鷹堡52",
+          "tags": [
+            "日式"
+          ],
+          "address": "湖濱里內湖路二段103巷52號",
+          "mapUrl": "https://maps.google.com/?cid=11201711249425303667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1800,
+            "end": 2000
+          },
+          "rating": 4.3,
+          "ratingCount": 228,
+          "lunchDays": [
+            0
+          ],
+          "gist": "肉品烹調恰到好處",
+          "dishes": [
+            "羊小排",
+            "牛小排"
+          ]
+        },
+        {
+          "placeId": "ChIJ1XdIeqStQjQR4u8ibNoGssg",
           "name": "Agusto奧古斯托 內湖店",
           "tags": [
             "義式"
@@ -7762,16 +7761,18 @@
             4,
             5
           ],
-          "gist": "義式料理高品質美味",
+          "gist": "牛排風味十足，海鮮新鮮燉飯濃郁",
           "dishes": [
             "牛排",
             "燉飯"
           ]
         },
         {
+          "placeId": "ChIJr80oVvStQjQR8LxICYeR5aI",
           "name": "AROS COFFEE 一縷光",
           "tags": [
-            "早午餐"
+            "早午餐",
+            "義式"
           ],
           "address": "港都里麗山街332 號",
           "mapUrl": "https://maps.google.com/?cid=11737948012973440240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -7793,6 +7794,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJO8M55DWtQjQR0gzUEHx0A5A",
           "name": "bb.q CHICKEN洲子店",
           "tags": [
             "韓式"
@@ -7818,6 +7820,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJzTTV62WsQjQRo7NZX3qN3Ww",
           "name": "Beiyi Spare Ribs",
           "tags": [
             "便當"
@@ -7842,6 +7845,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJpzAb-5mtQjQRjYYhoB8h790",
           "name": "Bigtom Cafe 內湖店 - 無罪甜生活咖啡館｜鹹派",
           "tags": [
             "早午餐"
@@ -7863,15 +7867,15 @@
             5,
             6
           ],
-          "gist": "冰淇淋濃郁不死甜",
+          "gist": "冰淇淋濃郁不死甜，鹹食選擇多",
           "dishes": [
             "冰淇淋",
             "漢堡",
-            "麵食",
             "鹹派"
           ]
         },
         {
+          "placeId": "ChIJecc4RGKsQjQRqBL26F3o7UQ",
           "name": "Bonjour 日安",
           "tags": [
             "早午餐"
@@ -7897,9 +7901,9 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ8VoWi3ysQjQRJxngwFZTohs",
           "name": "CaLACaLA義大利廚房內湖店",
           "tags": [
-            "素食",
             "速食",
             "義式"
           ],
@@ -7920,14 +7924,14 @@
             5,
             6
           ],
-          "gist": "義大利麵美味份量足",
+          "gist": "義大利麵燉飯美味且份量十足",
           "dishes": [
-            "義大利麵",
             "蟹黃軟殼蟹燉飯",
             "椒麻牛排義大利麵"
           ]
         },
         {
+          "placeId": "ChIJW_hsTlGtQjQRyXikN3ZoLGA",
           "name": "Chick Way 烤雞 南洋風烤雞專家內湖州子店",
           "tags": [
             "速食"
@@ -7948,6 +7952,35 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJGyQACzmtQjQRPbruOPI2fog",
+          "name": "Fancy poke 夏威夷生魚飯 西湖店",
+          "tags": [
+            "飯"
+          ],
+          "address": "西湖里內湖路一段323巷18弄2號",
+          "mapUrl": "https://maps.google.com/?cid=9835359050188896829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 200,
+            "end": 400
+          },
+          "rating": 4.1,
+          "ratingCount": 327,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "食材新鮮美味，口味選擇多樣",
+          "dishes": [
+            "波奇碗",
+            "五穀飯"
+          ]
+        },
+        {
+          "placeId": "ChIJ-_btl3itQjQRZFvg25a4GaI",
           "name": "GET POWER 給力盒子 內科店",
           "tags": [
             "義式"
@@ -7967,16 +8000,16 @@
             4,
             5
           ],
-          "gist": "餐點美味新鮮，健康餐盒選擇",
+          "gist": "餐點美味新鮮",
           "dishes": [
             "滷雞腿",
             "打拋雞"
           ]
         },
         {
+          "placeId": "ChIJIfRQpWSsQjQRH6lLSQk6r1A",
           "name": "GREEN BUNNY restaurant",
           "tags": [
-            "素食",
             "義式"
           ],
           "address": "港墘里江南街96巷32號",
@@ -7999,6 +8032,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ-Tfh4MytQjQR0MhWRJGTLiQ",
           "name": "GROUN:D",
           "tags": [
             "速食"
@@ -8022,11 +8056,11 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ05QpBmatQjQRVhOHNGbzsXQ",
           "name": "HALOA POKE 夏威夷拌飯 瑞光店",
           "tags": [
             "飯",
-            "小吃",
-            "素食"
+            "小吃"
           ],
           "address": "內湖區瑞光路275號",
           "mapUrl": "https://maps.google.com/?cid=8408769599570907990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -8045,12 +8079,13 @@
             5,
             6
           ],
-          "gist": "食材新鮮美味，健康且可客製化",
+          "gist": "食材新鮮，口味健康",
           "dishes": [
             "夏威夷蓋飯"
           ]
         },
         {
+          "placeId": "ChIJz26kS7itQjQR1JhpoEVAXkM",
           "name": "Hao & TOAST 豪吐司",
           "tags": [
             "早午餐"
@@ -8074,30 +8109,7 @@
           "dishes": []
         },
         {
-          "name": "Hearty Sandwich 哈媞手作三明治-內湖店",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "內湖路一段591巷15弄1號",
-          "mapUrl": "https://maps.google.com/?cid=13159322157227435838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.1,
-          "ratingCount": 266,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJiZoHtiqtQjQRtKixdJ0fehw",
           "name": "KitchenNow @ 內湖洲子店",
           "tags": [
             "韓式",
@@ -8121,9 +8133,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJc17Avn2sQjQRFjjbDN4mk3c",
           "name": "La Pasta 義麵屋 內湖店",
           "tags": [
-            "素食",
+            "麵",
             "速食",
             "義式"
           ],
@@ -8147,9 +8160,9 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJnwpmyIWtQjQReryoq_5_csE",
           "name": "LEAVES Pasta Cafe 午葉內湖",
           "tags": [
-            "素食",
             "早午餐"
           ],
           "address": "港墘里瑞光路168號1樓",
@@ -8169,7 +8182,7 @@
             5,
             6
           ],
-          "gist": "健康美味，擺盤精美",
+          "gist": "餐點健康美味，擺盤精美",
           "dishes": [
             "酪梨主題餐點",
             "義大利麵",
@@ -8177,8 +8190,11 @@
           ]
         },
         {
+          "placeId": "ChIJ27QZUW6sQjQRKdZidoV-nAY",
           "name": "Marcus老倉庫內湖店",
           "tags": [
+            "飯",
+            "麵",
             "早午餐"
           ],
           "address": "西湖里瑞光路583巷25號多倫多大樓1樓",
@@ -8198,7 +8214,7 @@
             5,
             6
           ],
-          "gist": "餐點美味豐盛，份量充足",
+          "gist": "餐點美味豐富，份量十足",
           "dishes": [
             "早午餐",
             "義大利麵",
@@ -8206,10 +8222,33 @@
           ]
         },
         {
+          "placeId": "ChIJTexCaHysQjQRV0c7sDWhC24",
+          "name": "Midair kitchen",
+          "tags": [
+            "其他"
+          ],
+          "address": "湖元里陽光街345巷5號之1",
+          "mapUrl": "https://maps.google.com/?cid=7929608820877903703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": null,
+          "rating": 3.6,
+          "ratingCount": 92,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJNcGuYYetQjQRP49kUyqAlF0",
           "name": "Miss Energy 能量小姐 台北內科 直營門市 內科低卡餐盒|低脂便當|健身餐盒|健康餐盒|商務便當|必吃便當|減脂餐|低卡美食",
           "tags": [
             "飯",
-            "便當"
+            "便當",
+            "韓式"
           ],
           "address": "內湖路一段443號",
           "mapUrl": "https://maps.google.com/?cid=6743155461356556095&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -8226,7 +8265,7 @@
             4,
             5
           ],
-          "gist": "清爽美味，出餐速度快",
+          "gist": "餐點美味清爽",
           "dishes": [
             "低脂雞肉",
             "厚切牛排",
@@ -8235,6 +8274,7 @@
           ]
         },
         {
+          "placeId": "ChIJsWOmhR2tQjQRgPY7G12PxgU",
           "name": "Missing Donna",
           "tags": [
             "飯"
@@ -8263,6 +8303,7 @@
           ]
         },
         {
+          "placeId": "ChIJX3EHUnusQjQR-DwZAXjPHrg",
           "name": "Oh Ya BBQ 炭烤吐司",
           "tags": [
             "早午餐"
@@ -8286,6 +8327,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJwXzdMwCtQjQR96Z94XCyzqk",
           "name": "ONE GOOD烤肉飯（內湖店）",
           "tags": [
             "飯",
@@ -8316,6 +8358,7 @@
           ]
         },
         {
+          "placeId": "ChIJBQCOmmStQjQR0DvynmAtv7c",
           "name": "P.Ming泰式廚坊",
           "tags": [
             "速食",
@@ -8346,6 +8389,33 @@
           ]
         },
         {
+          "placeId": "ChIJGR0BXNutQjQRaEy687v-u78",
+          "name": "Pasta à Pepe 佩佩奶奶大份量義大利麵 內科港墘店",
+          "tags": [
+            "麵"
+          ],
+          "address": "港墘里港墘路161號",
+          "mapUrl": "https://maps.google.com/?cid=13815916365090540648&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 200,
+            "end": 400
+          },
+          "rating": 4.5,
+          "ratingCount": 398,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJoRiGam-sQjQRwgxqZ-whwFg",
           "name": "Pizza Hut必勝客西湖外送店",
           "tags": [
             "速食"
@@ -8367,12 +8437,13 @@
             5,
             6
           ],
-          "gist": "餐點熱騰騰，起司份量大方",
+          "gist": "餐點美味，起司份量大方",
           "dishes": [
             "總匯卡茲餅"
           ]
         },
         {
+          "placeId": "ChIJY9AYuMatQjQRwOZA2LK2-lc",
           "name": "Q Burger 內湖港墘店",
           "tags": [
             "早午餐"
@@ -8393,10 +8464,11 @@
             5,
             6
           ],
-          "gist": "環境舒適整潔",
+          "gist": "",
           "dishes": []
         },
         {
+          "placeId": "ChIJbYmKA_itQjQR40b3POfYGRM",
           "name": "Q Burger 內湖麗山店(直營)",
           "tags": [
             "速食",
@@ -8419,13 +8491,14 @@
             5,
             6
           ],
-          "gist": "餐點香氣十足",
+          "gist": "餐點香氣十足美味",
           "dishes": [
             "炒麵",
             "豬排"
           ]
         },
         {
+          "placeId": "ChIJ7TmCN2yrQjQRxyV0elfjq-k",
           "name": "RJK羅傑斯墨西哥廚房_Roger's Mexican Cuisine Kitchen",
           "tags": [
             "其他"
@@ -8450,9 +8523,9 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJCyKuHW-sQjQRLbLgae6QWSU",
           "name": "Second Floor 貳樓西湖店",
           "tags": [
-            "素食",
             "速食",
             "早午餐"
           ],
@@ -8476,10 +8549,12 @@
           "gist": "餐點美味且份量十足",
           "dishes": [
             "歐姆蛋",
-            "義大利麵"
+            "義大利麵",
+            "麵包"
           ]
         },
         {
+          "placeId": "ChIJ27KdYW-sQjQRUqov0ZzARjc",
           "name": "SUBWAY (洲子美食館店)",
           "tags": [
             "速食"
@@ -8505,6 +8580,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ27KdYW-sQjQRvnYr5paT2Qw",
           "name": "SUBWAY內湖瑞光店",
           "tags": [
             "速食"
@@ -8526,12 +8602,14 @@
             5,
             6
           ],
-          "gist": "食材新鮮，可客製化",
+          "gist": "食材新鮮，口味可客製化",
           "dishes": [
-            "沙拉"
+            "沙拉",
+            "蔬菜"
           ]
         },
         {
+          "placeId": "ChIJH0HPEeOtQjQR1GUkjTCP_dk",
           "name": "Takeout burger & cafe 內湖店",
           "tags": [
             "早午餐"
@@ -8555,10 +8633,12 @@
           ],
           "gist": "漢堡美味多汁，份量十足",
           "dishes": [
-            "漢堡"
+            "漢堡",
+            "肉排"
           ]
         },
         {
+          "placeId": "ChIJN9tRRmGsQjQRBRGzuiryq9k",
           "name": "The Antipodean Specialty Coffee（內湖店）",
           "tags": [
             "速食",
@@ -8584,10 +8664,11 @@
           "gist": "澳式早午餐新鮮美味",
           "dishes": [
             "皇后大早餐",
-            "澳式早午餐"
+            "早午餐"
           ]
         },
         {
+          "placeId": "ChIJy2nAxWWsQjQRW0Z8aTf37zU",
           "name": "The SOUP 蔬店。手作鍋物",
           "tags": [
             "火鍋",
@@ -8609,16 +8690,18 @@
             5,
             6
           ],
-          "gist": "食材新鮮，肉品優質且份量足",
+          "gist": "食材新鮮，份量充足",
           "dishes": [
-            "南洋風味冰淇淋"
+            "蔬菜",
+            "肉品",
+            "冰淇淋"
           ]
         },
         {
+          "placeId": "ChIJd8JMXwKtQjQRtcgmBVKpiOs",
           "name": "Timama kitchen",
           "tags": [
             "飯",
-            "素食",
             "早午餐",
             "義式"
           ],
@@ -8638,13 +8721,14 @@
             5,
             6
           ],
-          "gist": "創意料理風味十足，份量足",
+          "gist": "創意料理滑順美味，份量足",
           "dishes": [
             "燉飯",
             "烤雞"
           ]
         },
         {
+          "placeId": "ChIJtQtRfW6sQjQRzjpE_jb97ag",
           "name": "VASA 瓦薩美式餐廳 - 內科門市",
           "tags": [
             "義式"
@@ -8669,11 +8753,12 @@
           "gist": "披薩美味，菜單選擇多樣",
           "dishes": [
             "披薩",
-            "松露野菇披薩",
-            "義大利麵"
+            "義大利麵",
+            "咖啡"
           ]
         },
         {
+          "placeId": "ChIJ33RALDutQjQRrZ590vqvP1s",
           "name": "VEGE CREEK 蔬河 內湖瑞光店",
           "tags": [
             "素食"
@@ -8699,9 +8784,9 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJYa2b-KmtQjQRKBd6g69TiCs",
           "name": "Woopen木盆 內湖港墘門市",
           "tags": [
-            "素食",
             "速食",
             "早午餐"
           ],
@@ -8725,15 +8810,16 @@
           "gist": "沙拉新鮮爽脆，份量足",
           "dishes": [
             "沙拉",
+            "蛋白質",
             "佛卡夏"
           ]
         },
         {
+          "placeId": "ChIJg0AaVGWsQjQR2mReXgEo98w",
           "name": "YAYOI彌生軒 內湖瑞光店",
           "tags": [
             "飯",
-            "日式",
-            "韓式"
+            "日式"
           ],
           "address": "港墘里瑞光路407號1樓",
           "mapUrl": "https://maps.google.com/?cid=14769317489328153818&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -8752,7 +8838,7 @@
             5,
             6
           ],
-          "gist": "日式定食新鮮，肉品軟嫩",
+          "gist": "定食新鮮乾淨，口味美味",
           "dishes": [
             "定食",
             "鰻魚",
@@ -8782,6 +8868,7 @@
       ],
       "restaurants": [
         {
+          "placeId": "ChIJ5Z977qcCaDQRlVNqeXTJPMU",
           "name": "（板橋府中店） 林斯漢堡美式餐廳Lin's Burger",
           "tags": [
             "速食"
@@ -8807,6 +8894,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJXTCEMrECaDQRTp28EJbgmDc",
           "name": "18度C麻醬現做涼麵",
           "tags": [
             "麵"
@@ -8832,6 +8920,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJtUCyBa0CaDQR_MIylXrHS8E",
           "name": "23號鍋燒麵 No.23 Taiwanese Hot Pot Noodles",
           "tags": [
             "麵"
@@ -8852,15 +8941,16 @@
             5,
             6
           ],
-          "gist": "口味美味，份量充足",
+          "gist": "餐點美味份量足",
           "dishes": [
             "炒飯",
             "蝦仁炒飯",
             "鍋燒麵",
-            "滷蛋"
+            "蛤蜊湯"
           ]
         },
         {
+          "placeId": "ChIJITTKoagCaDQRxP6AHcS0xkA",
           "name": "5味臭臭鍋 板橋華興店",
           "tags": [
             "火鍋"
@@ -8886,6 +8976,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJHRtD7z0DaDQRmutO4OCQ98A",
           "name": "91號咖喱",
           "tags": [
             "飯"
@@ -8907,15 +8998,15 @@
             5,
             6
           ],
-          "gist": "濃郁豐富，份量十足",
+          "gist": "咖哩濃郁份量十足",
           "dishes": [
-            "咖哩",
             "炸豬排",
             "炸雞",
             "味噌湯"
           ]
         },
         {
+          "placeId": "ChIJxzAmtZsDaDQRnyNFAcrfHYY",
           "name": "一三七港式燒臘",
           "tags": [
             "便當"
@@ -8940,6 +9031,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJyV9wLwQDaDQR7KB8RhSNvPg",
           "name": "一寶魯肉飯｜雞肉飯｜爌肉飯｜滿300元外送",
           "tags": [
             "飯"
@@ -8964,6 +9056,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ7zjsM3WnQjQR_o3gI8DjX2o",
           "name": "九湯屋日式拉麵 新北板橋華興店",
           "tags": [
             "日式"
@@ -8988,6 +9081,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJryZqJacCaDQRC2pBsPHqu9E",
           "name": "二兩牛肉麵",
           "tags": [
             "麵"
@@ -9008,14 +9102,14 @@
             5,
             6
           ],
-          "gist": "美味道地，風味十足",
+          "gist": "口味酸辣風味道地",
           "dishes": [
             "重慶小麵",
-            "酸辣粉",
-            "小菜"
+            "酸辣粉"
           ]
         },
         {
+          "placeId": "ChIJpUygfCUDaDQRVIkRPiuhW-Y",
           "name": "二師兄肉羹專賣店-南雅店",
           "tags": [
             "飯"
@@ -9037,7 +9131,7 @@
             5,
             6
           ],
-          "gist": "美味好吃",
+          "gist": "餐點美味選擇豐富",
           "dishes": [
             "肉羹",
             "雞肉羹",
@@ -9046,6 +9140,7 @@
           ]
         },
         {
+          "placeId": "ChIJq4oCr1MDaDQRAXkbJC6pFMo",
           "name": "八戶平價日本料理",
           "tags": [
             "日式"
@@ -9070,6 +9165,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJHeIH2bACaDQRLr3VHEdNSaE",
           "name": "三萬臭臭鍋-亞東店",
           "tags": [
             "火鍋"
@@ -9095,10 +9191,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJGzQ4u6cCaDQRNFdoPgILM0k",
           "name": "久天日式炭燒",
           "tags": [
-            "日式",
-            "韓式"
+            "日式"
           ],
           "address": "鄉雲里館前西路3號",
           "mapUrl": "https://maps.google.com/?cid=5274571692845848372&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -9117,6 +9213,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJwblBhQsDaDQRPTlJx47hE6E",
           "name": "久念日式涼麵、湯年糕、魯肉飯、麵疙瘩",
           "tags": [
             "飯"
@@ -9139,6 +9236,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJv04GVO0DaDQR5eJO2yS1GIA",
           "name": "千尋味重慶名吃酸辣粉",
           "tags": [
             "小吃"
@@ -9159,12 +9257,13 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁，麵條Q彈",
+          "gist": "湯頭濃郁麵條Q彈",
           "dishes": [
             "酸辣粉"
           ]
         },
         {
+          "placeId": "ChIJ5fq3bRADaDQRtzHGx9oJGxw",
           "name": "大戶屋 板橋愛買店",
           "tags": [
             "日式"
@@ -9186,14 +9285,13 @@
             5,
             6
           ],
-          "gist": "米飯美味Q彈",
+          "gist": "米飯美味Q彈可續",
           "dishes": [
-            "日式定食",
-            "鍋物",
             "米飯"
           ]
         },
         {
+          "placeId": "ChIJ7U_aHqYCaDQREMVOxD9fINg",
           "name": "大哥腿庫飯",
           "tags": [
             "飯"
@@ -9218,6 +9316,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJJerFq2IDaDQRhyFlWhD9L2I",
           "name": "大觀越南美食",
           "tags": [
             "小吃"
@@ -9242,19 +9341,21 @@
           "dishes": []
         },
         {
-          "name": "小倆口臭臭鍋",
+          "placeId": "ChIJX5dZBKQCaDQRdsLhmbJgLWI",
+          "name": "小木屋鬆餅 板橋忠孝店",
           "tags": [
-            "火鍋"
+            "速食"
           ],
-          "address": "福星里重慶路153號",
-          "mapUrl": "https://maps.google.com/?cid=9601794654089814584&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "address": "福星里忠孝路108號",
+          "mapUrl": "https://maps.google.com/?cid=7074416909871071862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
           "price": {
             "start": 1,
             "end": 200
           },
-          "rating": 3.8,
-          "ratingCount": 59,
+          "rating": 4,
+          "ratingCount": 1355,
           "lunchDays": [
+            0,
             1,
             2,
             3,
@@ -9266,6 +9367,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJI6u9BLwDaDQRk21ERyO6l3A",
           "name": "川味小吃",
           "tags": [
             "小吃"
@@ -9291,6 +9393,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJrx4NPgADaDQRXVJTh0iX-_M",
           "name": "不囉嗦小吃",
           "tags": [
             "小吃"
@@ -9311,6 +9414,30 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJb7d0OZ0DaDQRrgnT2cNlqw0",
+          "name": "仁中便當24h",
+          "tags": [
+            "便當"
+          ],
+          "address": "留侯里館前西路177號",
+          "mapUrl": "https://maps.google.com/?cid=984992835358099886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": null,
+          "rating": 2.6,
+          "ratingCount": 9,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ03uiNU0DaDQRSC-bvMRghhU",
           "name": "月心PAYDAY早午餐",
           "tags": [
             "早午餐"
@@ -9332,7 +9459,7 @@
             5,
             6
           ],
-          "gist": "份量十足，美味受歡迎",
+          "gist": "餐點份量十足美味",
           "dishes": [
             "三明治",
             "花生醬肉蛋吐司",
@@ -9340,35 +9467,7 @@
           ]
         },
         {
-          "name": "木子李早午餐",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "鄉雲里大明街18-8號",
-          "mapUrl": "https://maps.google.com/?cid=15348932024221079783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.3,
-          "ratingCount": 51,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "份量十足，酥脆美味",
-          "dishes": [
-            "漢堡",
-            "蛋餅",
-            "炒麵"
-          ]
-        },
-        {
+          "placeId": "ChIJd_4bjBuoQjQRO0SSrB5YmJE",
           "name": "王品牛排板橋縣民大道店",
           "tags": [
             "其他"
@@ -9380,7 +9479,7 @@
             "end": 2000
           },
           "rating": 4.8,
-          "ratingCount": 13080,
+          "ratingCount": 13082,
           "lunchDays": [
             0,
             1,
@@ -9390,14 +9489,15 @@
             5,
             6
           ],
-          "gist": "鮮嫩入味，精緻美味",
+          "gist": "牛排鮮嫩菜餚精緻",
           "dishes": [
             "牛排",
             "現烤麵包",
-            "湯品"
+            "濃郁湯品"
           ]
         },
         {
+          "placeId": "ChIJK9zql-gDaDQRYnwyxbo_9SI",
           "name": "丼畫家｜生魚片丼飯｜日式料理",
           "tags": [
             "飯",
@@ -9419,15 +9519,15 @@
             4,
             5
           ],
-          "gist": "新鮮厚實，份量大",
+          "gist": "生魚片新鮮份量大",
           "dishes": [
             "生魚片",
             "鮭魚",
-            "醋飯",
-            "鮮魚蘿蔔湯"
+            "醋飯"
           ]
         },
         {
+          "placeId": "ChIJRe4wa6gCaDQR-aKGnxSpV5k",
           "name": "台南郭虱目魚湯",
           "tags": [
             "小吃"
@@ -9452,6 +9552,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJe7PKh-cDaDQRhRBubG-Tedo",
           "name": "台越美食炸物",
           "tags": [
             "速食"
@@ -9471,6 +9572,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJCXX52KIDaDQRhzdsglBncqs",
           "name": "台藝溫州大餛飩",
           "tags": [
             "麵"
@@ -9494,6 +9596,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ01XzXJ0DaDQRzTJWDBlSTSE",
           "name": "台灣G湯 -新北板橋(南雅店）",
           "tags": [
             "飯"
@@ -9519,6 +9622,32 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJW6sFaqcCaDQRtR_rGGcHk2U",
+          "name": "四季便當",
+          "tags": [
+            "便當"
+          ],
+          "address": "景星里重慶路58號",
+          "mapUrl": "https://maps.google.com/?cid=7319201958788276149&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.7,
+          "ratingCount": 166,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJW0kt37ACaDQRpUFBG5MaS9s",
           "name": "四海快餐",
           "tags": [
             "便當"
@@ -9539,17 +9668,16 @@
             5,
             6
           ],
-          "gist": "美味經濟，配菜豐富",
+          "gist": "便當經濟實惠美味",
           "dishes": [
-            "便當",
-            "湯品"
+            "便當"
           ]
         },
         {
+          "placeId": "ChIJyRw_7qQCaDQR9yT8hEwY3-4",
           "name": "正宗麵線",
           "tags": [
-            "麵",
-            "小吃"
+            "麵"
           ],
           "address": "仁愛里仁愛路84號",
           "mapUrl": "https://maps.google.com/?cid=17212503017761023223&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -9570,6 +9698,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJXXn5bAEDaDQROe4oG7e0Okg",
           "name": "永豐味牛肉麵",
           "tags": [
             "麵"
@@ -9594,56 +9723,7 @@
           "dishes": []
         },
         {
-          "name": "生日快樂早午餐",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "華福里縣民大道一段104號",
-          "mapUrl": "https://maps.google.com/?cid=13877791069475304843&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.3,
-          "ratingCount": 160,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
-          "name": "白吐司",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "華東里南雅南路二段11-23號",
-          "mapUrl": "https://maps.google.com/?cid=4443035783648302587&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.3,
-          "ratingCount": 126,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJnXiJ230DaDQRpMugsoWfg2E",
           "name": "石二鍋 板橋愛買南雅店",
           "tags": [
             "火鍋"
@@ -9665,14 +9745,14 @@
             5,
             6
           ],
-          "gist": "食材新鮮，湯頭美味",
+          "gist": "湯頭美味食材新鮮",
           "dishes": [
             "牛奶鍋",
-            "麻辣鍋",
-            "白飯"
+            "麻辣鍋"
           ]
         },
         {
+          "placeId": "ChIJ39BHikMDaDQR80nO5EvW5lc",
           "name": "石頭鐵板城",
           "tags": [
             "便當"
@@ -9693,38 +9773,14 @@
             5,
             6
           ],
-          "gist": "份量充足，美味新鮮",
-          "dishes": []
-        },
-        {
-          "name": "向陽晨間飲食館二館 （板橋）",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "四川路二段47巷4弄17號1樓",
-          "mapUrl": "https://maps.google.com/?cid=440625176201466337&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.2,
-          "ratingCount": 770,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "口味豐富，酥脆美味",
+          "gist": "餐點新鮮份量充足",
           "dishes": [
-            "薯餅蛋餅",
-            "漢堡"
+            "肉類",
+            "蔬菜"
           ]
         },
         {
+          "placeId": "ChIJGdxopLsCaDQRlqtiWuMk8xg",
           "name": "好生活素食",
           "tags": [
             "素食"
@@ -9749,6 +9805,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJyV6TgqgCaDQR9J04K0VlYXk",
           "name": "好美素食園",
           "tags": [
             "便當",
@@ -9775,6 +9832,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ5yxj34wDaDQR3qon5HS1qxk",
           "name": "好食Soyummy健康餐 板橋府中店",
           "tags": [
             "其他"
@@ -9800,6 +9858,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJTbLQEa8CaDQRwvP1CkI-3WM",
           "name": "早。自己2.0 朝食製作所",
           "tags": [
             "早午餐"
@@ -9821,44 +9880,14 @@
             5,
             6
           ],
-          "gist": "用料實在，酥脆香甜",
+          "gist": "用料實在美味酥脆",
           "dishes": [
             "蛋餅",
-            "菠蘿麵包",
-            "麵包"
+            "菠蘿麵包"
           ]
         },
         {
-          "name": "早樂子早午餐 板橋重慶店",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "景星里重慶路108號",
-          "mapUrl": "https://maps.google.com/?cid=10886495765400983341&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.4,
-          "ratingCount": 42,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "風味十足，份量足",
-          "dishes": [
-            "酥炸地瓜薯條",
-            "蘿蔔糕蛋餅",
-            "炒泡麵",
-            "雞肉"
-          ]
-        },
-        {
+          "placeId": "ChIJJWdCQQIDaDQRZLEzzG6ERSc",
           "name": "米多莉義式廚房",
           "tags": [
             "義式"
@@ -9879,15 +9908,15 @@
             5,
             6
           ],
-          "gist": "濃郁美味，份量很足",
+          "gist": "醬汁濃郁食材豐富",
           "dishes": [
             "義大利麵",
             "燉飯",
-            "松露奶油醬",
             "蛤蜊"
           ]
         },
         {
+          "placeId": "ChIJGfkUaaECaDQRggSp4vewj4I",
           "name": "老川誠 手感老麵",
           "tags": [
             "麵"
@@ -9912,6 +9941,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJG48VoSUDaDQRt8cqQdJOzKQ",
           "name": "老先覺功夫窯燒鍋 板橋國慶PLUS店",
           "tags": [
             "火鍋"
@@ -9933,14 +9963,15 @@
             5,
             6
           ],
-          "gist": "湯頭清澈濃郁，魚肉滑順",
+          "gist": "湯頭濃郁魚肉滑順",
           "dishes": [
             "金湯酸菜魚",
             "沙巴魚",
-            "蔬菜"
+            "水蓮"
           ]
         },
         {
+          "placeId": "ChIJrc55SdYDaDQRfs9ECJEy4VM",
           "name": "老兵手工包子饅頭（板橋店）",
           "tags": [
             "小吃"
@@ -9961,13 +9992,13 @@
             5,
             6
           ],
-          "gist": "內餡美味，份量很大",
+          "gist": "內餡美味份量很大",
           "dishes": [
-            "雪菜包",
-            "包子"
+            "雪菜包"
           ]
         },
         {
+          "placeId": "ChIJI51CJrECaDQRy03PlGeAi00",
           "name": "老陝原汁牛肉麵",
           "tags": [
             "麵"
@@ -9989,7 +10020,7 @@
             5,
             6
           ],
-          "gist": "軟嫩濃郁，份量十足",
+          "gist": "牛肉軟嫩湯頭濃郁",
           "dishes": [
             "牛肉麵",
             "滷肉飯",
@@ -9997,6 +10028,7 @@
           ]
         },
         {
+          "placeId": "ChIJuZ_cOAADaDQRYM-8oaIzdzA",
           "name": "老湯石頭火鍋",
           "tags": [
             "火鍋"
@@ -10021,6 +10053,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJcyqMaKYCaDQRjr4SuPluMY0",
           "name": "肉羹林 嘉義雞肉飯-華興店",
           "tags": [
             "飯",
@@ -10048,6 +10081,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJq5LWd6cCaDQRraYMWfwMlNc",
           "name": "西堤牛排 板橋中山店",
           "tags": [
             "其他"
@@ -10073,6 +10107,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJI7peLj0DaDQRC27UV1VcPTM",
           "name": "吳記原汁牛肉麵",
           "tags": [
             "麵"
@@ -10094,12 +10129,13 @@
             5,
             6
           ],
-          "gist": "肉質軟嫩，湯頭濃郁",
+          "gist": "肉質軟嫩湯頭濃郁",
           "dishes": [
             "牛肉麵"
           ]
         },
         {
+          "placeId": "ChIJF5fwYxADaDQR7meUllplAAw",
           "name": "妙觀音素食-板橋亞東店",
           "tags": [
             "素食"
@@ -10121,15 +10157,14 @@
             5,
             6
           ],
-          "gist": "風味十足，份量充足",
+          "gist": "風味十足份量充足",
           "dishes": [
             "滷味",
-            "麻婆豆腐",
-            "麵食",
-            "飯類"
+            "麻婆豆腐"
           ]
         },
         {
+          "placeId": "ChIJOXuwdRUDaDQRkhLo30tHM-g",
           "name": "快樂小吃店",
           "tags": [
             "小吃"
@@ -10154,6 +10189,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJIyz2OqIDaDQRt7vNNRheB8Q",
           "name": "快餐屋滷肉飯、鍋燒麵",
           "tags": [
             "飯",
@@ -10179,6 +10215,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJO4D_w1MDaDQRnA5ElXDhJhw",
           "name": "我家牛排 板橋遠科旗艦店",
           "tags": [
             "速食"
@@ -10190,7 +10227,7 @@
             "end": 600
           },
           "rating": 4.5,
-          "ratingCount": 7988,
+          "ratingCount": 7989,
           "lunchDays": [
             0,
             1,
@@ -10200,7 +10237,7 @@
             5,
             6
           ],
-          "gist": "美味入味，選擇多樣",
+          "gist": "餐點美味選擇多樣",
           "dishes": [
             "炸雞翅",
             "滷豬腳",
@@ -10208,6 +10245,7 @@
           ]
         },
         {
+          "placeId": "ChIJ3Qfcp7UDaDQRmrZqHXyfmbw",
           "name": "貝兒義式餐廳",
           "tags": [
             "義式"
@@ -10228,15 +10266,15 @@
             5,
             6
           ],
-          "gist": "美味可口，份量充足",
+          "gist": "餐點美味份量充足",
           "dishes": [
             "義大利麵",
             "燉飯",
-            "薄皮披薩",
-            "湯品"
+            "薄皮披薩"
           ]
         },
         {
+          "placeId": "ChIJcYMHBAADaDQRbM7PLkqNEXs",
           "name": "辰噌拉麵-板橋美食-餐廳-日本料理",
           "tags": [
             "其他"
@@ -10260,6 +10298,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ4fCiRKcCaDQRDAEeRzPKu0U",
           "name": "那懿村 懿品小珍 板橋店",
           "tags": [
             "麵"
@@ -10281,14 +10320,14 @@
             5,
             6
           ],
-          "gist": "湯頭風味十足，鴨血軟嫩",
+          "gist": "湯頭夠味鴨血軟嫩",
           "dishes": [
             "麻辣鴨血",
-            "臭豆腐",
-            "小菜"
+            "臭豆腐"
           ]
         },
         {
+          "placeId": "ChIJNwi5PaQCaDQRsdU0Hxpy91w",
           "name": "京豐福涼麵專賣",
           "tags": [
             "麵",
@@ -10310,15 +10349,15 @@
             5,
             6
           ],
-          "gist": "風味十足，份量十足",
+          "gist": "口味豐富份量十足",
           "dishes": [
             "涼麵",
-            "麻醬涼麵",
-            "番茄醬涼麵",
-            "味噌貢丸湯"
+            "味噌貢丸湯",
+            "滷肉飯"
           ]
         },
         {
+          "placeId": "ChIJDxD1TFkDaDQRAVzV61O262Y",
           "name": "和田蔬食",
           "tags": [
             "素食"
@@ -10337,7 +10376,7 @@
             5,
             6
           ],
-          "gist": "健康美味，份量充足",
+          "gist": "蔬食美味份量充足",
           "dishes": [
             "皮蛋炒泡麵",
             "紅燒麵",
@@ -10345,6 +10384,7 @@
           ]
         },
         {
+          "placeId": "ChIJCXlvcqwDaDQRM3tTnrTGZ5M",
           "name": "咖哩作伙《豬排咖哩蛋包飯》日式豬排｜平價丼飯｜蛋包飯｜咖哩｜藍帶｜小火鍋",
           "tags": [
             "日式"
@@ -10366,7 +10406,7 @@
             5,
             6
           ],
-          "gist": "深受喜愛，份量充足",
+          "gist": "餐點美味份量充足",
           "dishes": [
             "咖哩",
             "蛋包飯",
@@ -10375,6 +10415,7 @@
           ]
         },
         {
+          "placeId": "ChIJIeqjUQADaDQRY0Eoi8kesjQ",
           "name": "宜品乾拌麵 華興店",
           "tags": [
             "麵"
@@ -10396,14 +10437,15 @@
             5,
             6
           ],
-          "gist": "美味Q彈，口味獨特",
+          "gist": "麵條美味Q彈",
           "dishes": [
             "乾拌麵",
-            "雙醬麵",
-            "香煎雞胸肉麵"
+            "雙醬乾拌麵",
+            "香煎雞胸肉乾拌麵"
           ]
         },
         {
+          "placeId": "ChIJSfOlTCcDaDQR3_RtlILfiZA",
           "name": "府中雞肉飯專門店",
           "tags": [
             "飯",
@@ -10426,13 +10468,13 @@
             5,
             6
           ],
-          "gist": "去骨鮮嫩，風味醬汁",
+          "gist": "雞肉鮮嫩風味醬汁佳",
           "dishes": [
-            "去骨嫩雞",
-            "辣椒"
+            "去骨嫩雞"
           ]
         },
         {
+          "placeId": "ChIJoRFz3rMCaDQRFmi8fsoIOIs",
           "name": "東之寶便當",
           "tags": [
             "飯",
@@ -10453,15 +10495,40 @@
             4,
             5
           ],
-          "gist": "大份美味，調味適中",
+          "gist": "份量大且不油膩",
           "dishes": [
             "炸雞排",
             "排骨",
-            "滷雞腿",
-            "湯品"
+            "滷雞腿"
           ]
         },
         {
+          "placeId": "ChIJ300mg3EDaDQRkIyPO_ZGtE4",
+          "name": "松記腿庫飯",
+          "tags": [
+            "便當"
+          ],
+          "address": "新興里南雅東路16-3號",
+          "mapUrl": "https://maps.google.com/?cid=5671235854141459600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.3,
+          "ratingCount": 33,
+          "lunchDays": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ35cJ3ggDaDQRuRHzoEEa2tk",
           "name": "板橋不吃不可奇雞便當",
           "tags": [
             "便當"
@@ -10486,6 +10553,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJk48TFKYCaDQRRwO4LpUBxQE",
           "name": "板橋老山東牛肉麵",
           "tags": [
             "麵",
@@ -10508,13 +10576,14 @@
             5,
             6
           ],
-          "gist": "入味香濃，湯品暖胃",
+          "gist": "滷得入味湯頭香濃",
           "dishes": [
             "花干",
             "芋頭米粉湯"
           ]
         },
         {
+          "placeId": "ChIJSdSdX6QCaDQRE8TzhYolVHg",
           "name": "板橋素食紅燒麵",
           "tags": [
             "麵",
@@ -10540,6 +10609,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJf9ZaYqcCaDQRZpoTZhc9Y_U",
           "name": "板橋壽司(關東煮）",
           "tags": [
             "小吃",
@@ -10561,7 +10631,7 @@
             5,
             6
           ],
-          "gist": "美味順口",
+          "gist": "口味美味湯頭可續",
           "dishes": [
             "關東煮",
             "蛋包飯",
@@ -10569,6 +10639,7 @@
           ]
         },
         {
+          "placeId": "ChIJde9LLrECaDQR_IYceg9vVdU",
           "name": "板橋德興街素食小吃（炒麵油飯甜不辣）",
           "tags": [
             "素食"
@@ -10592,6 +10663,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJS20FWbsCaDQRZTTzjPIxAw8",
           "name": "板橋歡喜紅蔥飯",
           "tags": [
             "飯"
@@ -10616,6 +10688,32 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJI6afi9UDaDQRLgh7CGSwHDY",
+          "name": "林口正饌素包子饅頭專賣店",
+          "tags": [
+            "素食"
+          ],
+          "address": "重慶里國慶路173號",
+          "mapUrl": "https://maps.google.com/?cid=3899185321081505838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.4,
+          "ratingCount": 61,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJxfAvaK8CaDQR9ZNW30jzSNI",
           "name": "爭鮮PLUS 南雅愛買店",
           "tags": [
             "其他"
@@ -10637,13 +10735,14 @@
             5,
             6
           ],
-          "gist": "美味新鮮",
+          "gist": "壽司美味新鮮",
           "dishes": [
             "壽司",
             "鮭魚壽司"
           ]
         },
         {
+          "placeId": "ChIJlfCceqgDaDQRYYz66f42m9w",
           "name": "狀元小廚",
           "tags": [
             "便當"
@@ -10667,6 +10766,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJHyFXB2MDaDQRCMd_qR7M8ts",
           "name": "肯德基KFC-板橋忠孝餐廳",
           "tags": [
             "速食"
@@ -10688,7 +10788,7 @@
             5,
             6
           ],
-          "gist": "美味可口",
+          "gist": "餐點美味口感佳",
           "dishes": [
             "炸雞",
             "蛋撻",
@@ -10696,6 +10796,7 @@
           ]
         },
         {
+          "placeId": "ChIJjSVqYEkDaDQRjzWJjdfAwD8",
           "name": "花路火鍋",
           "tags": [
             "火鍋"
@@ -10720,6 +10821,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJA5SdFrsCaDQRUQfhTMHZOmg",
           "name": "金米王池上飯包",
           "tags": [
             "飯",
@@ -10741,13 +10843,14 @@
             5,
             6
           ],
-          "gist": "份量十足，豐盛美味",
+          "gist": "份量十足配菜豐盛",
           "dishes": [
             "炸雞腿",
             "烤雞腿"
           ]
         },
         {
+          "placeId": "ChIJwZJxnqcCaDQRBdUNdOipLNg",
           "name": "金扶輪鐵板燒",
           "tags": [
             "小吃"
@@ -10769,14 +10872,15 @@
             5,
             6
           ],
-          "gist": "風味十足，鮮嫩美味",
+          "gist": "肉質鮮嫩風味十足",
           "dishes": [
             "牛肉",
             "雞肉",
-            "蔬菜"
+            "新鮮蔬菜"
           ]
         },
         {
+          "placeId": "ChIJ2fBuQKUCaDQRoUxRQADfx4Y",
           "name": "金師傅",
           "tags": [
             "便當"
@@ -10801,6 +10905,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJCeN_5aYCaDQRU5ZKB20q1D0",
           "name": "金賞味成都牛肉麵",
           "tags": [
             "麵"
@@ -10826,26 +10931,7 @@
           "dishes": []
         },
         {
-          "name": "阿玉麵店",
-          "tags": [
-            "麵"
-          ],
-          "address": "大豐里仁愛路73巷12號",
-          "mapUrl": "https://maps.google.com/?cid=7211113130391928156&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": null,
-          "rating": 4.7,
-          "ratingCount": 7,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJsaPaQaYCaDQR36BFQz8FoHk",
           "name": "阿甘水餃",
           "tags": [
             "小吃"
@@ -10866,13 +10952,14 @@
             4,
             5
           ],
-          "gist": "份量大且夠味",
+          "gist": "份量大且口味夠味",
           "dishes": [
             "炒飯",
             "水餃"
           ]
         },
         {
+          "placeId": "ChIJpVko5qgCaDQRG0bQp9g41FE",
           "name": "南雅牛肉麵館",
           "tags": [
             "小吃"
@@ -10894,14 +10981,15 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁，肉質軟嫩",
+          "gist": "湯頭濃郁肉質軟嫩",
           "dishes": [
             "紅燒牛肉麵",
-            "牛肉",
+            "牛肉麵",
             "水餃"
           ]
         },
         {
+          "placeId": "ChIJkYzlcq8CaDQRJ0b2lP_zn6c",
           "name": "南雅平價麵店",
           "tags": [
             "麵",
@@ -10923,13 +11011,14 @@
             5,
             6
           ],
-          "gist": "麵條Q彈，風味獨特",
+          "gist": "麵條Q彈風味獨特",
           "dishes": [
             "肉燥麵",
             "酸辣麵"
           ]
         },
         {
+          "placeId": "ChIJg8vq07oCaDQR2Xl5tOtCpgU",
           "name": "巷仔內劉媽媽牛肉麵",
           "tags": [
             "麵"
@@ -10955,6 +11044,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJNeLGhkQDaDQRXISFCPSAheM",
           "name": "星雨蔬坊（素食）",
           "tags": [
             "素食"
@@ -10979,6 +11069,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ00TaQZIDaDQRozDWVkSUFAk",
           "name": "洣唰專業麵線-板橋總店",
           "tags": [
             "麵"
@@ -11003,6 +11094,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJr38NnaQCaDQRHttEWg4uYqw",
           "name": "津之芳生魚片專賣店（重慶店）",
           "tags": [
             "小吃",
@@ -11029,30 +11121,7 @@
           "dishes": []
         },
         {
-          "name": "津政好小火鍋",
-          "tags": [
-            "火鍋"
-          ],
-          "address": "瑞興里四川路23號",
-          "mapUrl": "https://maps.google.com/?cid=15585410750567773462&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 200,
-            "end": 400
-          },
-          "rating": 4.5,
-          "ratingCount": 553,
-          "lunchDays": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJL9JqDqGpQjQRcLVqTtank3I",
           "name": "洪龍大腸. 蚵仔麵線",
           "tags": [
             "麵"
@@ -11074,14 +11143,15 @@
             5,
             6
           ],
-          "gist": "美味豐富且份量充足的麵線",
+          "gist": "料好實在份量足",
           "dishes": [
-            "麵線",
+            "蚵仔麵線",
             "蚵仔",
             "豬大腸"
           ]
         },
         {
+          "placeId": "ChIJqY3lMQADaDQRE_Khx4e8nWI",
           "name": "炸大蔬",
           "tags": [
             "素食"
@@ -11097,13 +11167,14 @@
           "lunchDays": [
             1
           ],
-          "gist": "酥脆美味且不油膩的蔬菜炸物",
+          "gist": "酥脆多汁不油膩",
           "dishes": [
             "炸節瓜",
             "杏鮑菇"
           ]
         },
         {
+          "placeId": "ChIJM4RgzqYCaDQRCkcHDyLjIL4",
           "name": "皇家傳承",
           "tags": [
             "麵"
@@ -11124,7 +11195,7 @@
             5,
             6
           ],
-          "gist": "湯頭濃郁肉質軟嫩的美味餐點",
+          "gist": "牛肉軟嫩湯頭濃郁",
           "dishes": [
             "牛肉麵",
             "炸雞",
@@ -11132,6 +11203,7 @@
           ]
         },
         {
+          "placeId": "ChIJrwqTJ2QDaDQRORoqI3CdD6A",
           "name": "皇家傳承牛肉麵-亞東門市",
           "tags": [
             "麵"
@@ -11157,6 +11229,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ5TU1-B2oQjQREi65MObFJ7A",
           "name": "紅蔥頭麵食館",
           "tags": [
             "麵",
@@ -11178,49 +11251,28 @@
             5,
             6
           ],
-          "gist": "份量十足且口味實在的湯麵",
+          "gist": "湯頭美味，份量充足",
           "dishes": [
             "羊肉湯麵",
-            "藥膳湯頭"
+            "藥膳湯頭",
+            "麵條",
+            "小菜"
           ]
         },
         {
-          "name": "美式早餐屋",
+          "placeId": "ChIJdbGIH6YCaDQRIMTbVXTyorA",
+          "name": "美美自助餐",
           "tags": [
-            "早午餐"
+            "便當"
           ],
-          "address": "華福里華興街84號",
-          "mapUrl": "https://maps.google.com/?cid=2060847868233335571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "address": "華福里華興街88號",
+          "mapUrl": "https://maps.google.com/?cid=12728002078373037088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
           "price": {
             "start": 1,
             "end": 200
           },
-          "rating": 4.2,
-          "ratingCount": 41,
-          "lunchDays": [
-            0,
-            1,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
-          "name": "美晨早午餐",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "華德里德興街37巷24號",
-          "mapUrl": "https://maps.google.com/?cid=4863197870114373037&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.9,
-          "ratingCount": 203,
+          "rating": 3,
+          "ratingCount": 475,
           "lunchDays": [
             0,
             1,
@@ -11230,13 +11282,11 @@
             5,
             6
           ],
-          "gist": "美味可口且份量十足的餐點",
-          "dishes": [
-            "雞肉條",
-            "鐵板麵"
-          ]
+          "gist": "食材新鮮，口味道地",
+          "dishes": []
         },
         {
+          "placeId": "ChIJRSQXLkcDaDQRwj3HNqUkZkI",
           "name": "胖老爹美式炸鷄 板橋合宜店",
           "tags": [
             "速食"
@@ -11257,6 +11307,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJzZzjp9kDaDQRJ99AdwLkGts",
           "name": "郁日式炸豬排（板橋華興店）",
           "tags": [
             "飯",
@@ -11284,6 +11335,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJVepkIaICaDQRMHJm456Rzfw",
           "name": "食三麵屋",
           "tags": [
             "麵"
@@ -11304,7 +11356,7 @@
             5,
             6
           ],
-          "gist": "風味獨特且深受喜愛的美味餐點",
+          "gist": "餐點美味豐富",
           "dishes": [
             "炸雞",
             "咖哩",
@@ -11312,8 +11364,10 @@
           ]
         },
         {
+          "placeId": "ChIJRW9Dy7YCaDQRxIOLgtJ7Kkg",
           "name": "食月午日 Brunch & Cafe 板橋店",
           "tags": [
+            "速食",
             "早午餐"
           ],
           "address": "華德里四川路二段99巷4弄3號",
@@ -11333,12 +11387,13 @@
             5,
             6
           ],
-          "gist": "美味豐富的早午餐選項",
+          "gist": "餐點美味",
           "dishes": [
             "早午餐"
           ]
         },
         {
+          "placeId": "ChIJ4ZW2GqcCaDQRjWkGXxslZ-8",
           "name": "食客稻日式料理｜居酒屋｜生啤買三送一｜府中美食｜寵物友善｜串燒",
           "tags": [
             "日式"
@@ -11359,6 +11414,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ-Y8iN1sDaDQRU1uXbyKPPt4",
           "name": "家禾食堂（便當、麵線）",
           "tags": [
             "麵",
@@ -11383,6 +11439,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJw2ssPqUCaDQRKeQK0VO4_vY",
           "name": "家鄉越南小吃",
           "tags": [
             "小吃"
@@ -11404,13 +11461,15 @@
             5,
             6
           ],
-          "gist": "份量充足且口味極佳的越南料理",
+          "gist": "份量充足，口味受好評",
           "dishes": [
-            "河粉",
+            "牛肉河粉",
+            "雞肉河粉",
             "炸春捲"
           ]
         },
         {
+          "placeId": "ChIJjULdCwqpQjQR2bfI05VQwzE",
           "name": "柴田家炒泡麵専売店",
           "tags": [
             "麵"
@@ -11430,12 +11489,13 @@
             5,
             6
           ],
-          "gist": "口味多樣且份量充足的炒泡麵",
+          "gist": "口味多樣，份量充足",
           "dishes": [
             "炒泡麵"
           ]
         },
         {
+          "placeId": "ChIJCagDmKcCaDQRjd00w-UZGOo",
           "name": "桂客鐵板燒",
           "tags": [
             "其他"
@@ -11455,14 +11515,15 @@
             5,
             6
           ],
-          "gist": "肉質鮮嫩且蔬菜份量充足的鐵板燒",
+          "gist": "肉質鮮嫩，蔬菜份量足",
           "dishes": [
             "雞肉",
             "牛肉",
-            "新鮮蔬菜"
+            "蔬菜"
           ]
         },
         {
+          "placeId": "ChIJb9jaoKcCaDQR7AWjWOjcGUs",
           "name": "泰世界 雲南泰式料理",
           "tags": [
             "其他"
@@ -11484,7 +11545,7 @@
             5,
             6
           ],
-          "gist": "口味豐富且份量十足的泰式料理",
+          "gist": "口味豐富，份量十足",
           "dishes": [
             "泰式河粉",
             "綠咖哩",
@@ -11492,6 +11553,7 @@
           ]
         },
         {
+          "placeId": "ChIJB9WzcK8CaDQRGgdxNPfSAR4",
           "name": "泰味館泰式料理(愛買南雅店)",
           "tags": [
             "其他"
@@ -11513,7 +11575,7 @@
             5,
             6
           ],
-          "gist": "份量充足且道地的台式泰國菜",
+          "gist": "份量很足",
           "dishes": [
             "綠咖哩",
             "蝦醬空心菜",
@@ -11521,6 +11583,7 @@
           ]
         },
         {
+          "placeId": "ChIJba2tJvEDaDQRoXKyAe-vXcc",
           "name": "茗香園冰室 - 板橋店",
           "tags": [
             "飯"
@@ -11542,14 +11605,15 @@
             5,
             6
           ],
-          "gist": "美味又道地的港式茶餐廳餐點",
+          "gist": "餐點美味道地",
           "dishes": [
             "XO醬豬扒炒飯",
-            "炸蝦仁芋頭春捲",
+            "酥炸蝦仁芋頭春捲",
             "奶黃流沙西多士"
           ]
         },
         {
+          "placeId": "ChIJJfKJ9bMDaDQR6b-F54rMjEY",
           "name": "荖子鍋PLUS 愛買南雅店",
           "tags": [
             "火鍋"
@@ -11571,10 +11635,11 @@
             5,
             6
           ],
-          "gist": "食材新鮮且肉品高品質的火鍋",
+          "gist": "食材新鮮，品質高",
           "dishes": []
         },
         {
+          "placeId": "ChIJ1SRrRJUDaDQR7qtt8_WLdc8",
           "name": "起家雞韓式炸雞 板橋信義店",
           "tags": [
             "韓式",
@@ -11601,6 +11666,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJaViTKbECaDQRplH7Wh2-JdY",
           "name": "健康素食",
           "tags": [
             "素食"
@@ -11626,6 +11692,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ_ZvuIakCaDQRtdX_G_19Qns",
           "name": "啞巴板橋無名蚵仔麵",
           "tags": [
             "麵",
@@ -11651,6 +11718,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ90Jt4yIDaDQRhaPMtacbcEE",
           "name": "教堂小廚",
           "tags": [
             "義式"
@@ -11671,13 +11739,14 @@
             5,
             6
           ],
-          "gist": "風味極佳且份量十足的美味餐點",
+          "gist": "風味極佳，份量十足",
           "dishes": [
             "咖哩",
             "義大利麵"
           ]
         },
         {
+          "placeId": "ChIJKQbgfyYDaDQRTd4kMUahR5A",
           "name": "細細香 拌麵 干鍋 點心",
           "tags": [
             "麵"
@@ -11699,7 +11768,7 @@
             5,
             6
           ],
-          "gist": "豐盛美味且價格合理的餐點",
+          "gist": "餐點豐盛美味",
           "dishes": [
             "滷肉飯",
             "牛肉",
@@ -11707,6 +11776,7 @@
           ]
         },
         {
+          "placeId": "ChIJr6KoxtoDaDQRN7uWLzHq1ag",
           "name": "蛋白盒子健康低卡餐盒-板橋亞東店",
           "tags": [
             "便當"
@@ -11732,6 +11802,30 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJQxxU0R4DaDQROiHFHVm6XBg",
+          "name": "蛋白植-蔬食低卡餐盒（歡迎線上點餐外帶內用、外送）",
+          "tags": [
+            "便當"
+          ],
+          "address": "鄉雲里四川路一段102-1號",
+          "mapUrl": "https://maps.google.com/?cid=1755482846681964858&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 4.3,
+          "ratingCount": 85,
+          "lunchDays": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJzQSPF6YCaDQRDTVp4DW6hag",
           "name": "覓食廚房早午餐",
           "tags": [
             "早午餐"
@@ -11756,35 +11850,7 @@
           "dishes": []
         },
         {
-          "name": "軟蛋醬 蛋包飯專門製作所 新北板橋店",
-          "tags": [
-            "義式"
-          ],
-          "address": "福星里重慶路208號",
-          "mapUrl": "https://maps.google.com/?cid=5527378346993479491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4.8,
-          "ratingCount": 852,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "醬汁濃郁夠味的美味蛋包飯",
-          "dishes": [
-            "蛋包飯",
-            "黑松露白醬",
-            "日式黑咖哩"
-          ]
-        },
-        {
+          "placeId": "ChIJ7_1w3IsDaDQRnK-J8az3BQg",
           "name": "這一小鍋 板橋中山店【呷Bar店】",
           "tags": [
             "火鍋"
@@ -11810,20 +11876,20 @@
           "dishes": []
         },
         {
-          "name": "都來家早午餐",
+          "placeId": "ChIJy67NZ-8DaDQRDUnr9dFqFrk",
+          "name": "逢來閣台式自助餐店(美食街)",
           "tags": [
-            "早午餐"
+            "素食"
           ],
-          "address": "華德里德興街35號",
-          "mapUrl": "https://maps.google.com/?cid=8648084830996831918&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "address": "華東里南雅南路二段21號B1F",
+          "mapUrl": "https://maps.google.com/?cid=13336964796510849293&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
           "price": {
-            "start": 1,
-            "end": 200
+            "start": 200,
+            "end": 400
           },
-          "rating": 3.8,
-          "ratingCount": 120,
+          "rating": 2.4,
+          "ratingCount": 73,
           "lunchDays": [
-            0,
             1,
             2,
             3,
@@ -11831,10 +11897,11 @@
             5,
             6
           ],
-          "gist": "",
+          "gist": "菜餚美味可口",
           "dishes": []
         },
         {
+          "placeId": "ChIJQ-ChC4oDaDQRJh4UPTKHpjo",
           "name": "頂呱呱 板橋重慶店",
           "tags": [
             "速食"
@@ -11856,37 +11923,13 @@
             5,
             6
           ],
-          "gist": "香脆可口的美味地瓜薯條",
+          "gist": "香脆可口",
           "dishes": [
-            "地瓜薯條"
+            "甜地瓜薯條"
           ]
         },
         {
-          "name": "麥味登 板橋合安店",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "中山里合宜路115號",
-          "mapUrl": "https://maps.google.com/?cid=9314642793163808192&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.9,
-          "ratingCount": 264,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "美味可口的餐點",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJBRHvfAADaDQRIDBBOC00iqA",
           "name": "麥當勞-板橋南雅餐廳",
           "tags": [
             "速食"
@@ -11912,6 +11955,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJI57DZqcCaDQRa2qb7cmadsw",
           "name": "麥當勞-板橋重慶餐廳",
           "tags": [
             "速食"
@@ -11933,12 +11977,42 @@
             5,
             6
           ],
-          "gist": "美味可口的速食餐點",
+          "gist": "餐點美味",
           "dishes": []
         },
         {
+          "placeId": "ChIJY2kqNccDaDQRHlV49sC6QcA",
+          "name": "麥當勞-板橋愛買二餐廳",
+          "tags": [
+            "速食"
+          ],
+          "address": "華貴里貴興路101號",
+          "mapUrl": "https://maps.google.com/?cid=13853559266699924766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3,
+          "ratingCount": 718,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "熱騰騰又鬆軟",
+          "dishes": [
+            "鬆餅火腿蛋堡"
+          ]
+        },
+        {
+          "placeId": "ChIJYxuUOrECaDQR3WWxKzgBF0Y",
           "name": "喜餃俱樂部-素食",
           "tags": [
+            "便當",
             "素食"
           ],
           "address": "華德里德興街6號",
@@ -11961,6 +12035,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ4wMImwEDaDQR_RnEmGbHOXw",
           "name": "喫尤平價鐵板燒 - 湳雅店",
           "tags": [
             "其他"
@@ -11981,6 +12056,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJE54--6EDaDQRDUnHV62IlNc",
           "name": "富有素食坊 HOYA Vegetarian Restaurant",
           "tags": [
             "素食"
@@ -12005,6 +12081,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ-Y0g_k8DaDQR0mOtH4SPfWY",
           "name": "滋立火鍋 | 輕養生鍋物",
           "tags": [
             "火鍋"
@@ -12026,14 +12103,15 @@
             5,
             6
           ],
-          "gist": "食材新鮮且湯頭濃郁夠味的火鍋",
+          "gist": "食材新鮮，湯底夠味",
           "dishes": [
-            "蒜香蛤蜊湯",
-            "剝皮辣椒湯",
+            "蒜香蛤蜊",
+            "剝皮辣椒湯底",
             "霜淇淋"
           ]
         },
         {
+          "placeId": "ChIJM5v9UgkDaDQRME6D_-fEoDY",
           "name": "發肉燒肉餐酒 板橋三店",
           "tags": [
             "日式"
@@ -12055,7 +12133,7 @@
             5,
             6
           ],
-          "gist": "高品質且新鮮的頂級肉品海鮮",
+          "gist": "肉品高品質新鮮",
           "dishes": [
             "牛舌",
             "和牛",
@@ -12063,6 +12141,33 @@
           ]
         },
         {
+          "placeId": "ChIJjwh-GrsCaDQRgdfu2E-PE1I",
+          "name": "菜市場自助餐",
+          "tags": [
+            "便當"
+          ],
+          "address": "重慶里國慶路124號",
+          "mapUrl": "https://maps.google.com/?cid=5914228308772312961&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.8,
+          "ratingCount": 205,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ1bUmXbADaDQRrWZQyMAvw4A",
           "name": "詠桂牛肉麵",
           "tags": [
             "麵"
@@ -12086,6 +12191,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJzTUeX-oDaDQRyGG-RqOw9to",
           "name": "黃記小吃",
           "tags": [
             "小吃"
@@ -12105,7 +12211,7 @@
             4,
             5
           ],
-          "gist": "味道平衡且份量充足的台式料理",
+          "gist": "味道平衡，份量充足",
           "dishes": [
             "滷肉飯",
             "小菜",
@@ -12113,6 +12219,7 @@
           ]
         },
         {
+          "placeId": "ChIJ4enl2rACaDQRxtTrsc8yqhE",
           "name": "媽咪素食自助餐（土城）",
           "tags": [
             "素食"
@@ -12136,6 +12243,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJGVF-6RWoQjQR7y76cfMzVJM",
           "name": "愛。布朗曲 義式披薩/義大利麵/手作漢堡",
           "tags": [
             "麵",
@@ -12159,7 +12267,7 @@
             5,
             6
           ],
-          "gist": "美味可口的義式與異國料理",
+          "gist": "料理深受喜愛",
           "dishes": [
             "卡邦尼義大利麵",
             "海鮮義大利麵",
@@ -12168,6 +12276,7 @@
           ]
         },
         {
+          "placeId": "ChIJvTKGZVADaDQR3IHTSGpdMyk",
           "name": "愛布朗曲隔壁的窯烤披薩",
           "tags": [
             "其他"
@@ -12188,6 +12297,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJCVCDH3MDaDQRkhQCxwFcx-c",
           "name": "楓格早午餐",
           "tags": [
             "早午餐"
@@ -12212,6 +12322,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJnwfvwUkDaDQRC06uSn6_K8g",
           "name": "溪湖麵線",
           "tags": [
             "麵"
@@ -12236,6 +12347,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJxfAvaK8CaDQRSyvJUv8FFfU",
           "name": "義式屋古拉爵 板橋愛買店",
           "tags": [
             "義式"
@@ -12257,13 +12369,14 @@
             5,
             6
           ],
-          "gist": "美味可口的經典義式料理",
+          "gist": "美味可口",
           "dishes": [
             "披薩",
             "義大利麵"
           ]
         },
         {
+          "placeId": "ChIJ17PmJEMDaDQR6oHdX01XF-o",
           "name": "達利早餐Daily Breakfast-板橋貴興店",
           "tags": [
             "早午餐"
@@ -12285,13 +12398,14 @@
             5,
             6
           ],
-          "gist": "美味且令人滿足的特色早餐",
+          "gist": "餐點美味滿足",
           "dishes": [
             "千層麵蛋餅",
             "芋泥肉鬆吐司"
           ]
         },
         {
+          "placeId": "ChIJ0SHSHqYCaDQRGCQG2ZGiiTY",
           "name": "達美樂披薩 板橋華興店",
           "tags": [
             "速食",
@@ -12314,12 +12428,13 @@
             5,
             6
           ],
-          "gist": "受歡迎且美味的蔬食披薩馬芬",
+          "gist": "美味受歡迎",
           "dishes": [
             "白醬蔬食熔岩披薩馬芬"
           ]
         },
         {
+          "placeId": "ChIJY0EzEq8CaDQRqm_H-Yra_n4",
           "name": "鼎川霖鍋物 貴興店",
           "tags": [
             "火鍋"
@@ -12341,35 +12456,11 @@
             5,
             6
           ],
-          "gist": "食材新鮮多樣的高品質火鍋",
+          "gist": "食材新鮮多樣",
           "dishes": []
         },
         {
-          "name": "慢食早午餐",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "大豐里重慶路290巷22弄16號",
-          "mapUrl": "https://maps.google.com/?cid=5019864050863484949&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 4,
-          "ratingCount": 71,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "",
-          "dishes": []
-        },
-        {
+          "placeId": "ChIJ3xv7FKYCaDQR-4VdGKD5MrA",
           "name": "慢慢來 快一點｜板橋早午餐推薦｜人氣早餐｜府中必吃早點｜河粉蛋餅",
           "tags": [
             "早午餐"
@@ -12391,14 +12482,14 @@
             5,
             6
           ],
-          "gist": "美味豐盛且獨特的早午餐點",
+          "gist": "美味豐盛酥脆",
           "dishes": [
-            "早午餐",
             "辣味炸雞麵",
             "薯餅塔"
           ]
         },
         {
+          "placeId": "ChIJ5yp3JsoDaDQR5HdVcIzl3UI",
           "name": "慵懶貓早午餐",
           "tags": [
             "早午餐"
@@ -12422,6 +12513,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJLWWveqcCaDQRehgt5UDqHfM",
           "name": "福州手藝鍋貼",
           "tags": [
             "小吃"
@@ -12442,13 +12534,14 @@
             4,
             6
           ],
-          "gist": "用料實在且內餡多汁的點心",
+          "gist": "用料實在內餡多汁",
           "dishes": [
             "生煎包",
             "鍋貼"
           ]
         },
         {
+          "placeId": "ChIJoarq7nICaDQRGcvYjhnNVrs",
           "name": "福記燒臘便當 四川店",
           "tags": [
             "飯",
@@ -12472,13 +12565,14 @@
             5,
             6
           ],
-          "gist": "份量充足且美味的燒臘料理",
+          "gist": "燒臘美味份量足",
           "dishes": [
             "烤鴨",
             "叉燒"
           ]
         },
         {
+          "placeId": "ChIJc7Oym6ECaDQR3AJVFi2IjUE",
           "name": "福樂水餃牛肉麵",
           "tags": [
             "麵"
@@ -12499,13 +12593,15 @@
             5,
             6
           ],
-          "gist": "表現不錯的炒飯與熱炒料理",
+          "gist": "熱炒表現不錯",
           "dishes": [
             "炒飯",
-            "水餃"
+            "水餃",
+            "小菜"
           ]
         },
         {
+          "placeId": "ChIJx6aYBKcCaDQR_h03Li7ZBdM",
           "name": "綠色廚房有機蔬食·輕食·素食",
           "tags": [
             "素食"
@@ -12530,6 +12626,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJm_l3BsoDaDQR1saZ5JzSWQE",
           "name": "聚 日式鍋物 板橋中山店",
           "tags": [
             "火鍋"
@@ -12555,6 +12652,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJR73yB6QCaDQRUisn7yoyR8E",
           "name": "豪記燒臘專賣店",
           "tags": [
             "便當",
@@ -12576,13 +12674,14 @@
             5,
             6
           ],
-          "gist": "道地美味且皮脆多汁的港式燒臘",
+          "gist": "道地酥脆多汁",
           "dishes": [
             "烤鴨",
             "叉燒"
           ]
         },
         {
+          "placeId": "ChIJM3jwMQADaDQRIOfaJaXcc-Q",
           "name": "豪鍋幸福鍋物(板橋火鍋)",
           "tags": [
             "火鍋"
@@ -12608,6 +12707,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJq7q3oqcCaDQRtfE4CJahCCo",
           "name": "銀鳳樓餐廳有限公司",
           "tags": [
             "其他"
@@ -12629,7 +12729,7 @@
             5,
             6
           ],
-          "gist": "美味且份量十足的經典菜餚",
+          "gist": "美味份量十足",
           "dishes": [
             "寧式鱔糊",
             "醉雞",
@@ -12637,6 +12737,32 @@
           ]
         },
         {
+          "placeId": "ChIJc6Gcn7ECaDQRGdjtfE6Xctw",
+          "name": "摩斯漢堡 亞東醫院店",
+          "tags": [
+            "速食"
+          ],
+          "address": "華東里南雅南路二段21號B1",
+          "mapUrl": "https://maps.google.com/?cid=15884925199048366105&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.1,
+          "ratingCount": 127,
+          "lunchDays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJV41jEBaoQjQROpuyGozZ_KE",
           "name": "摩斯漢堡 板橋館前店",
           "tags": [
             "速食"
@@ -12658,12 +12784,13 @@
             5,
             6
           ],
-          "gist": "品質穩定且美味的米漢堡",
+          "gist": "品質穩定好吃",
           "dishes": [
             "米漢堡"
           ]
         },
         {
+          "placeId": "ChIJ4UL9D6mpQjQRJ6h8FJO4dac",
           "name": "樂釜 Love Hot Pot 極上鍋物(板橋店)",
           "tags": [
             "火鍋"
@@ -12685,13 +12812,14 @@
             5,
             6
           ],
-          "gist": "肉質鮮嫩且蛤蜊飽滿鮮甜的火鍋",
+          "gist": "肉質鮮嫩，蛤蜊飽滿",
           "dishes": [
             "蛤蜊",
             "沙茶醬"
           ]
         },
         {
+          "placeId": "ChIJAVDmq6cCaDQRvHUKkCdOZhM",
           "name": "樂崎火鍋-板橋店",
           "tags": [
             "火鍋"
@@ -12712,10 +12840,11 @@
             5,
             6
           ],
-          "gist": "食材新鮮且湯底富有創意的火鍋",
+          "gist": "食材新鮮，湯底美味",
           "dishes": []
         },
         {
+          "placeId": "ChIJUYhT0-YDaDQR_QkHqfHwxKQ",
           "name": "歐義式 ALL 14 WELL",
           "tags": [
             "麵",
@@ -12741,10 +12870,10 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJfTYgra0CaDQRl89nXF1sFX0",
           "name": "澎澎素食養生早午餐",
           "tags": [
-            "素食",
-            "早午餐"
+            "素食"
           ],
           "address": "中山里大觀路二段19巷77號",
           "mapUrl": "https://maps.google.com/?cid=9013229377489981335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
@@ -12767,6 +12896,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJoR0w5s4DaDQR6XJ63Qb4OX8",
           "name": "緣越南小吃",
           "tags": [
             "小吃"
@@ -12788,6 +12918,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJOZHN3tQDaDQROLSJx0atgw4",
           "name": "燒肉王日式碳燒",
           "tags": [
             "韓式"
@@ -12813,6 +12944,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJTQ2S9OwDaDQRZoQLky7FG7U",
           "name": "燒肉アニキ-燒肉Aniki-板橋府中店",
           "tags": [
             "日式"
@@ -12834,13 +12966,14 @@
             5,
             6
           ],
-          "gist": "肉品新鮮美味且無油煙的燒烤",
+          "gist": "肉品新鮮美味",
           "dishes": [
             "牛舌",
             "A5和牛漢堡排"
           ]
         },
         {
+          "placeId": "ChIJk4uFRwADaDQRxRlTyaitVzo",
           "name": "築間幸福鍋物 板橋館前店",
           "tags": [
             "火鍋"
@@ -12862,10 +12995,13 @@
             5,
             6
           ],
-          "gist": "同時提供火鍋燒烤的豐富選擇",
-          "dishes": []
+          "gist": "肉品海鮮新鮮美味",
+          "dishes": [
+            "冰淇淋"
+          ]
         },
         {
+          "placeId": "ChIJqZhaYKYCaDQRbY_cPbXVb_E",
           "name": "蕭手作老麵饅頭",
           "tags": [
             "麵"
@@ -12890,6 +13026,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJDWr7DjcDaDQRqHX_4QkUsao",
           "name": "蕭師傅小吃店",
           "tags": [
             "小吃"
@@ -12914,6 +13051,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJjZhVbQADaDQRSwc43peQJwk",
           "name": "錢夫人時尚鍋物（板橋店）/restaurants/板橋火鍋/板橋美食/板橋家庭聚餐/附近美食/板橋必吃",
           "tags": [
             "火鍋"
@@ -12939,6 +13077,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJvyBHAaQCaDQRe3v5t577Ag8",
           "name": "錢都日式涮涮鍋 板橋忠孝店",
           "tags": [
             "日式",
@@ -12961,10 +13100,13 @@
             5,
             6
           ],
-          "gist": "食材美味新鮮且物超所值的火鍋",
-          "dishes": []
+          "gist": "食材新鮮美味",
+          "dishes": [
+            "冰淇淋"
+          ]
         },
         {
+          "placeId": "ChIJT5DFc6gCaDQR3EIaPSZ2UaA",
           "name": "錢都日式涮涮鍋-板橋館前店",
           "tags": [
             "火鍋"
@@ -12986,17 +13128,17 @@
             5,
             6
           ],
-          "gist": "食材新鮮豐富，份量充足美味",
+          "gist": "食材新鮮份量足",
           "dishes": [
-            "肉品",
-            "海鮮",
             "冰淇淋",
             "霜淇淋"
           ]
         },
         {
+          "placeId": "ChIJQ3nn-6UCaDQRBFbww3ZJLYM",
           "name": "隨緣素食",
           "tags": [
+            "便當",
             "素食"
           ],
           "address": "華貴里貴興路49號",
@@ -13019,6 +13161,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJxZzyt9EDaDQRuogY7uHJjMM",
           "name": "懂吃Studio低GI健康餐盒 | 低卡會議便當 | 減脂餐推薦",
           "tags": [
             "便當"
@@ -13039,12 +13182,13 @@
             5,
             6
           ],
-          "gist": "菜單美味多樣，蛋白質豐富",
+          "gist": "健康美味多樣",
           "dishes": [
             "紫米飯"
           ]
         },
         {
+          "placeId": "ChIJD2l7y1UDaDQRyn-vhZ7NCkk",
           "name": "鍋燒專賣-烏龍.意麵.炒飯.炒麵.粥.各式小菜",
           "tags": [
             "麵"
@@ -13070,6 +13214,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJVyKaFgADaDQRPuOpL9FXFX8",
           "name": "韓金智能拉麵店-板橋亞東店",
           "tags": [
             "韓式"
@@ -13091,12 +13236,13 @@
             5,
             6
           ],
-          "gist": "泡麵選擇多樣，可自由添加食材",
+          "gist": "選擇多樣新鮮",
           "dishes": [
             "泡麵"
           ]
         },
         {
+          "placeId": "ChIJX0NBxacCaDQRFQHZiZpHTdM",
           "name": "鮨悅手作壽司",
           "tags": [
             "日式"
@@ -13116,7 +13262,7 @@
             5,
             6
           ],
-          "gist": "食材新鮮入口即化，份量大",
+          "gist": "食材新鮮，入口即化，份量大",
           "dishes": [
             "生魚片",
             "海膽",
@@ -13124,6 +13270,7 @@
           ]
         },
         {
+          "placeId": "ChIJs3k73IEDaDQR0Aynoy7CKQs",
           "name": "鮮五丼 板橋府中店",
           "tags": [
             "其他"
@@ -13145,13 +13292,14 @@
             5,
             6
           ],
-          "gist": "丼飯美味，炸物令人喜愛",
+          "gist": "經濟實惠又美味",
           "dishes": [
             "丼飯",
             "炸物"
           ]
         },
         {
+          "placeId": "ChIJm153q-IDaDQRzgtyTCr7wwQ",
           "name": "鮮魂鍋（大呼過癮亞東店）",
           "tags": [
             "火鍋"
@@ -13177,6 +13325,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJEeZBWWcDaDQR7y8Ah_Qs48A",
           "name": "鴻華燒臘",
           "tags": [
             "便當"
@@ -13201,6 +13350,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJdQwoxqcCaDQRiBrvY6bezBA",
           "name": "檸檬草美食茶房 板橋店",
           "tags": [
             "小吃"
@@ -13222,13 +13372,14 @@
             5,
             6
           ],
-          "gist": "亞洲創意料理與飲品份量充足",
+          "gist": "份量充足，選擇豐富",
           "dishes": [
             "火鍋",
             "義大利麵"
           ]
         },
         {
+          "placeId": "ChIJe5HWCqcCaDQRmwhB4c8CaSM",
           "name": "檸檬草鍋物料理",
           "tags": [
             "火鍋"
@@ -13254,6 +13405,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJA2uQ_64CaDQRhoj8ser7X_g",
           "name": "薩莉亞 板橋亞東店",
           "tags": [
             "飯",
@@ -13276,7 +13428,7 @@
             5,
             6
           ],
-          "gist": "餐點美味選擇豐富",
+          "gist": "餐點美味，價格實惠",
           "dishes": [
             "佛卡夏",
             "披薩",
@@ -13285,6 +13437,7 @@
           ]
         },
         {
+          "placeId": "ChIJe_Eza8IDaDQRVNaEcNMHO-s",
           "name": "豐記燒臘",
           "tags": [
             "便當"
@@ -13304,13 +13457,15 @@
             4,
             5
           ],
-          "gist": "燒臘鮮嫩風味十足，配菜可口",
+          "gist": "鮮嫩美味，風味十足",
           "dishes": [
+            "燒臘",
             "雞肉",
             "叉燒"
           ]
         },
         {
+          "placeId": "ChIJwRzW3HUDaDQRx9gBFtyQITI",
           "name": "懷念福隆古早味便當-國慶店",
           "tags": [
             "便當"
@@ -13336,6 +13491,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJZ2VJStwDaDQRiiAxLIE6ccY",
           "name": "麵飽飽食魂堂",
           "tags": [
             "麵"
@@ -13356,13 +13512,15 @@
             5,
             6
           ],
-          "gist": "麵條Q彈，湯頭濃郁美味",
+          "gist": "麵條Q彈，湯頭濃郁",
           "dishes": [
+            "拉麵",
             "豚骨拉麵",
             "麻辣拉麵"
           ]
         },
         {
+          "placeId": "ChIJcZpumK4DaDQRmLgC0yn_Aps",
           "name": "癮食光",
           "tags": [
             "日式",
@@ -13384,14 +13542,16 @@
             5,
             6
           ],
-          "gist": "定食精緻美味，附贈清雞湯",
+          "gist": "擺盤精緻，風味十足",
           "dishes": [
+            "日式定食",
             "漢堡排",
             "叉燒",
             "清雞湯"
           ]
         },
         {
+          "placeId": "ChIJgatNu2UDaDQRbHZRb7zUut0",
           "name": "聽喵說早午餐",
           "tags": [
             "早午餐"
@@ -13412,13 +13572,13 @@
             5,
             6
           ],
-          "gist": "沙拉新鮮份量足，飲品美味",
+          "gist": "沙拉新鮮，份量充足",
           "dishes": [
-            "沙拉",
-            "飲品"
+            "沙拉"
           ]
         },
         {
+          "placeId": "ChIJOcGdjG0DaDQRCAkG6_8SKyY",
           "name": "鑫鴻小吃",
           "tags": [
             "小吃"
@@ -13439,7 +13599,7 @@
             5,
             6
           ],
-          "gist": "炒飯香氣十足不油膩，湯品清甜",
+          "gist": "香氣十足，不油膩",
           "dishes": [
             "炒飯",
             "炸排骨",
@@ -13447,34 +13607,7 @@
           ]
         },
         {
-          "name": "Apple203早午餐店",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "華東里南雅南路二段144巷16號",
-          "mapUrl": "https://maps.google.com/?cid=17462591146069372039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.8,
-          "ratingCount": 316,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "台西式餐點酥脆多汁",
-          "dishes": [
-            "蔥抓餅",
-            "厚切牛排"
-          ]
-        },
-        {
+          "placeId": "ChIJ8TkQmgQDaDQRFh3xxLF3sUo",
           "name": "Aum Aum Dosirak 韓定食 板橋店",
           "tags": [
             "韓式"
@@ -13494,14 +13627,16 @@
             4,
             5
           ],
-          "gist": "便當精緻，主菜風味十足",
+          "gist": "主菜風味十足，配菜多",
           "dishes": [
             "韓式便當"
           ]
         },
         {
+          "placeId": "ChIJS12xK2QDaDQRa2_nWGk3JOA",
           "name": "Buon Pasta & Bar - 現代義式料理",
           "tags": [
+            "麵",
             "義式"
           ],
           "address": "板橋區重慶路12巷9號",
@@ -13521,12 +13656,13 @@
             5,
             6
           ],
-          "gist": "醬汁風味濃郁，麵條口感特殊",
+          "gist": "醬汁濃郁，麵條口感特殊",
           "dishes": [
             "義大利麵"
           ]
         },
         {
+          "placeId": "ChIJ_U_RbqcCaDQRjk28fjUAiX4",
           "name": "COFFeee早午餐咖啡",
           "tags": [
             "早午餐"
@@ -13548,14 +13684,15 @@
             5,
             6
           ],
-          "gist": "早午餐盤餐份量足，鬆餅Q彈",
+          "gist": "份量十足，風味絕佳",
           "dishes": [
-            "雞腿",
+            "早午餐盤",
             "歐姆蛋",
             "麻糬鬆餅"
           ]
         },
         {
+          "placeId": "ChIJrzQV3rMCaDQRqUx_tJTO-qw",
           "name": "Ethan's Italian(義式料理)",
           "tags": [
             "麵",
@@ -13577,13 +13714,14 @@
             5,
             6
           ],
-          "gist": "食材新鮮，份量充足美味",
+          "gist": "食材新鮮，份量充足",
           "dishes": [
             "義大利麵",
             "燉飯"
           ]
         },
         {
+          "placeId": "ChIJK1W-N9ADaDQR2IabTKmkeVk",
           "name": "FULL MOON 手工蛋餅外帶店早午餐（不定期公休）",
           "tags": [
             "早午餐"
@@ -13601,13 +13739,15 @@
             5,
             6
           ],
-          "gist": "手工蛋餅外皮酥脆內餡豐富",
+          "gist": "口感酥脆，內餡豐富",
           "dishes": [
+            "手工蛋餅",
             "蔥花蛋餅",
             "高麗菜起司蛋餅"
           ]
         },
         {
+          "placeId": "ChIJfahCJgADaDQRmpJ-YmnHZeU",
           "name": "Korea Tim 韓式烤肉飯",
           "tags": [
             "韓式"
@@ -13628,13 +13768,39 @@
             5,
             6
           ],
-          "gist": "肉品風味十足，配菜香甜美味",
+          "gist": "肉品風味十足，配料美味",
           "dishes": [
-            "烤肉飯",
-            "泡菜"
+            "韓式烤肉飯"
           ]
         },
         {
+          "placeId": "ChIJMUrybfQDaDQRhMaV91IjEQY",
+          "name": "McCafé 咖啡-板橋愛買二店",
+          "tags": [
+            "速食"
+          ],
+          "address": "華貴里貴興路101號1樓",
+          "mapUrl": "https://maps.google.com/?cid=437169478079727236&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "price": {
+            "start": 1,
+            "end": 200
+          },
+          "rating": 3.8,
+          "ratingCount": 63,
+          "lunchDays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "gist": "",
+          "dishes": []
+        },
+        {
+          "placeId": "ChIJ69x0YrECaDQR7ZrVjogy9UA",
           "name": "NU PASTA 板橋亞東店",
           "tags": [
             "義式"
@@ -13656,7 +13822,7 @@
             5,
             6
           ],
-          "gist": "義麵與燉飯風味十足",
+          "gist": "風味十足，焗烤美味",
           "dishes": [
             "義大利麵",
             "燉飯",
@@ -13664,6 +13830,7 @@
           ]
         },
         {
+          "placeId": "ChIJ57kYGakDaDQRo0CJvAkvAUo",
           "name": "O'La 義麵坊",
           "tags": [
             "麵"
@@ -13688,6 +13855,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJKd-q77MCaDQRXGfrVPMcfCQ",
           "name": "OEC美味 早午餐店",
           "tags": [
             "早午餐"
@@ -13709,7 +13877,7 @@
             5,
             6
           ],
-          "gist": "餐點美味高品質，選擇多樣",
+          "gist": "餐點高品質，風味十足",
           "dishes": [
             "鱈魚排蛋包飯",
             "黑胡椒鐵板麵",
@@ -13717,6 +13885,7 @@
           ]
         },
         {
+          "placeId": "ChIJjx4EttgDaDQR9i5qzINxcUI",
           "name": "OKAYU 歐卡御粥舖",
           "tags": [
             "其他"
@@ -13741,6 +13910,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJj2usOwADaDQRRTV1M9_Xk1M",
           "name": "One Burger",
           "tags": [
             "速食"
@@ -13766,33 +13936,7 @@
           "dishes": []
         },
         {
-          "name": "Q Burger 板橋華興店 | 直營",
-          "tags": [
-            "早午餐"
-          ],
-          "address": "華福里華興街40號",
-          "mapUrl": "https://maps.google.com/?cid=6152848444579289231&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-          "price": {
-            "start": 1,
-            "end": 200
-          },
-          "rating": 3.9,
-          "ratingCount": 699,
-          "lunchDays": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "gist": "炒泡麵深受歡迎且美味",
-          "dishes": [
-            "炒泡麵"
-          ]
-        },
-        {
+          "placeId": "ChIJK-b_CQADaDQRZd69Uabc_vo",
           "name": "SAUNG SUNDA TEH MOJANG 印尼餐廳",
           "tags": [
             "其他"
@@ -13817,6 +13961,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJTUsu4ZsDaDQR8NADaOZHav0",
           "name": "Second Floor 貳樓板橋店",
           "tags": [
             "義式"
@@ -13842,6 +13987,7 @@
           "dishes": []
         },
         {
+          "placeId": "ChIJ-QwJ1rACaDQR-p7cnaYLjzY",
           "name": "Vietnamese eatery",
           "tags": [
             "小吃"
