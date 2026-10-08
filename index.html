@@ -9,37 +9,39 @@
   </head>
   <body>
     <main>
-      <h1><span class="icon icon-bowl-food" aria-hidden="true"></span> 午餐吃什麼</h1>
+      <aside class="panel">
+        <h1><span class="icon icon-bowl-food" aria-hidden="true"></span> 午餐吃什麼</h1>
 
-      <section>
-        <h2>地點</h2>
-        <div id="locations" class="chips"></div>
-      </section>
+        <section>
+          <h2>地點</h2>
+          <div id="locations" class="chips"></div>
+        </section>
 
-      <section>
-        <h2>來源</h2>
-        <div id="modes" class="chips"></div>
-      </section>
+        <section>
+          <h2>來源</h2>
+          <div id="modes" class="chips"></div>
+        </section>
 
-      <section>
-        <h2>想吃</h2>
-        <div id="tags" class="chips"></div>
-        <form id="keyword-form" class="keyword-form" hidden>
-          <input id="keyword" type="search" placeholder="或輸入想吃的，例如 披薩" enterkeyhint="search" />
-          <button type="submit" class="chip">搜尋</button>
-        </form>
-      </section>
+        <section>
+          <h2>想吃</h2>
+          <div id="tags" class="chips"></div>
+          <form id="keyword-form" class="keyword-form" hidden>
+            <input id="keyword" type="search" placeholder="或輸入想吃的，例如 披薩" enterkeyhint="search" />
+            <button type="submit" class="chip">搜尋</button>
+          </form>
+        </section>
 
-      <section>
-        <h2>預算（每人）</h2>
-        <div id="prices" class="chips"></div>
-      </section>
+        <section>
+          <h2>預算（每人）</h2>
+          <div id="prices" class="chips"></div>
+        </section>
 
-      <button id="random" type="button" class="random"><span class="icon icon-dice-five" aria-hidden="true"></span> 隨機挑一間</button>
+        <button id="random" type="button" class="random"><span class="icon icon-dice-five" aria-hidden="true"></span> 隨機挑一間</button>
 
-      <div id="result" class="result" hidden aria-live="polite"></div>
+        <div id="result" class="result" hidden aria-live="polite"></div>
+      </aside>
 
-      <section>
+      <section class="results">
         <h2 id="count"></h2>
         <ul id="list" class="list"></ul>
       </section>

@@ -204,3 +204,30 @@ h2 {
   text-decoration: none;
   font-weight: 500;
 }
+
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: minmax(0, 1fr);
+    gap: 32px;
+    max-width: 1100px;
+    height: 100dvh;
+    padding-bottom: 0;
+  }
+
+  .panel,
+  .results {
+    overflow-y: auto;
+    padding-bottom: 40px;
+  }
+
+  .results h2 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-top: 0;
+    padding: 8px 0;
+    background: var(--bg);
+  }
+}
