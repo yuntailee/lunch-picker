@@ -54,8 +54,16 @@ export function toCandidate(place) {
   };
 }
 
+export async function geocode({ apiKey, query }) {
+  await loadMaps(apiKey);
+  const { Place } = await google.maps.importLibrary("places");
+  const { places } = await Place.searchByText({ textQuery: query, fields: ["location"], maxResultCount: 1 });
+  if (!places.length) throw new Error(`找不到「${query}」`);
+  return { name: query, lat: places[0].location.lat(), lng: places[0].location.lng() };
+}
+
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.name}:${keyword}`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 

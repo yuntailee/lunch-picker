@@ -2,7 +2,7 @@ import { initChat } from "./chat.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
-import { searchNearby } from "./places.js";
+import { geocode, searchNearby } from "./places.js";
 import { previewOnHover } from "./preview.js";
 import {
   filterByPrice,
@@ -15,6 +15,8 @@ import {
 } from "./recommender.js";
 
 const LOCATION_KEY = "food-tool:location";
+const CUSTOM_LOCATION_KEY = "food-tool:custom-location";
+const OTHER_TAG = "其他";
 const ALL_TAGS = "全部";
 const ANY_PRICE = "不限";
 const MODES = { list: "每日清單", live: "即時搜尋" };
@@ -35,6 +37,8 @@ const state = {
 
 const els = {
   locations: document.querySelector("#locations"),
+  locationForm: document.querySelector("#location-form"),
+  locationInput: document.querySelector("#location-input"),
   modes: document.querySelector("#modes"),
   tags: document.querySelector("#tags"),
   prices: document.querySelector("#prices"),
@@ -52,10 +56,18 @@ async function init() {
   const data = await response.json();
   state.updatedAt = new Date(data.updatedAt);
   state.locations = data.locations;
+  const custom = JSON.parse(localStorage.getItem(CUSTOM_LOCATION_KEY) ?? "null");
+  if (custom) state.locations.push(customLocation(custom));
   const saved = localStorage.getItem(LOCATION_KEY);
   state.location = state.locations.find((l) => l.name === saved) ?? state.locations[0];
+  if (!state.location.restaurants) state.mode = "live";
 
   els.random.addEventListener("click", spin);
+  els.locationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = els.locationInput.value.trim();
+    if (query) setCustomLocation(query);
+  });
   els.keywordForm.addEventListener("submit", (event) => {
     event.preventDefault();
     selectTag(els.keyword.value.trim() || ALL_TAGS);
@@ -66,7 +78,7 @@ async function init() {
 
 function render() {
   renderChips(els.locations, state.locations.map((l) => l.name), state.location.name, selectLocation, "map-pin");
-  renderChips(els.modes, Object.values(MODES), MODES[state.mode], selectMode);
+  renderChips(els.modes, state.location.restaurants ? Object.values(MODES) : [MODES.live], MODES[state.mode], selectMode);
   renderChips(els.tags, [ALL_TAGS, ...state.location.tags], state.tag ?? ALL_TAGS, selectTag);
   renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], state.price ?? ANY_PRICE, selectPrice);
   els.keywordForm.hidden = state.mode !== "live";
@@ -78,8 +90,31 @@ function render() {
 function selectLocation(name) {
   state.location = state.locations.find((l) => l.name === name);
   state.tag = null;
+  if (!state.location.restaurants) state.mode = "live";
   localStorage.setItem(LOCATION_KEY, name);
   render();
+}
+
+function customLocation({ name, lat, lng }) {
+  const tags = [...new Set(state.locations.flatMap((l) => l.tags ?? []))].filter((t) => t !== OTHER_TAG);
+  return { name, lat, lng, tags, restaurants: null };
+}
+
+async function setCustomLocation(query) {
+  if (state.locations.some((l) => l.name === query && l.restaurants)) {
+    selectLocation(query);
+    return;
+  }
+  showMessage(`定位「${query}」中…`, "map-pin");
+  try {
+    const found = await geocode({ apiKey: GOOGLE_MAPS_API_KEY, query });
+    localStorage.setItem(CUSTOM_LOCATION_KEY, JSON.stringify(found));
+    state.locations = [...state.locations.filter((l) => l.restaurants), customLocation(found)];
+    els.locationInput.value = "";
+    selectLocation(found.name);
+  } catch (error) {
+    showMessage(`定位失敗：${error.message}`);
+  }
 }
 
 function selectMode(label) {
