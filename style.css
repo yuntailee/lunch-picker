@@ -157,6 +157,10 @@ h2 {
   column-gap: 8px;
 }
 
+.list .heading .tags {
+  margin-left: auto;
+}
+
 .summary {
   display: -webkit-box;
   overflow: hidden;
