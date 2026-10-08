@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f97316" />
+    <title>午餐吃什麼</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>🍱 午餐吃什麼</h1>
+
+      <section>
+        <h2>地點</h2>
+        <div id="locations" class="chips"></div>
+      </section>
+
+      <section>
+        <h2>來源</h2>
+        <div id="modes" class="chips"></div>
+      </section>
+
+      <section>
+        <h2>想吃</h2>
+        <div id="tags" class="chips"></div>
+        <form id="keyword-form" class="keyword-form" hidden>
+          <input id="keyword" type="search" placeholder="或輸入想吃的，例如 披薩" enterkeyhint="search" />
+          <button type="submit" class="chip">搜尋</button>
+        </form>
+      </section>
+
+      <button id="random" type="button" class="random">🎲 隨機挑一間</button>
+
+      <div id="result" class="result" hidden aria-live="polite"></div>
+
+      <section>
+        <h2 id="count"></h2>
+        <ul id="list" class="list"></ul>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
