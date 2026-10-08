@@ -51,29 +51,6 @@
       </section>
     </main>
     <iframe id="preview" class="preview" title="Google 地圖預覽" hidden></iframe>
-
-    <button id="chat-toggle" type="button" class="chat-toggle" aria-label="開啟午餐小幫手">
-      <span class="icon icon-chat-circle-dots" aria-hidden="true"></span>
-    </button>
-    <section id="chat" class="chat" aria-label="午餐小幫手" hidden>
-      <header class="chat-header">
-        <span class="chat-avatar"><span class="icon icon-bowl-food" aria-hidden="true"></span></span>
-        <div>
-          <p class="chat-title">午餐小幫手</p>
-          <p class="chat-status">Gemini · 從目前列表推薦</p>
-        </div>
-        <button id="chat-close" type="button" class="chat-close" aria-label="關閉">
-          <span class="icon icon-x" aria-hidden="true"></span>
-        </button>
-      </header>
-      <ol id="chat-messages" class="chat-messages" aria-live="polite"></ol>
-      <form id="chat-form" class="chat-form">
-        <input id="chat-input" type="text" placeholder="傳送訊息…" autocomplete="off" enterkeyhint="send" />
-        <button type="submit" class="chat-send" aria-label="送出">
-          <span class="icon icon-paper-plane-right" aria-hidden="true"></span>
-        </button>
-      </form>
-    </section>
     <script type="module" src="app.js"></script>
   </body>
 </html>
