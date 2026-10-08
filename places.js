@@ -1,4 +1,5 @@
 import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
+import { lunchDays } from "./hours.js";
 import { formatPrice, formatRating, summaryHighlight, toPrice } from "./recommender.js";
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
@@ -11,6 +12,7 @@ const FIELDS = [
   "rating",
   "userRatingCount",
   "priceRange",
+  "regularOpeningHours",
   "reviewSummary",
 ];
 
@@ -48,12 +50,13 @@ export function toCandidate(place) {
     address: place.formattedAddress ?? "",
     mapUrl: place.googleMapsURI,
     price,
+    lunchDays: lunchDays(place.regularOpeningHours?.periods),
     summary: summaryHighlight(place.reviewSummary?.text),
   };
 }
 
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:live:${location.name}:${keyword}`;
+  const cacheKey = `food-tool:places:${location.name}:${keyword}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 
@@ -63,7 +66,6 @@ export async function searchNearby({ apiKey, location, keyword }) {
     textQuery: keyword,
     fields: FIELDS,
     includedType: "restaurant",
-    isOpenNow: true,
     locationRestriction: boundsAround(location, SEARCH_RADIUS_M),
     maxResultCount: 20,
   });

@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 import { boundsAround, SEARCH_RADIUS_M } from "../geo.js";
+import { lunchDays } from "../hours.js";
 import { summaryHighlight, toPrice } from "../recommender.js";
 import { condenseSummaries } from "./condense.js";
 
@@ -15,6 +16,7 @@ const FIELD_MASK = [
   "places.priceRange",
   "places.rating",
   "places.userRatingCount",
+  "places.regularOpeningHours",
   "places.reviewSummary",
   "nextPageToken",
 ].join(",");
@@ -78,6 +80,7 @@ export function buildRestaurants(hits) {
         price: toPrice(place.priceRange),
         rating: place.rating ?? null,
         ratingCount: place.userRatingCount ?? 0,
+        lunchDays: lunchDays(place.regularOpeningHours?.periods),
         summary: summaryHighlight(place.reviewSummary?.text?.text),
       };
       if (category && !entry.tags.includes(category)) entry.tags.push(category);
@@ -85,6 +88,7 @@ export function buildRestaurants(hits) {
     }
   }
   return [...byId.values()]
+    .filter((r) => r.lunchDays.length)
     .map((r) => (r.tags.length ? r : { ...r, tags: [OTHER_TAG] }))
     .sort((a, b) => a.name.localeCompare(b.name, "zh-Hant"));
 }
@@ -123,7 +127,7 @@ async function main() {
     const built = buildLocation(location, categories, hits);
     const summaries = built.restaurants.filter((r) => r.summary).map((r) => r.summary);
     built.restaurants = applyCondensed(built.restaurants, await condenseSummaries(geminiKey, summaries));
-    console.log(`${location.name}：${built.restaurants.length} 間，${summaries.length} 間有招牌菜摘要`);
+    console.log(`${location.name}：${built.restaurants.length} 間午餐有開，${summaries.length} 間有招牌菜摘要`);
     output.locations.push(built);
   }
 

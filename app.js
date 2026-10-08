@@ -1,5 +1,6 @@
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
+import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
 import { searchNearby } from "./places.js";
 import {
   filterByPrice,
@@ -92,11 +93,15 @@ function selectPrice(label) {
   render();
 }
 
+function narrow(candidates) {
+  return filterByPrice(filterByLunch(candidates, new Date().getDay()), state.price);
+}
+
 async function loadCandidates() {
   const requestId = ++state.requestId;
 
   if (state.mode === "list") {
-    showCandidates(filterByPrice(filterByTag(state.location.restaurants, state.tag).map(fromList), state.price));
+    showCandidates(narrow(filterByTag(state.location.restaurants, state.tag).map(fromList)));
     return;
   }
   if (!GOOGLE_MAPS_API_KEY) {
@@ -111,7 +116,7 @@ async function loadCandidates() {
       location: state.location,
       keyword: state.tag ?? "餐廳",
     });
-    if (requestId === state.requestId) showCandidates(filterByPrice(candidates, state.price));
+    if (requestId === state.requestId) showCandidates(narrow(candidates));
   } catch (error) {
     if (requestId === state.requestId) showMessage(`Google 搜尋失敗：${error.message}`);
   }
@@ -129,6 +134,7 @@ function fromList(restaurant) {
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
     price: restaurant.price,
+    lunchDays: restaurant.lunchDays,
     summary: formatHighlight(restaurant),
   };
 }
@@ -146,13 +152,14 @@ function showMessage(text) {
 }
 
 function countText(count) {
+  const open = `${weekdayLabel(new Date().getDay())} ${LUNCH_LABEL} 有開、`;
   const budget = state.price ? `${state.price}的` : "";
   if (state.mode === "list") {
     const updated = state.updatedAt.toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" });
-    return `${budget}${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間（${updated} 更新）`;
+    return `${open}${budget}${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間（${updated} 更新）`;
   }
   const target = state.tag ? `「${state.tag}」` : "餐廳";
-  return `${SEARCH_RADIUS_M} 公尺內營業中、${budget}${target}共 ${count} 間`;
+  return `${SEARCH_RADIUS_M} 公尺內${open}${budget}${target}共 ${count} 間`;
 }
 
 function renderChips(container, labels, active, onSelect) {
