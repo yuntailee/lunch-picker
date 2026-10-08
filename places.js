@@ -1,9 +1,10 @@
 import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
+import { formatPrice, formatRating, toPrice } from "./recommender.js";
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
 const CACHE_TTL_MS = 30 * 60 * 1000;
-// rating / userRatingCount 屬於 Text Search Enterprise SKU（每月免費額度約 1,000 次）
-const FIELDS = ["displayName", "formattedAddress", "googleMapsURI", "rating", "userRatingCount"];
+// rating / priceRange 屬於 Text Search Enterprise SKU（每月免費額度約 1,000 次）
+const FIELDS = ["displayName", "formattedAddress", "googleMapsURI", "rating", "userRatingCount", "priceRange"];
 
 let mapsReady;
 
@@ -29,19 +30,21 @@ function loadMaps(apiKey) {
 }
 
 export function toCandidate(place) {
-  const detail = place.rating
-    ? `⭐ ${place.rating.toFixed(1)}（${(place.userRatingCount ?? 0).toLocaleString()} 則評論）`
-    : "尚無評分";
+  const price = toPrice(place.priceRange);
+  const detail = [formatRating(place.rating, place.userRatingCount) || "尚無評分", formatPrice(price)]
+    .filter(Boolean)
+    .join(" · ");
   return {
     name: place.displayName,
     detail,
     address: place.formattedAddress ?? "",
     mapUrl: place.googleMapsURI,
+    price,
   };
 }
 
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:explore:${location.name}:${keyword}`;
+  const cacheKey = `food-tool:live:${location.name}:${keyword}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 

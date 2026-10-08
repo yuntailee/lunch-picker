@@ -1,10 +1,18 @@
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { searchNearby } from "./places.js";
-import { filterByTag, pickRandom } from "./recommender.js";
+import {
+  filterByPrice,
+  filterByTag,
+  formatPrice,
+  formatRating,
+  pickRandom,
+  PRICE_BUCKETS,
+} from "./recommender.js";
 
 const LOCATION_KEY = "food-tool:location";
 const ALL_TAGS = "全部";
+const ANY_PRICE = "不限";
 const MODES = { list: "每日清單", live: "即時搜尋" };
 const SPIN_TICKS = 12;
 const SPIN_INTERVAL_MS = 60;
@@ -15,6 +23,7 @@ const state = {
   location: null,
   mode: "list",
   tag: null,
+  price: null,
   candidates: [],
   requestId: 0,
   spinning: false,
@@ -24,6 +33,7 @@ const els = {
   locations: document.querySelector("#locations"),
   modes: document.querySelector("#modes"),
   tags: document.querySelector("#tags"),
+  prices: document.querySelector("#prices"),
   keywordForm: document.querySelector("#keyword-form"),
   keyword: document.querySelector("#keyword"),
   random: document.querySelector("#random"),
@@ -52,6 +62,7 @@ function render() {
   renderChips(els.locations, state.locations.map((l) => l.name), state.location.name, selectLocation);
   renderChips(els.modes, Object.values(MODES), MODES[state.mode], selectMode);
   renderChips(els.tags, [ALL_TAGS, ...state.location.tags], state.tag ?? ALL_TAGS, selectTag);
+  renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], state.price ?? ANY_PRICE, selectPrice);
   els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
   els.result.hidden = true;
@@ -75,11 +86,16 @@ function selectTag(tag) {
   render();
 }
 
+function selectPrice(label) {
+  state.price = label === ANY_PRICE ? null : label;
+  render();
+}
+
 async function loadCandidates() {
   const requestId = ++state.requestId;
 
   if (state.mode === "list") {
-    showCandidates(filterByTag(state.location.restaurants, state.tag).map(fromList));
+    showCandidates(filterByPrice(filterByTag(state.location.restaurants, state.tag).map(fromList), state.price));
     return;
   }
   if (!GOOGLE_MAPS_API_KEY) {
@@ -94,18 +110,24 @@ async function loadCandidates() {
       location: state.location,
       keyword: state.tag ?? "餐廳",
     });
-    if (requestId === state.requestId) showCandidates(candidates);
+    if (requestId === state.requestId) showCandidates(filterByPrice(candidates, state.price));
   } catch (error) {
     if (requestId === state.requestId) showMessage(`Google 搜尋失敗：${error.message}`);
   }
 }
 
 function fromList(restaurant) {
+  const detail = [
+    restaurant.tags.join("、"),
+    formatPrice(restaurant.price),
+    formatRating(restaurant.rating, restaurant.ratingCount),
+  ];
   return {
     name: restaurant.name,
-    detail: restaurant.tags.join("、"),
+    detail: detail.filter(Boolean).join(" · "),
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
+    price: restaurant.price,
   };
 }
 
@@ -122,12 +144,13 @@ function showMessage(text) {
 }
 
 function countText(count) {
+  const budget = state.price ? `${state.price}的` : "";
   if (state.mode === "list") {
     const updated = state.updatedAt.toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" });
-    return `${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間（${updated} 更新）`;
+    return `${budget}${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間（${updated} 更新）`;
   }
   const target = state.tag ? `「${state.tag}」` : "餐廳";
-  return `${SEARCH_RADIUS_M} 公尺內營業中的${target}共 ${count} 間`;
+  return `${SEARCH_RADIUS_M} 公尺內營業中、${budget}${target}共 ${count} 間`;
 }
 
 function renderChips(container, labels, active, onSelect) {

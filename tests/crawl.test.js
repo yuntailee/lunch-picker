@@ -9,6 +9,16 @@ const place = (id, name, businessStatus = "OPERATIONAL") => ({
   shortFormattedAddress: `${name}路 1 號`,
   googleMapsUri: `https://maps.google.com/?cid=${id}`,
   businessStatus,
+  priceRange: { startPrice: { units: "1" }, endPrice: { units: "200" } },
+  rating: 4.2,
+  userRatingCount: 88,
+});
+
+test("buildRestaurants 保留價格與評分", () => {
+  const [restaurant] = buildRestaurants([{ category: "飯", places: [place("1", "雞肉飯")] }]);
+  assert.deepEqual(restaurant.price, { start: 1, end: 200 });
+  assert.equal(restaurant.rating, 4.2);
+  assert.equal(restaurant.ratingCount, 88);
 });
 
 test("buildRestaurants 依搜尋分類歸類並合併重複店家", () => {
