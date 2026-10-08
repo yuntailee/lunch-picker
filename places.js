@@ -41,12 +41,10 @@ function loadMaps(apiKey) {
 
 export function toCandidate(place) {
   const price = toPrice(place.priceRange);
-  const detail = [formatRating(place.rating, place.userRatingCount) || "尚無評分", formatPrice(price)]
-    .filter(Boolean)
-    .join(" · ");
   return {
     name: place.displayName,
-    detail,
+    detail: formatPrice(price),
+    rating: formatRating(place.rating, place.userRatingCount),
     address: place.formattedAddress ?? "",
     mapUrl: place.googleMapsURI,
     price,

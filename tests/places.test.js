@@ -18,7 +18,8 @@ test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址
   });
   assert.deepEqual(candidate, {
     name: "阿嬤雞肉飯",
-    detail: "⭐ 4.3（1,234） · $1–200",
+    detail: "$1–200",
+    rating: "4.3（1,234）",
     address: "台北市內湖區某路 1 號",
     mapUrl: "https://maps.google.com/?cid=1",
     price: { start: 1, end: 200 },
@@ -27,9 +28,10 @@ test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址
   });
 });
 
-test("toCandidate 沒有評分、價格與營業時間時給預設值", () => {
+test("toCandidate 沒有評分、價格與營業時間時給空值", () => {
   const candidate = toCandidate({ displayName: "新店", googleMapsURI: "x" });
-  assert.equal(candidate.detail, "尚無評分");
+  assert.equal(candidate.detail, "");
+  assert.equal(candidate.rating, "");
   assert.equal(candidate.price, null);
   assert.deepEqual(candidate.lunchDays, []);
   assert.equal(candidate.summary, "");

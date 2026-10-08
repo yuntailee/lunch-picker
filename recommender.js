@@ -32,7 +32,7 @@ export function formatPrice(price) {
 }
 
 export function formatRating(rating, ratingCount) {
-  return rating ? `⭐ ${rating.toFixed(1)}（${(ratingCount ?? 0).toLocaleString()}）` : "";
+  return rating ? `${rating.toFixed(1)}（${(ratingCount ?? 0).toLocaleString()}）` : "";
 }
 
 export function summaryHighlight(text) {
@@ -40,7 +40,7 @@ export function summaryHighlight(text) {
 }
 
 export function formatHighlight({ gist, dishes }) {
-  return [dishes.length ? `🍽 ${dishes.join("、")}` : "", gist].filter(Boolean).join("｜");
+  return [dishes.join("、"), gist].filter(Boolean).join("｜");
 }
 
 export function pickRandom(items, random = Math.random) {

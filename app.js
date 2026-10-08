@@ -61,7 +61,7 @@ async function init() {
 }
 
 function render() {
-  renderChips(els.locations, state.locations.map((l) => l.name), state.location.name, selectLocation);
+  renderChips(els.locations, state.locations.map((l) => l.name), state.location.name, selectLocation, "map-pin");
   renderChips(els.modes, Object.values(MODES), MODES[state.mode], selectMode);
   renderChips(els.tags, [ALL_TAGS, ...state.location.tags], state.tag ?? ALL_TAGS, selectTag);
   renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], state.price ?? ANY_PRICE, selectPrice);
@@ -109,7 +109,7 @@ async function loadCandidates() {
     return;
   }
 
-  showMessage("🔍 Google 地圖搜尋中…");
+  showMessage("Google 地圖搜尋中…", "magnifying-glass");
   try {
     const candidates = await searchNearby({
       apiKey: GOOGLE_MAPS_API_KEY,
@@ -123,14 +123,10 @@ async function loadCandidates() {
 }
 
 function fromList(restaurant) {
-  const detail = [
-    restaurant.tags.join("、"),
-    formatPrice(restaurant.price),
-    formatRating(restaurant.rating, restaurant.ratingCount),
-  ];
   return {
     name: restaurant.name,
-    detail: detail.filter(Boolean).join(" · "),
+    detail: [restaurant.tags.join("、"), formatPrice(restaurant.price)].filter(Boolean).join(" · "),
+    rating: formatRating(restaurant.rating, restaurant.ratingCount),
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
     price: restaurant.price,
@@ -145,9 +141,9 @@ function showCandidates(candidates) {
   els.list.replaceChildren(...candidates.map(candidateItem));
 }
 
-function showMessage(text) {
+function showMessage(text, icon) {
   state.candidates = [];
-  els.count.textContent = text;
+  els.count.replaceChildren(...(icon ? [iconEl(icon), " "] : []), text);
   els.list.replaceChildren();
 }
 
@@ -162,13 +158,13 @@ function countText(count) {
   return `${SEARCH_RADIUS_M} 公尺內${open}${budget}${target}共 ${count} 間`;
 }
 
-function renderChips(container, labels, active, onSelect) {
+function renderChips(container, labels, active, onSelect, icon) {
   container.replaceChildren(
     ...labels.map((label) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "chip";
-      button.textContent = label;
+      button.append(...(icon ? [iconEl(icon), " "] : []), label);
       button.setAttribute("aria-pressed", String(label === active));
       button.addEventListener("click", () => onSelect(label));
       return button;
@@ -179,11 +175,23 @@ function renderChips(container, labels, active, onSelect) {
 function candidateItem(candidate) {
   const heading = document.createElement("div");
   heading.className = "heading";
-  heading.append(mapLink(candidate.mapUrl, candidate.name), textEl("span", "tags", candidate.detail));
+  heading.append(mapLink(candidate.mapUrl, candidate.name), detailEl("span", candidate));
   const li = document.createElement("li");
   li.append(heading);
-  if (candidate.summary) li.append(textEl("p", "summary", candidate.summary));
+  if (candidate.summary) li.append(summaryEl("summary", candidate.summary));
   return li;
+}
+
+function detailEl(tag, candidate) {
+  const el = textEl(tag, "tags", candidate.detail);
+  if (candidate.rating) el.append(candidate.detail ? " · " : "", iconEl("star"), ` ${candidate.rating}`);
+  return el;
+}
+
+function summaryEl(className, text) {
+  const el = textEl("p", className, ` ${text}`);
+  el.prepend(iconEl("fork-knife"));
+  return el;
 }
 
 function spin() {
@@ -214,9 +222,9 @@ function showResult(candidate) {
   link.className = "map-link";
   els.result.replaceChildren(
     textEl("p", "result-name", candidate.name),
-    textEl("p", "tags", candidate.detail),
+    detailEl("p", candidate),
     ...(candidate.address ? [textEl("p", "tags", candidate.address)] : []),
-    ...(candidate.summary ? [textEl("p", "result-summary", candidate.summary)] : []),
+    ...(candidate.summary ? [summaryEl("result-summary", candidate.summary)] : []),
     link,
   );
   els.result.classList.add("done");
@@ -229,6 +237,13 @@ function mapLink(href, text) {
   link.rel = "noopener";
   link.textContent = text;
   return link;
+}
+
+function iconEl(name) {
+  const el = document.createElement("span");
+  el.className = `icon icon-${name}`;
+  el.setAttribute("aria-hidden", "true");
+  return el;
 }
 
 function textEl(tag, className, text) {

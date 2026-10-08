@@ -60,14 +60,14 @@ test("formatPrice 與 formatRating 的顯示格式", () => {
   assert.equal(formatPrice({ start: 1, end: 200 }), "$1–200");
   assert.equal(formatPrice({ start: 1000, end: null }), "$1000 以上");
   assert.equal(formatPrice(null), "");
-  assert.equal(formatRating(4.25, 1234), "⭐ 4.3（1,234）");
+  assert.equal(formatRating(4.25, 1234), "4.3（1,234）");
   assert.equal(formatRating(null, 0), "");
 });
 
 test("formatHighlight 組出菜名與重點，缺哪個就省略哪個", () => {
-  assert.equal(formatHighlight({ dishes: ["肉燥麵", "酸辣麵"], gist: "麵條Q彈" }), "🍽 肉燥麵、酸辣麵｜麵條Q彈");
+  assert.equal(formatHighlight({ dishes: ["肉燥麵", "酸辣麵"], gist: "麵條Q彈" }), "肉燥麵、酸辣麵｜麵條Q彈");
   assert.equal(formatHighlight({ dishes: [], gist: "份量大" }), "份量大");
-  assert.equal(formatHighlight({ dishes: ["花干"], gist: "" }), "🍽 花干");
+  assert.equal(formatHighlight({ dishes: ["花干"], gist: "" }), "花干");
   assert.equal(formatHighlight({ dishes: [], gist: "" }), "");
 });
 

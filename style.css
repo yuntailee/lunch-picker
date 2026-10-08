@@ -30,6 +30,29 @@ h1 {
   font-size: 1.6rem;
 }
 
+/* SVG 當遮罩、底色用 currentColor，圖示就會跟著文字顏色走 */
+.icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  background-color: currentColor;
+  mask: center / contain no-repeat;
+}
+
+.icon-bowl-food { mask-image: url("icons/bowl-food.svg"); }
+.icon-dice-five { mask-image: url("icons/dice-five.svg"); }
+.icon-fork-knife { mask-image: url("icons/fork-knife.svg"); }
+.icon-magnifying-glass { mask-image: url("icons/magnifying-glass.svg"); }
+.icon-map-pin { mask-image: url("icons/map-pin.svg"); }
+.icon-star { mask-image: url("icons/star.svg"); color: #f59e0b; }
+
+h1 .icon,
+.summary .icon,
+.result-summary .icon {
+  color: var(--accent);
+}
+
 h2 {
   margin: 20px 0 8px;
   font-size: 0.9rem;
