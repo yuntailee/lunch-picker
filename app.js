@@ -1,3 +1,4 @@
+import { initChat } from "./chat.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
@@ -59,6 +60,7 @@ async function init() {
     event.preventDefault();
     selectTag(els.keyword.value.trim() || ALL_TAGS);
   });
+  initChat(() => ({ summary: `${state.location.name}，${els.count.textContent}`, candidates: state.candidates }));
   render();
 }
 

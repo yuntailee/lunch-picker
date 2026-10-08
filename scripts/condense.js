@@ -1,5 +1,6 @@
+import { generate } from "../gemini.js";
+
 const MODEL = "gemini-3.5-flash-lite";
-const ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 const BATCH_SIZE = 40;
 const MAX_DISHES = 4;
 
@@ -36,18 +37,15 @@ export function parseCondensed(json, count) {
 }
 
 async function condenseBatch(apiKey, texts) {
-  const response = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: INSTRUCTION }] },
-      contents: [{ parts: [{ text: JSON.stringify(texts.map((text, id) => ({ id, text }))) }] }],
-      generationConfig: { responseMimeType: "application/json", responseSchema: SCHEMA },
-    }),
+  const json = await generate(apiKey, {
+    model: MODEL,
+    system: INSTRUCTION,
+    contents: [{ role: "user", parts: [{ text: JSON.stringify(texts.map((text, id) => ({ id, text }))) }] }],
+    generationConfig: { responseMimeType: "application/json", responseSchema: SCHEMA },
+  }).catch((error) => {
+    throw new Error(`Gemini 濃縮失敗：${error.message}`);
   });
-  const data = await response.json();
-  if (!response.ok) throw new Error(`Gemini 濃縮失敗：${data.error?.message ?? response.status}`);
-  return parseCondensed(data.candidates[0].content.parts[0].text, texts.length);
+  return parseCondensed(json, texts.length);
 }
 
 export async function condenseSummaries(apiKey, texts) {
