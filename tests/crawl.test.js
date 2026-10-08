@@ -1,7 +1,26 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { buildLocation, buildRestaurants, OTHER_TAG } from "../scripts/crawl.js";
+import { applyCondensed, buildLocation, buildRestaurants, OTHER_TAG } from "../scripts/crawl.js";
+
+test("applyCondensed 把濃縮結果依序套到有摘要的店，並移除原始摘要", () => {
+  const restaurants = applyCondensed(
+    [
+      { name: "A", summary: "原文 A" },
+      { name: "B", summary: "" },
+      { name: "C", summary: "原文 C" },
+    ],
+    [
+      { gist: "重點 A", dishes: ["菜 A"] },
+      { gist: "重點 C", dishes: [] },
+    ],
+  );
+  assert.deepEqual(restaurants, [
+    { name: "A", gist: "重點 A", dishes: ["菜 A"] },
+    { name: "B", gist: "", dishes: [] },
+    { name: "C", gist: "重點 C", dishes: [] },
+  ]);
+});
 
 const place = (id, name, businessStatus = "OPERATIONAL") => ({
   id,

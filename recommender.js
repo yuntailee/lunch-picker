@@ -39,6 +39,10 @@ export function summaryHighlight(text) {
   return text?.split("\n")[0].trim() ?? "";
 }
 
+export function formatHighlight({ gist, dishes }) {
+  return [dishes.length ? `🍽 ${dishes.join("、")}` : "", gist].filter(Boolean).join("｜");
+}
+
 export function pickRandom(items, random = Math.random) {
   return items.length ? items[Math.floor(random() * items.length)] : null;
 }

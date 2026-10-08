@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 import { boundsAround, SEARCH_RADIUS_M } from "../geo.js";
 import { summaryHighlight, toPrice } from "../recommender.js";
+import { condenseSummaries } from "./condense.js";
 
 const ENDPOINT = "https://places.googleapis.com/v1/places:searchText";
 // reviewSummary 屬於 Enterprise + Atmosphere SKU（每月免費 1,000 次），所以爬蟲只能每週跑一次
@@ -94,9 +95,22 @@ export function buildLocation(location, categories, hits) {
   return { ...location, tags, restaurants };
 }
 
+export function applyCondensed(restaurants, condensed) {
+  let next = 0;
+  return restaurants.map(({ summary, ...restaurant }) =>
+    summary ? { ...restaurant, ...condensed[next++] } : { ...restaurant, gist: "", dishes: [] },
+  );
+}
+
+function requireEnv(name) {
+  const value = process.env[name];
+  if (!value) throw new Error(`缺少環境變數 ${name}`);
+  return value;
+}
+
 async function main() {
-  const apiKey = process.env.GOOGLE_PLACES_SERVER_KEY;
-  if (!apiKey) throw new Error("缺少環境變數 GOOGLE_PLACES_SERVER_KEY");
+  const placesKey = requireEnv("GOOGLE_PLACES_SERVER_KEY");
+  const geminiKey = requireEnv("GEMINI_API_KEY");
 
   const { categories, locations } = JSON.parse(await readFile(CONFIG_PATH, "utf-8"));
   const output = { updatedAt: new Date().toISOString(), locations: [] };
@@ -104,10 +118,12 @@ async function main() {
   for (const location of locations) {
     const hits = [];
     for (const category of [...categories, null]) {
-      hits.push({ category, places: await searchAll(apiKey, location, category ?? GENERIC_QUERY) });
+      hits.push({ category, places: await searchAll(placesKey, location, category ?? GENERIC_QUERY) });
     }
     const built = buildLocation(location, categories, hits);
-    console.log(`${location.name}：${built.restaurants.length} 間`);
+    const summaries = built.restaurants.filter((r) => r.summary).map((r) => r.summary);
+    built.restaurants = applyCondensed(built.restaurants, await condenseSummaries(geminiKey, summaries));
+    console.log(`${location.name}：${built.restaurants.length} 間，${summaries.length} 間有招牌菜摘要`);
     output.locations.push(built);
   }
 

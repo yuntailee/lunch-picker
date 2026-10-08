@@ -30,6 +30,7 @@ test("data/restaurants.json 是完整的爬蟲結果", async () => {
     for (const r of location.restaurants) {
       assert.ok(r.name && r.mapUrl, `${location.name} 有餐廳缺少名稱或網址`);
       assert.ok(r.tags.length > 0 && r.tags.every((t) => location.tags.includes(t)), `${r.name} 的分類不在 tags 內`);
+      assert.ok(typeof r.gist === "string" && Array.isArray(r.dishes), `${r.name} 缺少 gist 或 dishes`);
     }
   }
 });

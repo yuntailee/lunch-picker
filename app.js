@@ -4,6 +4,7 @@ import { searchNearby } from "./places.js";
 import {
   filterByPrice,
   filterByTag,
+  formatHighlight,
   formatPrice,
   formatRating,
   pickRandom,
@@ -128,7 +129,7 @@ function fromList(restaurant) {
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
     price: restaurant.price,
-    summary: restaurant.summary,
+    summary: formatHighlight(restaurant),
   };
 }
 
@@ -169,11 +170,8 @@ function renderChips(container, labels, active, onSelect) {
 }
 
 function candidateItem(candidate) {
-  const row = document.createElement("div");
-  row.className = "row";
-  row.append(mapLink(candidate.mapUrl, candidate.name), textEl("span", "tags", candidate.detail));
   const li = document.createElement("li");
-  li.append(row);
+  li.append(mapLink(candidate.mapUrl, candidate.name), textEl("p", "tags", candidate.detail));
   if (candidate.summary) li.append(textEl("p", "summary", candidate.summary));
   return li;
 }
@@ -208,7 +206,7 @@ function showResult(candidate) {
     textEl("p", "result-name", candidate.name),
     textEl("p", "tags", candidate.detail),
     ...(candidate.address ? [textEl("p", "tags", candidate.address)] : []),
-    ...(candidate.summary ? [textEl("p", "result-summary", `💬 ${candidate.summary}`)] : []),
+    ...(candidate.summary ? [textEl("p", "result-summary", candidate.summary)] : []),
     link,
   );
   els.result.classList.add("done");

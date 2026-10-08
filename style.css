@@ -101,7 +101,6 @@ h2 {
   border: 2px dashed var(--accent);
   border-radius: 16px;
   background: var(--accent-soft);
-  text-align: center;
 }
 
 .result.done {
@@ -140,20 +139,19 @@ h2 {
 }
 
 .list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   padding: 12px 4px;
   border-bottom: 1px solid var(--border);
 }
 
-.list .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+.list p {
+  margin: 0;
 }
 
 .summary {
   display: -webkit-box;
-  margin: 4px 0 0;
   overflow: hidden;
   color: var(--muted);
   font-size: 0.8rem;
@@ -165,7 +163,6 @@ h2 {
   margin-top: 10px;
   font-size: 0.9rem;
   line-height: 1.5;
-  text-align: left;
 }
 
 .list a {

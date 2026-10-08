@@ -4,6 +4,7 @@ import { test } from "node:test";
 import {
   filterByPrice,
   filterByTag,
+  formatHighlight,
   formatPrice,
   formatRating,
   pickRandom,
@@ -61,6 +62,13 @@ test("formatPrice 與 formatRating 的顯示格式", () => {
   assert.equal(formatPrice(null), "");
   assert.equal(formatRating(4.25, 1234), "⭐ 4.3（1,234）");
   assert.equal(formatRating(null, 0), "");
+});
+
+test("formatHighlight 組出菜名與重點，缺哪個就省略哪個", () => {
+  assert.equal(formatHighlight({ dishes: ["肉燥麵", "酸辣麵"], gist: "麵條Q彈" }), "🍽 肉燥麵、酸辣麵｜麵條Q彈");
+  assert.equal(formatHighlight({ dishes: [], gist: "份量大" }), "份量大");
+  assert.equal(formatHighlight({ dishes: ["花干"], gist: "" }), "🍽 花干");
+  assert.equal(formatHighlight({ dishes: [], gist: "" }), "");
 });
 
 test("pickRandom 依亂數選出對應項目", () => {
