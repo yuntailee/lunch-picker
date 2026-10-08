@@ -150,6 +150,13 @@ h2 {
   margin: 0;
 }
 
+.list .heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 8px;
+}
+
 .summary {
   display: -webkit-box;
   overflow: hidden;

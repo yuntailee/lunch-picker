@@ -177,8 +177,11 @@ function renderChips(container, labels, active, onSelect) {
 }
 
 function candidateItem(candidate) {
+  const heading = document.createElement("div");
+  heading.className = "heading";
+  heading.append(mapLink(candidate.mapUrl, candidate.name), textEl("span", "tags", candidate.detail));
   const li = document.createElement("li");
-  li.append(mapLink(candidate.mapUrl, candidate.name), textEl("p", "tags", candidate.detail));
+  li.append(heading);
   if (candidate.summary) li.append(textEl("p", "summary", candidate.summary));
   return li;
 }
