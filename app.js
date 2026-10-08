@@ -31,7 +31,7 @@ const els = {
 };
 
 async function init() {
-  const response = await fetch("data/restaurants.json");
+  const response = await fetch("data/restaurants.json", { cache: "no-cache" });
   state.locations = (await response.json()).locations;
   const saved = localStorage.getItem(LOCATION_KEY);
   state.location = state.locations.find((l) => l.name === saved) ?? state.locations[0];
