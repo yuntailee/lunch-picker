@@ -1,15 +1,19 @@
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 
-const HOVER_DELAY_MS = 300;
+const SHOW_DELAY_MS = 300;
+// 滑鼠從店家移到地圖要穿過中間的空隙，這段時間內不能關掉預覽
+const HIDE_DELAY_MS = 250;
 const GAP_PX = 16;
-let timer;
+let frame;
+let showTimer;
+let hideTimer;
 
 export function embedUrl(placeId) {
   const params = new URLSearchParams({ key: GOOGLE_MAPS_API_KEY, q: `place_id:${placeId}`, language: "zh-TW" });
   return `https://www.google.com/maps/embed/v1/place?${params}`;
 }
 
-function show(frame, item, placeId) {
+function show(item, placeId) {
   const src = embedUrl(placeId);
   if (frame.src !== src) frame.src = src;
   frame.hidden = false;
@@ -19,14 +23,31 @@ function show(frame, item, placeId) {
   frame.style.left = `${rect.left - frame.offsetWidth - GAP_PX}px`;
 }
 
-export function previewOnHover(frame, item, placeId) {
+function scheduleHide() {
+  clearTimeout(hideTimer);
+  hideTimer = setTimeout(() => {
+    frame.hidden = true;
+  }, HIDE_DELAY_MS);
+}
+
+export function initPreview(element) {
+  frame = element;
+  frame.addEventListener("pointerenter", () => {
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+  });
+  frame.addEventListener("pointerleave", scheduleHide);
+}
+
+export function previewOnHover(item, placeId) {
   item.addEventListener("pointerenter", () => {
     if (!matchMedia("(hover: hover) and (min-width: 900px)").matches) return;
-    clearTimeout(timer);
-    timer = setTimeout(() => show(frame, item, placeId), HOVER_DELAY_MS);
+    clearTimeout(hideTimer);
+    clearTimeout(showTimer);
+    showTimer = setTimeout(() => show(item, placeId), SHOW_DELAY_MS);
   });
   item.addEventListener("pointerleave", () => {
-    clearTimeout(timer);
-    frame.hidden = true;
+    clearTimeout(showTimer);
+    scheduleHide();
   });
 }

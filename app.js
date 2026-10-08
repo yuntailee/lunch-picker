@@ -2,7 +2,7 @@ import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
 import { geocode, searchNearby } from "./places.js";
-import { previewOnHover } from "./preview.js";
+import { initPreview, previewOnHover } from "./preview.js";
 import {
   filterByPrice,
   filterByTag,
@@ -61,6 +61,7 @@ async function init() {
   state.location = state.locations.find((l) => l.name === saved) ?? state.locations[0];
   if (!state.location.restaurants) state.mode = "live";
 
+  initPreview(els.preview);
   els.random.addEventListener("click", spin);
   els.locationForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -217,7 +218,7 @@ function candidateItem(candidate) {
   const li = document.createElement("li");
   li.append(heading);
   if (candidate.summary) li.append(summaryEl("summary", candidate.summary));
-  previewOnHover(els.preview, li, candidate.placeId);
+  previewOnHover(li, candidate.placeId);
   return li;
 }
 
