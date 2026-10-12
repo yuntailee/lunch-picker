@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import {
+  excludeTags,
   filterByPrice,
   filterByTag,
   formatHighlight,
@@ -24,6 +25,14 @@ const restaurants = [
   { name: "咖哩飯", tags: ["飯", "日式"], price: { start: 1000, end: null } },
   { name: "神秘小館", tags: ["其他"], price: null },
 ];
+
+test("excludeTags 排除含有任一不想吃類型的餐廳", () => {
+  assert.deepEqual(
+    excludeTags(restaurants, ["日式", "麵"]).map((r) => r.name),
+    ["雞肉飯", "神秘小館"],
+  );
+  assert.equal(excludeTags(restaurants, []).length, restaurants.length);
+});
 
 test("filterByTag 只留下有該類型的餐廳", () => {
   assert.deepEqual(

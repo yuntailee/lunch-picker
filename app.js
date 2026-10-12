@@ -4,6 +4,7 @@ import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
 import { geocode, searchNearby } from "./places.js";
 import { initPreview, previewOnHover } from "./preview.js";
 import {
+  excludeTags,
   filterByPrice,
   filterByTag,
   formatHighlight,
@@ -28,6 +29,8 @@ const state = {
   location: null,
   mode: "list",
   tag: null,
+  excluding: false,
+  excludedTags: [],
   price: null,
   candidates: [],
   requestId: 0,
@@ -40,6 +43,9 @@ const els = {
   locationInput: document.querySelector("#location-input"),
   modes: document.querySelector("#modes"),
   tags: document.querySelector("#tags"),
+  tagsTitle: document.querySelector("#tags-title"),
+  excludeSwitch: document.querySelector("#exclude-switch"),
+  excludeToggle: document.querySelector("#exclude-toggle"),
   prices: document.querySelector("#prices"),
   keywordForm: document.querySelector("#keyword-form"),
   keyword: document.querySelector("#keyword"),
@@ -72,24 +78,46 @@ async function init() {
     event.preventDefault();
     selectTag(els.keyword.value.trim() || ALL_TAGS);
   });
+  els.excludeToggle.addEventListener("change", () => {
+    state.excluding = els.excludeToggle.checked;
+    resetTags();
+    render();
+  });
   render();
 }
 
 function render() {
-  renderChips(els.locations, state.locations.map((l) => l.name), state.location.name, selectLocation, "map-pin");
-  renderChips(els.modes, state.location.restaurants ? Object.values(MODES) : [MODES.live], MODES[state.mode], selectMode);
-  renderChips(els.tags, [ALL_TAGS, ...state.location.tags], state.tag ?? ALL_TAGS, selectTag);
-  renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], state.price ?? ANY_PRICE, selectPrice);
+  const is = (value) => (label) => label === value;
+  renderChips(els.locations, state.locations.map((l) => l.name), is(state.location.name), selectLocation, "map-pin");
+  renderChips(els.modes, state.location.restaurants ? Object.values(MODES) : [MODES.live], is(MODES[state.mode]), selectMode);
+  if (state.excluding) {
+    renderChips(els.tags, state.location.tags, (label) => state.excludedTags.includes(label), selectTag);
+  } else {
+    renderChips(els.tags, [ALL_TAGS, ...state.location.tags], is(state.tag ?? ALL_TAGS), selectTag);
+  }
+  renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], is(state.price ?? ANY_PRICE), selectPrice);
+  els.excludeSwitch.hidden = state.mode !== "list";
+  els.excludeToggle.checked = state.excluding;
+  els.tagsTitle.textContent = state.excluding ? "不想吃（可複選）" : "想吃";
+  els.tags.classList.toggle("excluding", state.excluding);
   els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
   els.result.hidden = true;
   loadCandidates();
 }
 
+function resetTags() {
+  state.tag = null;
+  state.excludedTags = [];
+}
+
 function selectLocation(name) {
   state.location = state.locations.find((l) => l.name === name);
-  state.tag = null;
-  if (!state.location.restaurants) state.mode = "live";
+  resetTags();
+  if (!state.location.restaurants) {
+    state.mode = "live";
+    state.excluding = false;
+  }
   localStorage.setItem(LOCATION_KEY, name);
   render();
 }
@@ -118,11 +146,21 @@ async function setCustomLocation(query) {
 
 function selectMode(label) {
   state.mode = Object.keys(MODES).find((key) => MODES[key] === label);
+  if (state.mode === "live" && state.excluding) {
+    state.excluding = false;
+    resetTags();
+  }
   render();
 }
 
 function selectTag(tag) {
-  state.tag = tag === ALL_TAGS ? null : tag;
+  if (state.excluding) {
+    state.excludedTags = state.excludedTags.includes(tag)
+      ? state.excludedTags.filter((t) => t !== tag)
+      : [...state.excludedTags, tag];
+  } else {
+    state.tag = tag === ALL_TAGS ? null : tag;
+  }
   render();
 }
 
@@ -139,7 +177,10 @@ async function loadCandidates() {
   const requestId = ++state.requestId;
 
   if (state.mode === "list") {
-    showCandidates(narrow(filterByTag(state.location.restaurants, state.tag).map(fromList)));
+    const restaurants = state.excluding
+      ? excludeTags(state.location.restaurants, state.excludedTags)
+      : filterByTag(state.location.restaurants, state.tag);
+    showCandidates(narrow(restaurants.map(fromList)));
     return;
   }
   if (!GOOGLE_MAPS_API_KEY) {
@@ -191,20 +232,25 @@ function countText(count) {
   const budget = state.price ? `${state.price}的` : "";
   if (state.mode === "list") {
     const updated = state.updatedAt.toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" });
-    return `${open}${budget}${state.tag ? `「${state.tag}」` : "全部"}共 ${count} 間（${updated} 更新）`;
+    return `${open}${budget}${listTarget()}共 ${count} 間（${updated} 更新）`;
   }
   const target = state.tag ? `「${state.tag}」` : "餐廳";
   return `${SEARCH_RADIUS_M} 公尺內${open}${budget}${target}共 ${count} 間`;
 }
 
-function renderChips(container, labels, active, onSelect, icon) {
+function listTarget() {
+  if (state.excluding) return state.excludedTags.length ? `不含「${state.excludedTags.join("、")}」` : "全部";
+  return state.tag ? `「${state.tag}」` : "全部";
+}
+
+function renderChips(container, labels, isActive, onSelect, icon) {
   container.replaceChildren(
     ...labels.map((label) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "chip";
       button.append(...(icon ? [iconEl(icon), " "] : []), label);
-      button.setAttribute("aria-pressed", String(label === active));
+      button.setAttribute("aria-pressed", String(isActive(label)));
       button.addEventListener("click", () => onSelect(label));
       return button;
     }),

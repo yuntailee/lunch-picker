@@ -8,6 +8,10 @@ export function filterByTag(restaurants, tag) {
   return tag ? restaurants.filter((r) => r.tags.includes(tag)) : restaurants;
 }
 
+export function excludeTags(restaurants, tags) {
+  return restaurants.filter((r) => !r.tags.some((tag) => tags.includes(tag)));
+}
+
 export function toPrice(priceRange) {
   if (!priceRange?.startPrice) return null;
   return {

@@ -27,7 +27,14 @@
         </section>
 
         <section>
-          <h2>想吃</h2>
+          <div class="section-head">
+            <h2 id="tags-title">想吃</h2>
+            <label id="exclude-switch" class="switch">
+              <input id="exclude-toggle" type="checkbox" role="switch" />
+              <span class="switch-track" aria-hidden="true"></span>
+              不想吃
+            </label>
+          </div>
           <div id="tags" class="chips"></div>
           <form id="keyword-form" class="keyword-form" hidden>
             <input id="keyword" type="search" placeholder="或輸入想吃的，例如 披薩" enterkeyhint="search" />
