@@ -54,9 +54,96 @@ h1 {
   font-size: 0.9rem;
 }
 
-.user .chip {
+.chip.small {
   padding: 4px 12px;
   font-size: 0.85rem;
+}
+
+.account {
+  position: relative;
+}
+
+.account-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.account-name:hover {
+  color: var(--text);
+}
+
+/* 用 padding 而不是 margin 留距離，滑鼠從名字移到選單時才不會經過空隙而關掉 */
+.account-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 20;
+  display: none;
+  padding-top: 4px;
+}
+
+.account:hover .account-menu,
+.account:focus-within .account-menu {
+  display: block;
+}
+
+.account-menu .chip {
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+}
+
+.blacklist-link {
+  display: block;
+  margin: 10px auto 0;
+  padding: 4px 8px;
+  border: 0;
+  background: none;
+  color: #d1d5db;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.blacklist-link:hover {
+  color: var(--muted);
+}
+
+.context-menu {
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+}
+
+.context-menu button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.context-menu button:hover,
+.context-menu button:focus-visible {
+  outline: none;
+  background: var(--accent-soft);
 }
 
 .login {
@@ -112,11 +199,6 @@ h1 {
   justify-content: space-between;
   min-height: 44px;
   border-bottom: 1px solid var(--border);
-}
-
-.admin-list .chip {
-  padding: 4px 12px;
-  font-size: 0.85rem;
 }
 
 .admin-token {

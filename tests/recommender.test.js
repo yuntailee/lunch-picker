@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import {
+  excludePlaces,
   excludeTags,
   filterByPrice,
   filterByTag,
@@ -32,6 +33,15 @@ test("excludeTags 排除含有任一不想吃類型的餐廳", () => {
     ["雞肉飯", "神秘小館"],
   );
   assert.equal(excludeTags(restaurants, []).length, restaurants.length);
+});
+
+test("excludePlaces 依 placeId 排除黑名單裡的店", () => {
+  const items = [{ placeId: "a", name: "甲" }, { placeId: "b", name: "乙" }, { placeId: "c", name: "丙" }];
+  assert.deepEqual(
+    excludePlaces(items, [{ placeId: "b", name: "乙（舊名）" }]).map((item) => item.name),
+    ["甲", "丙"],
+  );
+  assert.equal(excludePlaces(items, []).length, 3);
 });
 
 test("filterByTag 只留下有該類型的餐廳", () => {

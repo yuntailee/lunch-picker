@@ -57,7 +57,7 @@ function renderList() {
       } else {
         const remove = document.createElement("button");
         remove.type = "button";
-        remove.className = "chip";
+        remove.className = "chip small";
         remove.textContent = "刪除";
         remove.addEventListener("click", () => {
           draft = removeMember(draft, member.name);

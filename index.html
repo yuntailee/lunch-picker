@@ -11,9 +11,15 @@
     <header class="topbar">
       <h1><span class="icon icon-bowl-food" aria-hidden="true"></span> 午餐吃什麼</h1>
       <div id="user" class="user" hidden>
-        <span><span class="icon icon-user-circle" aria-hidden="true"></span> <span id="user-name"></span></span>
-        <button id="admin-open" type="button" class="chip" hidden>管理帳號</button>
-        <button id="logout" type="button" class="chip">登出</button>
+        <button id="admin-open" type="button" class="chip small" hidden>管理帳號</button>
+        <div class="account">
+          <button type="button" class="account-name">
+            <span class="icon icon-user-circle" aria-hidden="true"></span> <span id="user-name"></span>
+          </button>
+          <div class="account-menu">
+            <button id="logout" type="button" class="chip small">登出</button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -57,6 +63,7 @@
         </section>
 
         <button id="random" type="button" class="random"><span class="icon icon-dice-five" aria-hidden="true"></span> 隨機挑一間</button>
+        <button id="blacklist-open" type="button" class="blacklist-link"></button>
 
         <div id="result" class="result" hidden aria-live="polite"></div>
       </aside>
@@ -67,6 +74,7 @@
       </section>
     </main>
     <iframe id="preview" class="preview" title="Google 地圖預覽" hidden></iframe>
+    <div id="context-menu" class="context-menu" role="menu" hidden></div>
 
     <dialog id="admin" class="admin" aria-labelledby="admin-title">
       <h2 id="admin-title">管理帳號</h2>

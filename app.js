@@ -3,9 +3,11 @@ import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
 import { findMember } from "./members.js";
+import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
 import { initPreview, previewOnHover } from "./preview.js";
 import {
+  excludePlaces,
   excludeTags,
   filterByPrice,
   filterByTag,
@@ -33,6 +35,7 @@ const state = {
   tag: null,
   excluding: false,
   excludedTags: [],
+  blacklist: [],
   price: null,
   candidates: [],
   requestId: 0,
@@ -58,6 +61,8 @@ const els = {
   keywordForm: document.querySelector("#keyword-form"),
   keyword: document.querySelector("#keyword"),
   random: document.querySelector("#random"),
+  blacklistOpen: document.querySelector("#blacklist-open"),
+  contextMenu: document.querySelector("#context-menu"),
   result: document.querySelector("#result"),
   count: document.querySelector("#count"),
   list: document.querySelector("#list"),
@@ -85,7 +90,9 @@ async function init() {
     location.reload();
   });
   initPreview(els.preview);
+  initContextMenu(els.contextMenu);
   els.random.addEventListener("click", spin);
+  els.blacklistOpen.addEventListener("click", showBlacklist);
   els.locationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = els.locationInput.value.trim();
@@ -118,6 +125,7 @@ function start(member, members) {
   if (!state.location.restaurants) state.mode = "live";
   state.excluding = prefs.excluding ?? false;
   state.excludedTags = prefs.excludedTags ?? [];
+  state.blacklist = prefs.blacklist ?? [];
 
   els.userName.textContent = member.name;
   els.adminOpen.hidden = !member.admin;
@@ -141,6 +149,7 @@ function savePrefs() {
       customLocation: custom ? { name: custom.name, lat: custom.lat, lng: custom.lng } : null,
       excluding: state.excluding,
       excludedTags: state.excludedTags,
+      blacklist: state.blacklist,
     }),
   );
 }
@@ -169,7 +178,12 @@ function render() {
   els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
   els.result.hidden = true;
+  renderBlacklistLink();
   loadCandidates();
+}
+
+function renderBlacklistLink() {
+  els.blacklistOpen.textContent = `檢視黑名單（${state.blacklist.length}）`;
 }
 
 function selectLocation(name) {
@@ -222,7 +236,8 @@ function selectPrice(label) {
 }
 
 function narrow(candidates) {
-  return filterByPrice(filterByLunch(candidates, new Date().getDay()), state.price);
+  const open = filterByLunch(candidates, new Date().getDay());
+  return excludePlaces(filterByPrice(open, state.price), state.blacklist);
 }
 
 async function loadCandidates() {
@@ -270,7 +285,31 @@ function fromList(restaurant) {
 function showCandidates(candidates) {
   state.candidates = candidates;
   els.count.textContent = countText(candidates.length);
-  els.list.replaceChildren(...candidates.map(candidateItem));
+  els.list.replaceChildren(...candidates.map(listItem));
+}
+
+function showBlacklist() {
+  state.requestId += 1;
+  const back = document.createElement("button");
+  back.type = "button";
+  back.className = "chip small";
+  back.textContent = "返回清單";
+  back.addEventListener("click", render);
+  const title = state.blacklist.length ? `黑名單共 ${state.blacklist.length} 間` : "黑名單是空的";
+  els.count.replaceChildren(title, " ", back);
+  els.list.replaceChildren(...state.blacklist.map(blacklistItem));
+}
+
+function addToBlacklist(candidate) {
+  state.blacklist = [...state.blacklist, candidate];
+  render();
+}
+
+function removeFromBlacklist(candidate) {
+  state.blacklist = state.blacklist.filter((item) => item.placeId !== candidate.placeId);
+  savePrefs();
+  renderBlacklistLink();
+  showBlacklist();
 }
 
 function showMessage(text, icon) {
@@ -309,15 +348,41 @@ function renderChips(container, labels, isActive, onSelect, icon) {
   );
 }
 
-function candidateItem(candidate) {
+function listItem(candidate) {
+  return candidateItem(candidate, [
+    { label: "開啟", onSelect: () => openMap(candidate) },
+    { label: "加入黑名單", onSelect: () => addToBlacklist(candidate) },
+  ]);
+}
+
+function blacklistItem(candidate) {
+  const li = candidateItem(candidate, [
+    { label: "開啟", onSelect: () => openMap(candidate) },
+    { label: "移出黑名單", onSelect: () => removeFromBlacklist(candidate) },
+  ]);
+  const remove = document.createElement("button");
+  remove.type = "button";
+  remove.className = "chip small";
+  remove.textContent = "移出";
+  remove.addEventListener("click", () => removeFromBlacklist(candidate));
+  li.querySelector(".heading").append(remove);
+  return li;
+}
+
+function candidateItem(candidate, menuItems) {
   const heading = document.createElement("div");
   heading.className = "heading";
   heading.append(mapLink(candidate.mapUrl, candidate.name), detailEl("span", candidate));
   const li = document.createElement("li");
   li.append(heading);
   if (candidate.summary) li.append(summaryEl("summary", candidate.summary));
+  li.addEventListener("contextmenu", (event) => openContextMenu(event, menuItems));
   previewOnHover(li, candidate.placeId);
   return li;
+}
+
+function openMap(candidate) {
+  window.open(candidate.mapUrl, "_blank", "noopener");
 }
 
 function detailEl(tag, candidate) {

@@ -12,6 +12,11 @@ export function excludeTags(restaurants, tags) {
   return restaurants.filter((r) => !r.tags.some((tag) => tags.includes(tag)));
 }
 
+export function excludePlaces(items, blacklist) {
+  const placeIds = new Set(blacklist.map((item) => item.placeId));
+  return items.filter((item) => !placeIds.has(item.placeId));
+}
+
 export function toPrice(priceRange) {
   if (!priceRange?.startPrice) return null;
   return {
