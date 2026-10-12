@@ -196,20 +196,30 @@ h1 {
 .admin-list li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   min-height: 44px;
   border-bottom: 1px solid var(--border);
 }
 
-.group-select {
+.admin-member {
+  flex: 1;
+}
+
+.admin-group {
   padding: 4px 8px;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 8px;
   background: var(--card);
   color: var(--text);
   font: inherit;
   font-size: 0.85rem;
-  cursor: pointer;
+}
+
+/* 跟「刪除」按鈕同寬，兩種列的下拉選單才會對齊 */
+.admin-badge,
+.admin-list .chip {
+  min-width: 56px;
+  text-align: center;
 }
 
 .admin-token {

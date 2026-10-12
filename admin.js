@@ -47,14 +47,16 @@ function open() {
 function renderList() {
   els.list.replaceChildren(
     ...draft.map((member) => {
-      const actions = document.createElement("div");
-      actions.className = "admin-actions";
-      actions.append(groupSelect(member));
+      const li = document.createElement("li");
+      const name = document.createElement("span");
+      name.className = "admin-member";
+      name.textContent = member.name;
+      li.append(name, groupSelect(member));
       if (member.admin) {
         const badge = document.createElement("span");
-        badge.className = "tags";
+        badge.className = "tags admin-badge";
         badge.textContent = "管理員";
-        actions.append(badge);
+        li.append(badge);
       } else {
         const remove = document.createElement("button");
         remove.type = "button";
@@ -64,10 +66,8 @@ function renderList() {
           draft = removeMember(draft, member.name);
           renderList();
         });
-        actions.append(remove);
+        li.append(remove);
       }
-      const li = document.createElement("li");
-      li.append(member.name, actions);
       return li;
     }),
   );
@@ -76,8 +76,8 @@ function renderList() {
 
 function groupSelect(member) {
   const select = document.createElement("select");
-  select.className = "group-select";
-  select.setAttribute("aria-label", `${member.name} 的單位`);
+  select.className = "admin-group";
+  select.setAttribute("aria-label", `${member.name} 的群組`);
   select.append(...GROUPS.map((group) => new Option(group, group, false, group === member.group)));
   select.addEventListener("change", () => {
     draft = setGroup(draft, member.name, select.value);

@@ -1,7 +1,7 @@
 {
   "members": [
     { "name": "Stan", "group": "公司" },
-    { "name": "Kiro", "admin": true, "group": "公司" },
+    { "name": "Kiro", "group": "公司", "admin": true },
     { "name": "Annie", "group": "公司" },
     { "name": "Sophie", "group": "公司" },
     { "name": "Sammy", "group": "公司" },
@@ -9,6 +9,7 @@
     { "name": "Daniel", "group": "公司" },
     { "name": "Sean", "group": "公司" },
     { "name": "Judy", "group": "公司" },
-    { "name": "Vic", "group": "公司" }
+    { "name": "Vic", "group": "公司" },
+    { "name": "Danny", "group": "仁愛醫院" }
   ]
 }

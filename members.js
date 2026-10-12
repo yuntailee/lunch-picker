@@ -21,7 +21,6 @@ export function removeMember(members, name) {
 }
 
 export function setGroup(members, name, group) {
-  if (!GROUPS.includes(group)) throw new Error(`沒有「${group}」這個單位`);
   return members.map((member) => (member.name === name ? { ...member, group } : member));
 }
 
