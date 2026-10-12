@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <aside class="panel">
-        <h1><span class="icon icon-bowl-food" aria-hidden="true"></span> 午餐吃什麼</h1>
+    <header class="topbar">
+      <h1><span class="icon icon-bowl-food" aria-hidden="true"></span> 午餐吃什麼</h1>
+      <div id="user" class="user" hidden>
+        <span><span class="icon icon-user-circle" aria-hidden="true"></span> <span id="user-name"></span></span>
+        <button id="admin-open" type="button" class="chip" hidden>管理帳號</button>
+        <button id="logout" type="button" class="chip">登出</button>
+      </div>
+    </header>
 
+    <form id="login" class="login" hidden>
+      <label for="login-name">輸入英文姓名登入</label>
+      <input id="login-name" type="text" autocomplete="username" autocapitalize="words" enterkeyhint="go" required />
+      <button type="submit" class="random">登入</button>
+      <p id="login-error" class="login-error" aria-live="polite"></p>
+    </form>
+
+    <main hidden>
+      <aside class="panel">
         <section>
           <h2>地點</h2>
           <div id="locations" class="chips"></div>
@@ -53,6 +67,24 @@
       </section>
     </main>
     <iframe id="preview" class="preview" title="Google 地圖預覽" hidden></iframe>
+
+    <dialog id="admin" class="admin" aria-labelledby="admin-title">
+      <h2 id="admin-title">管理帳號</h2>
+      <ul id="admin-list" class="admin-list"></ul>
+      <form id="admin-add" class="keyword-form">
+        <input id="admin-name" type="text" placeholder="新成員英文姓名" autocomplete="off" />
+        <button type="submit" class="chip">新增</button>
+      </form>
+      <label class="admin-token">
+        GitHub token（只存在這台瀏覽器）
+        <input id="admin-token" type="password" autocomplete="off" />
+      </label>
+      <p id="admin-status" class="tags" aria-live="polite"></p>
+      <div class="admin-actions">
+        <button id="admin-close" type="button" class="chip">關閉</button>
+        <button id="admin-save" type="button" class="chip primary">儲存</button>
+      </div>
+    </dialog>
     <script type="module" src="app.js"></script>
   </body>
 </html>

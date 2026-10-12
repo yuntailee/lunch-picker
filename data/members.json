@@ -1,0 +1,13 @@
+{
+  "members": [
+    { "name": "Stan" },
+    { "name": "Kiro", "admin": true },
+    { "name": "Annie" },
+    { "name": "Sophie" },
+    { "name": "Sammy" },
+    { "name": "George" },
+    { "name": "Daniel" },
+    { "name": "Sean" },
+    { "name": "Judy" }
+  ]
+}

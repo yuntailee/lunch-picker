@@ -1,6 +1,8 @@
+import { initAdmin } from "./admin.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
+import { findMember } from "./members.js";
 import { geocode, searchNearby } from "./places.js";
 import { initPreview, previewOnHover } from "./preview.js";
 import {
@@ -14,8 +16,7 @@ import {
   PRICE_BUCKETS,
 } from "./recommender.js";
 
-const LOCATION_KEY = "food-tool:location";
-const CUSTOM_LOCATION_KEY = "food-tool:custom-location";
+const MEMBER_KEY = "food-tool:member";
 const OTHER_TAG = "其他";
 const ALL_TAGS = "全部";
 const ANY_PRICE = "不限";
@@ -24,6 +25,7 @@ const SPIN_TICKS = 12;
 const SPIN_INTERVAL_MS = 60;
 
 const state = {
+  member: null,
   updatedAt: null,
   locations: [],
   location: null,
@@ -38,6 +40,14 @@ const state = {
 };
 
 const els = {
+  user: document.querySelector("#user"),
+  userName: document.querySelector("#user-name"),
+  adminOpen: document.querySelector("#admin-open"),
+  logout: document.querySelector("#logout"),
+  login: document.querySelector("#login"),
+  loginName: document.querySelector("#login-name"),
+  loginError: document.querySelector("#login-error"),
+  main: document.querySelector("main"),
   locations: document.querySelector("#locations"),
   locationForm: document.querySelector("#location-form"),
   locationInput: document.querySelector("#location-input"),
@@ -55,16 +65,25 @@ const els = {
 };
 
 async function init() {
-  const response = await fetch("data/restaurants.json", { cache: "no-cache" });
-  const data = await response.json();
+  const fetchJson = (url) => fetch(url, { cache: "no-cache" }).then((response) => response.json());
+  const [{ members }, data] = await Promise.all([fetchJson("data/members.json"), fetchJson("data/restaurants.json")]);
   state.updatedAt = new Date(data.updatedAt);
   state.locations = data.locations;
-  const custom = JSON.parse(localStorage.getItem(CUSTOM_LOCATION_KEY) ?? "null");
-  if (custom) state.locations.push(customLocation(custom));
-  const saved = localStorage.getItem(LOCATION_KEY);
-  state.location = state.locations.find((l) => l.name === saved) ?? state.locations[0];
-  if (!state.location.restaurants) state.mode = "live";
 
+  els.login.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const member = findMember(members, els.loginName.value);
+    if (!member) {
+      els.loginError.textContent = "找不到這個名字，請找管理員新增帳號";
+      return;
+    }
+    localStorage.setItem(MEMBER_KEY, member.name);
+    start(member, members);
+  });
+  els.logout.addEventListener("click", () => {
+    localStorage.removeItem(MEMBER_KEY);
+    location.reload();
+  });
   initPreview(els.preview);
   els.random.addEventListener("click", spin);
   els.locationForm.addEventListener("submit", (event) => {
@@ -78,45 +97,85 @@ async function init() {
   });
   els.tagsSwitch.addEventListener("click", () => {
     state.excluding = !state.excluding;
-    resetTags();
+    state.tag = null;
     render();
   });
+
+  const member = findMember(members, localStorage.getItem(MEMBER_KEY));
+  if (member) {
+    start(member, members);
+  } else {
+    els.login.hidden = false;
+    els.loginName.focus();
+  }
+}
+
+function start(member, members) {
+  state.member = member;
+  const prefs = JSON.parse(localStorage.getItem(prefsKey()) ?? "{}");
+  if (prefs.customLocation) state.locations.push(customLocation(prefs.customLocation));
+  state.location = state.locations.find((l) => l.name === prefs.location) ?? state.locations[0];
+  if (!state.location.restaurants) state.mode = "live";
+  state.excluding = prefs.excluding ?? false;
+  state.excludedTags = prefs.excludedTags ?? [];
+
+  els.userName.textContent = member.name;
+  els.adminOpen.hidden = !member.admin;
+  if (member.admin) initAdmin(members, els.adminOpen);
+  els.login.hidden = true;
+  els.user.hidden = false;
+  els.main.hidden = false;
   render();
 }
 
+function prefsKey() {
+  return `food-tool:prefs:${state.member.name.toLowerCase()}`;
+}
+
+function savePrefs() {
+  const custom = state.locations.find((l) => !l.restaurants);
+  localStorage.setItem(
+    prefsKey(),
+    JSON.stringify({
+      location: state.location.name,
+      customLocation: custom ? { name: custom.name, lat: custom.lat, lng: custom.lng } : null,
+      excluding: state.excluding,
+      excludedTags: state.excludedTags,
+    }),
+  );
+}
+
+// 「不想吃」只在每日清單有分類資料時才生效，切到即時搜尋時保留設定但不套用
+function isExcluding() {
+  return state.excluding && state.mode === "list";
+}
+
 function render() {
+  savePrefs();
   const is = (value) => (label) => label === value;
+  const excluding = isExcluding();
   renderChips(els.locations, state.locations.map((l) => l.name), is(state.location.name), selectLocation, "map-pin");
   renderChips(els.modes, state.location.restaurants ? Object.values(MODES) : [MODES.live], is(MODES[state.mode]), selectMode);
-  if (state.excluding) {
+  if (excluding) {
     renderChips(els.tags, state.location.tags, (label) => state.excludedTags.includes(label), selectTag);
   } else {
     renderChips(els.tags, [ALL_TAGS, ...state.location.tags], is(state.tag ?? ALL_TAGS), selectTag);
   }
   renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], is(state.price ?? ANY_PRICE), selectPrice);
-  els.tagsSwitch.setAttribute("aria-checked", !state.excluding);
+  els.tagsSwitch.setAttribute("aria-checked", !excluding);
   els.tagsSwitch.disabled = state.mode !== "list";
-  els.tagsSwitch.textContent = state.excluding ? "不想吃" : "想吃";
-  els.tags.classList.toggle("excluding", state.excluding);
+  els.tagsSwitch.textContent = excluding ? "不想吃" : "想吃";
+  els.tags.classList.toggle("excluding", excluding);
   els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
   els.result.hidden = true;
   loadCandidates();
 }
 
-function resetTags() {
-  state.tag = null;
-  state.excludedTags = [];
-}
-
 function selectLocation(name) {
   state.location = state.locations.find((l) => l.name === name);
-  resetTags();
-  if (!state.location.restaurants) {
-    state.mode = "live";
-    state.excluding = false;
-  }
-  localStorage.setItem(LOCATION_KEY, name);
+  state.tag = null;
+  if (!state.location.restaurants) state.mode = "live";
   render();
 }
 
@@ -133,7 +192,6 @@ async function setCustomLocation(query) {
   showMessage(`定位「${query}」中…`, "map-pin");
   try {
     const found = await geocode({ apiKey: GOOGLE_MAPS_API_KEY, query });
-    localStorage.setItem(CUSTOM_LOCATION_KEY, JSON.stringify(found));
     state.locations = [...state.locations.filter((l) => l.restaurants), customLocation(found)];
     els.locationInput.value = "";
     selectLocation(found.name);
@@ -144,15 +202,11 @@ async function setCustomLocation(query) {
 
 function selectMode(label) {
   state.mode = Object.keys(MODES).find((key) => MODES[key] === label);
-  if (state.mode === "live" && state.excluding) {
-    state.excluding = false;
-    resetTags();
-  }
   render();
 }
 
 function selectTag(tag) {
-  if (state.excluding) {
+  if (isExcluding()) {
     state.excludedTags = state.excludedTags.includes(tag)
       ? state.excludedTags.filter((t) => t !== tag)
       : [...state.excludedTags, tag];
@@ -175,7 +229,7 @@ async function loadCandidates() {
   const requestId = ++state.requestId;
 
   if (state.mode === "list") {
-    const restaurants = state.excluding
+    const restaurants = isExcluding()
       ? excludeTags(state.location.restaurants, state.excludedTags)
       : filterByTag(state.location.restaurants, state.tag);
     showCandidates(narrow(restaurants.map(fromList)));
@@ -237,7 +291,7 @@ function countText(count) {
 }
 
 function listTarget() {
-  if (state.excluding) return state.excludedTags.length ? `不含「${state.excludedTags.join("、")}」` : "全部";
+  if (isExcluding()) return state.excludedTags.length ? `不含「${state.excludedTags.join("、")}」` : "全部";
   return state.tag ? `「${state.tag}」` : "全部";
 }
 

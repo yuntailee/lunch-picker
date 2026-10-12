@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+/* 自訂 display 的元素也要能被 hidden 屬性藏起來 */
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -22,12 +27,122 @@ body {
 main {
   max-width: 480px;
   margin: 0 auto;
-  padding: 20px 16px 40px;
+  padding: 0 16px 40px;
 }
 
 h1 {
-  margin: 0 0 16px;
+  margin: 0;
   font-size: 1.6rem;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 16px 0;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.user .chip {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
+  margin: 12vh auto 0;
+  padding: 0 16px;
+}
+
+.login label {
+  font-weight: 600;
+}
+
+.login .random {
+  margin-top: 0;
+}
+
+.login-error {
+  min-height: 1.4em;
+  margin: 0;
+  color: #dc2626;
+}
+
+.admin {
+  width: min(420px, calc(100% - 32px));
+  padding: 20px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+}
+
+.admin::backdrop {
+  background: rgb(0 0 0 / 35%);
+}
+
+.admin h2 {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.admin-list {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.admin-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-list .chip {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.admin-token {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.chip.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.chip:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 /* SVG 當遮罩、底色用 currentColor，圖示就會跟著文字顏色走 */
@@ -46,6 +161,7 @@ h1 {
 .icon-magnifying-glass { mask-image: url("icons/magnifying-glass.svg"); }
 .icon-map-pin { mask-image: url("icons/map-pin.svg"); }
 .icon-star { mask-image: url("icons/star.svg"); color: #f59e0b; }
+.icon-user-circle { mask-image: url("icons/user-circle.svg"); }
 
 h1 .icon,
 .summary .icon,
@@ -150,11 +266,9 @@ h2 {
   margin-top: 10px;
 }
 
-.keyword-form[hidden] {
-  display: none;
-}
-
-.keyword-form input {
+.keyword-form input,
+.login input,
+.admin-token input {
   flex: 1;
   min-width: 0;
   padding: 8px 14px;
@@ -293,18 +407,27 @@ h2 {
   box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
 }
 
-.preview[hidden] {
-  display: none;
-}
-
 @media (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+  }
+
+  .topbar {
+    width: 100%;
+    max-width: 1100px;
+  }
+
   main {
     display: grid;
+    flex: 1;
     grid-template-columns: 380px 1fr;
     grid-template-rows: minmax(0, 1fr);
     gap: 32px;
+    width: 100%;
     max-width: 1100px;
-    height: 100dvh;
+    min-height: 0;
     padding-bottom: 0;
   }
 
