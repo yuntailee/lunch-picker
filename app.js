@@ -119,6 +119,7 @@ async function init() {
 
 function start(member, members) {
   state.member = member;
+  state.locations = state.locations.filter((l) => l.group === member.group);
   const prefs = JSON.parse(localStorage.getItem(prefsKey()) ?? "{}");
   if (prefs.customLocation) state.locations.push(customLocation(prefs.customLocation));
   state.location = state.locations.find((l) => l.name === prefs.location) ?? state.locations[0];
