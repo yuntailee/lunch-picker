@@ -1,4 +1,4 @@
-import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
+import { boundsAround, SEARCH_RADIUS_M, splitBounds } from "./geo.js";
 import { formatPrice, formatRating, summaryHighlight, toPrice } from "./recommender.js";
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
@@ -6,6 +6,9 @@ const CACHE_TTL_MS = 30 * 60 * 1000;
 const TEXT_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText";
 const PAGE_SIZE = 20;
 export const TEXT_SEARCH_PAGES = 3;
+// 單次 Text Search 最多 60 筆。滿了就切成四格再查，最多 21 格，避免一次按鈕打太多付費請求。
+export const MAX_SPLIT_DEPTH = 3;
+export const MAX_AREAS = 21;
 // reviewSummary 屬於 Enterprise + Atmosphere SKU（每月免費 1,000 次，與每週爬蟲共用）
 const FIELD_MASK = [
   "places.id",
@@ -73,7 +76,27 @@ export async function gatherTextSearch(fetchPage) {
     pageToken = data.nextPageToken;
     if (!pageToken) break;
   }
-  return places;
+  return { places, truncated: Boolean(pageToken) };
+}
+
+export function dedupePlaces(places) {
+  const byId = new Map();
+  for (const place of places) {
+    const id = place.id || place.displayName;
+    if (!byId.has(id)) byId.set(id, place);
+  }
+  return [...byId.values()];
+}
+
+export async function searchArea(fetchBounds, bounds, depth = 0, budget = { remaining: MAX_AREAS }) {
+  if (budget.remaining <= 0) return [];
+  budget.remaining -= 1;
+  const { places, truncated } = await fetchBounds(bounds);
+  if (!truncated || depth >= MAX_SPLIT_DEPTH) return places;
+  const parts = await Promise.all(
+    splitBounds(bounds).map((part) => searchArea(fetchBounds, part, depth + 1, budget)),
+  );
+  return dedupePlaces([...places, ...parts.flat()]);
 }
 
 function fromRestPlace(place) {
@@ -90,39 +113,47 @@ function fromRestPlace(place) {
   };
 }
 
-export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:pages${TEXT_SEARCH_PAGES}`;
-  const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
-  if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
-
-  const { north, south, east, west } = boundsAround(location, SEARCH_RADIUS_M);
-  const body = {
+function rectangleBody(keyword, bounds) {
+  return {
     textQuery: keyword,
     includedType: "restaurant",
     locationRestriction: {
       rectangle: {
-        low: { latitude: south, longitude: west },
-        high: { latitude: north, longitude: east },
+        low: { latitude: bounds.south, longitude: bounds.west },
+        high: { latitude: bounds.north, longitude: bounds.east },
       },
     },
     languageCode: "zh-TW",
     regionCode: "TW",
     pageSize: PAGE_SIZE,
   };
-  const places = await gatherTextSearch(async (pageToken) => {
-    const response = await fetch(TEXT_SEARCH_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Goog-Api-Key": apiKey,
-        "X-Goog-FieldMask": FIELD_MASK,
-      },
-      body: JSON.stringify({ ...body, pageToken }),
-    });
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.error?.message ?? `Google 搜尋失敗：${response.status}`);
-    return data;
+}
+
+async function fetchTextPage(apiKey, body, pageToken) {
+  const response = await fetch(TEXT_SEARCH_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Goog-Api-Key": apiKey,
+      "X-Goog-FieldMask": FIELD_MASK,
+    },
+    body: JSON.stringify({ ...body, pageToken }),
   });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error?.message ?? `Google 搜尋失敗：${response.status}`);
+  return data;
+}
+
+export async function searchNearby({ apiKey, location, keyword }) {
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:split${MAX_SPLIT_DEPTH}`;
+  const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
+  if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
+
+  const places = await searchArea(
+    (bounds) =>
+      gatherTextSearch((pageToken) => fetchTextPage(apiKey, rectangleBody(keyword, bounds), pageToken)),
+    boundsAround(location, SEARCH_RADIUS_M),
+  );
 
   const results = places.map(fromRestPlace).map(toCandidate);
   localStorage.setItem(cacheKey, JSON.stringify({ time: Date.now(), results }));
