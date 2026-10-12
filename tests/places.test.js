@@ -25,7 +25,6 @@ test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址
     address: "台北市內湖區某路 1 號",
     mapUrl: "https://maps.google.com/?cid=1",
     price: { start: 1, end: 200 },
-    lunchDays: [1],
     summary: "招牌雞肉飯很香。",
   });
 });
@@ -35,6 +34,5 @@ test("toCandidate 沒有評分、價格與營業時間時給空值", () => {
   assert.equal(candidate.detail, "");
   assert.equal(candidate.rating, "");
   assert.equal(candidate.price, null);
-  assert.deepEqual(candidate.lunchDays, []);
   assert.equal(candidate.summary, "");
 });

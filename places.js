@@ -1,5 +1,4 @@
 import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
-import { lunchDays } from "./hours.js";
 import { formatPrice, formatRating, summaryHighlight, toPrice } from "./recommender.js";
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
@@ -12,7 +11,6 @@ const FIELDS = [
   "rating",
   "userRatingCount",
   "priceRange",
-  "regularOpeningHours",
   "reviewSummary",
 ];
 
@@ -49,7 +47,6 @@ export function toCandidate(place) {
     address: place.formattedAddress ?? "",
     mapUrl: place.googleMapsURI,
     price,
-    lunchDays: lunchDays(place.regularOpeningHours?.periods),
     summary: summaryHighlight(place.reviewSummary?.text),
   };
 }

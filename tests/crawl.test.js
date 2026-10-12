@@ -40,20 +40,22 @@ const place = (id, name, businessStatus = "OPERATIONAL", openHour = 11) => ({
   reviewSummary: { text: { text: `${name}的招牌菜很受歡迎。\n\n部分評論提到等很久。` } },
 });
 
-test("buildRestaurants 保留價格、評分、午餐營業日與評論摘要第一段", () => {
+test("buildRestaurants 保留價格、評分與評論摘要第一段", () => {
   const [restaurant] = buildRestaurants([{ category: "飯", places: [place("1", "雞肉飯")] }]);
   assert.equal(restaurant.placeId, "1");
   assert.deepEqual(restaurant.price, { start: 1, end: 200 });
   assert.equal(restaurant.rating, 4.2);
   assert.equal(restaurant.ratingCount, 88);
-  assert.deepEqual(restaurant.lunchDays, [1, 2, 3, 4, 5]);
   assert.equal(restaurant.summary, "雞肉飯的招牌菜很受歡迎。");
 });
 
-test("buildRestaurants 排除午餐時段從不營業或沒有營業時間的店家", () => {
+test("buildRestaurants 保留晚餐店和沒有營業時間的店", () => {
   const dinnerOnly = place("1", "居酒屋", "OPERATIONAL", 17);
   const { regularOpeningHours, ...unknown } = place("2", "神秘小館");
-  assert.equal(buildRestaurants([{ category: "日式", places: [dinnerOnly, unknown] }]).length, 0);
+  assert.deepEqual(
+    buildRestaurants([{ category: "日式", places: [dinnerOnly, unknown] }]).map((r) => r.name),
+    ["居酒屋", "神秘小館"],
+  );
 });
 
 test("buildRestaurants 依搜尋分類歸類並合併重複店家", () => {

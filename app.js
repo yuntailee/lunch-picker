@@ -1,7 +1,6 @@
 import { initAdmin } from "./admin.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
-import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
 import { locationsForGroup, matchMember } from "./members.js";
 import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
@@ -247,8 +246,7 @@ function selectPrice(label) {
 }
 
 function narrow(candidates) {
-  const open = filterByLunch(candidates, new Date().getDay());
-  return excludePlaces(filterByPrice(open, state.price), state.blacklist);
+  return excludePlaces(filterByPrice(candidates, state.price), state.blacklist);
 }
 
 async function loadCandidates() {
@@ -288,7 +286,6 @@ function fromList(restaurant) {
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
     price: restaurant.price,
-    lunchDays: restaurant.lunchDays,
     summary: formatHighlight(restaurant),
   };
 }
@@ -330,14 +327,13 @@ function showMessage(text, icon) {
 }
 
 function countText(count) {
-  const open = `${weekdayLabel(new Date().getDay())} ${LUNCH_LABEL} 有開、`;
   const budget = state.price ? `${state.price}的` : "";
   if (state.mode === "list") {
     const updated = state.updatedAt.toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" });
-    return `${open}${budget}${listTarget()}共 ${count} 間（${updated} 更新）`;
+    return `${budget}${listTarget()}共 ${count} 間（${updated} 更新）`;
   }
   const target = state.tag ? `「${state.tag}」` : "餐廳";
-  return `${SEARCH_RADIUS_M} 公尺內${open}${budget}${target}共 ${count} 間`;
+  return `${SEARCH_RADIUS_M} 公尺內${budget}${target}共 ${count} 間`;
 }
 
 function listTarget() {
