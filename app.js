@@ -136,9 +136,6 @@ function start(member, directory) {
   state.member = member;
   state.locations = locationsForGroup(catalog.locations, crawledLocations, member.group, catalog.categories);
   const prefs = JSON.parse(localStorage.getItem(prefsKey()) ?? "{}");
-  if (prefs.customLocation && !state.locations.some((l) => l.name === prefs.customLocation.name)) {
-    state.locations.push(customLocation(prefs.customLocation));
-  }
   state.location = state.locations.find((l) => l.name === prefs.location) ?? state.locations[0];
   if (!state.location.restaurants) state.mode = "live";
   state.excluding = prefs.excluding ?? false;
@@ -160,12 +157,10 @@ function prefsKey() {
 }
 
 function savePrefs() {
-  const custom = state.locations.find((l) => l.custom);
   localStorage.setItem(
     prefsKey(),
     JSON.stringify({
       location: state.location.name,
-      customLocation: custom ? { name: custom.name, lat: custom.lat, lng: custom.lng } : null,
       excluding: state.excluding,
       excludedTags: state.excludedTags,
       blacklist: state.blacklist,
