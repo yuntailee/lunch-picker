@@ -273,7 +273,7 @@ async function loadCandidates() {
     });
     if (requestId === state.requestId) showCandidates(narrow(candidates));
   } catch (error) {
-    if (requestId === state.requestId) showMessage(`Google 搜尋失敗：${error.message}`);
+    if (requestId === state.requestId) showMessage(error.message);
   }
 }
 

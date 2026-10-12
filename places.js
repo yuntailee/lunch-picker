@@ -1,4 +1,4 @@
-import { boundsAround, SEARCH_RADIUS_M, splitBounds } from "./geo.js";
+import { boundsAround, SEARCH_RADIUS_M } from "./geo.js";
 import { formatPrice, formatRating, summaryHighlight, toPrice } from "./recommender.js";
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
@@ -6,9 +6,6 @@ const CACHE_TTL_MS = 30 * 60 * 1000;
 const TEXT_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText";
 const PAGE_SIZE = 20;
 export const TEXT_SEARCH_PAGES = 3;
-// 單次 Text Search 最多 60 筆。滿了就切成四格再查，最多 21 格，避免一次按鈕打太多付費請求。
-export const MAX_SPLIT_DEPTH = 3;
-export const MAX_AREAS = 21;
 // reviewSummary 屬於 Enterprise + Atmosphere SKU（每月免費 1,000 次，與每週爬蟲共用）
 const FIELD_MASK = [
   "places.id",
@@ -76,29 +73,14 @@ export async function gatherTextSearch(fetchPage) {
     pageToken = data.nextPageToken;
     if (!pageToken) break;
   }
-  // 滿 60 筆時 Google 不再給下一頁 token，但範圍裡可能還有店，所以一樣要再切格。
-  const cap = PAGE_SIZE * TEXT_SEARCH_PAGES;
-  return { places, truncated: Boolean(pageToken) || places.length >= cap };
+  return places;
 }
 
-export function dedupePlaces(places) {
-  const byId = new Map();
-  for (const place of places) {
-    const id = place.id || place.displayName;
-    if (!byId.has(id)) byId.set(id, place);
+export function describeSearchError(message, status) {
+  if ((message ?? "").includes("Quota exceeded")) {
+    return "今天的 Google 搜尋次數用完了，明天 15:00 後再試";
   }
-  return [...byId.values()];
-}
-
-export async function searchArea(fetchBounds, bounds, depth = 0, budget = { remaining: MAX_AREAS }) {
-  if (budget.remaining <= 0) return [];
-  budget.remaining -= 1;
-  const { places, truncated } = await fetchBounds(bounds);
-  if (!truncated || depth >= MAX_SPLIT_DEPTH) return places;
-  const parts = await Promise.all(
-    splitBounds(bounds).map((part) => searchArea(fetchBounds, part, depth + 1, budget)),
-  );
-  return dedupePlaces([...places, ...parts.flat()]);
+  return `Google 搜尋失敗：${message ?? status}`;
 }
 
 function fromRestPlace(place) {
@@ -128,6 +110,7 @@ function rectangleBody(keyword, bounds) {
     languageCode: "zh-TW",
     regionCode: "TW",
     pageSize: PAGE_SIZE,
+    rankPreference: "DISTANCE",
   };
 }
 
@@ -142,19 +125,20 @@ async function fetchTextPage(apiKey, body, pageToken) {
     body: JSON.stringify({ ...body, pageToken }),
   });
   const data = await response.json();
-  if (!response.ok) throw new Error(data.error?.message ?? `Google 搜尋失敗：${response.status}`);
+  if (!response.ok) throw new Error(describeSearchError(data.error?.message, response.status));
   return data;
 }
 
+// 一次按鈕只查 1 公里、最多 3 次，並由近到遠排序。
+// 把地圖切成多格再查，會把 SearchTextRequest 的每日配額打完。
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:split${MAX_SPLIT_DEPTH}:cap`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 
-  const places = await searchArea(
-    (bounds) =>
-      gatherTextSearch((pageToken) => fetchTextPage(apiKey, rectangleBody(keyword, bounds), pageToken)),
-    boundsAround(location, SEARCH_RADIUS_M),
+  const bounds = boundsAround(location, SEARCH_RADIUS_M);
+  const places = await gatherTextSearch((pageToken) =>
+    fetchTextPage(apiKey, rectangleBody(keyword, bounds), pageToken),
   );
 
   const results = places.map(fromRestPlace).map(toCandidate);
