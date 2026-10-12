@@ -3,16 +3,21 @@ import { formatPrice, formatRating, summaryHighlight, toPrice } from "./recommen
 
 const MAPS_CALLBACK = "__foodToolMapsReady";
 const CACHE_TTL_MS = 30 * 60 * 1000;
+const TEXT_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText";
+const PAGE_SIZE = 20;
+export const TEXT_SEARCH_PAGES = 3;
 // reviewSummary 屬於 Enterprise + Atmosphere SKU（每月免費 1,000 次，與每週爬蟲共用）
-const FIELDS = [
-  "displayName",
-  "formattedAddress",
-  "googleMapsURI",
-  "rating",
-  "userRatingCount",
-  "priceRange",
-  "reviewSummary",
-];
+const FIELD_MASK = [
+  "places.id",
+  "places.displayName",
+  "places.formattedAddress",
+  "places.googleMapsUri",
+  "places.rating",
+  "places.userRatingCount",
+  "places.priceRange",
+  "places.reviewSummary",
+  "nextPageToken",
+].join(",");
 
 let mapsReady;
 
@@ -59,22 +64,67 @@ export async function geocode({ apiKey, query }) {
   return { name: query, lat: places[0].location.lat(), lng: places[0].location.lng() };
 }
 
+export async function gatherTextSearch(fetchPage) {
+  const places = [];
+  let pageToken;
+  for (let page = 0; page < TEXT_SEARCH_PAGES; page += 1) {
+    const data = await fetchPage(pageToken);
+    places.push(...(data.places ?? []));
+    pageToken = data.nextPageToken;
+    if (!pageToken) break;
+  }
+  return places;
+}
+
+function fromRestPlace(place) {
+  const summary = place.reviewSummary?.text;
+  return {
+    id: place.id?.replace(/^places\//, ""),
+    displayName: place.displayName?.text ?? place.displayName,
+    formattedAddress: place.formattedAddress,
+    googleMapsURI: place.googleMapsUri,
+    rating: place.rating,
+    userRatingCount: place.userRatingCount,
+    priceRange: place.priceRange,
+    reviewSummary: { text: summary?.text ?? summary ?? "" },
+  };
+}
+
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:pages${TEXT_SEARCH_PAGES}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 
-  await loadMaps(apiKey);
-  const { Place } = await google.maps.importLibrary("places");
-  const { places } = await Place.searchByText({
+  const { north, south, east, west } = boundsAround(location, SEARCH_RADIUS_M);
+  const body = {
     textQuery: keyword,
-    fields: FIELDS,
     includedType: "restaurant",
-    locationRestriction: boundsAround(location, SEARCH_RADIUS_M),
-    maxResultCount: 20,
+    locationRestriction: {
+      rectangle: {
+        low: { latitude: south, longitude: west },
+        high: { latitude: north, longitude: east },
+      },
+    },
+    languageCode: "zh-TW",
+    regionCode: "TW",
+    pageSize: PAGE_SIZE,
+  };
+  const places = await gatherTextSearch(async (pageToken) => {
+    const response = await fetch(TEXT_SEARCH_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": apiKey,
+        "X-Goog-FieldMask": FIELD_MASK,
+      },
+      body: JSON.stringify({ ...body, pageToken }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error?.message ?? `Google 搜尋失敗：${response.status}`);
+    return data;
   });
 
-  const results = places.map(toCandidate);
+  const results = places.map(fromRestPlace).map(toCandidate);
   localStorage.setItem(cacheKey, JSON.stringify({ time: Date.now(), results }));
   return results;
 }

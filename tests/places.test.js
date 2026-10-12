@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { toCandidate } from "../places.js";
+import { gatherTextSearch, toCandidate } from "../places.js";
 
 test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址", () => {
   const candidate = toCandidate({
@@ -27,6 +27,27 @@ test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址
     price: { start: 1, end: 200 },
     summary: "招牌雞肉飯很香。",
   });
+});
+
+test("gatherTextSearch 翻頁直到沒有下一頁，最多 3 頁", async () => {
+  const calls = [];
+  const places = await gatherTextSearch(async (pageToken) => {
+    calls.push(pageToken);
+    const page = calls.length;
+    return { places: [{ id: `p${page}` }], nextPageToken: page < 3 ? `token-${page}` : undefined };
+  });
+  assert.deepEqual(calls, [undefined, "token-1", "token-2"]);
+  assert.deepEqual(places.map((place) => place.id), ["p1", "p2", "p3"]);
+});
+
+test("gatherTextSearch 第一頁就沒有下一頁時停住", async () => {
+  let calls = 0;
+  const places = await gatherTextSearch(async () => {
+    calls += 1;
+    return { places: [{ id: "only" }] };
+  });
+  assert.equal(calls, 1);
+  assert.deepEqual(places, [{ id: "only" }]);
 });
 
 test("toCandidate 沒有評分、價格與營業時間時給空值", () => {

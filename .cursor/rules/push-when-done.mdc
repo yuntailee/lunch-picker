@@ -1,0 +1,13 @@
+---
+description: 這個專案改完就直接 commit 並 push，不要先問
+alwaysApply: true
+---
+
+# 改完直接推上 GitHub
+
+這個 repo 的使用者要求：做完就能用的改動，直接 commit 並 `git push` 到 `origin` 的目前分支。不要先問要不要推。
+
+- 不要 force push
+- 不要跳過 hooks
+- 不要把密碼、token、`.env` 放進 commit
+- 還沒做完、或使用者只是在問問題，不要為了這條規則空推
