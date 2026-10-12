@@ -65,8 +65,20 @@ export async function geocode({ apiKey, query }) {
   return { name: query, lat: places[0].location.lat(), lng: places[0].location.lng() };
 }
 
-export function withoutPermanentlyClosed(places) {
-  return places.filter((place) => place.businessStatus !== "CLOSED_PERMANENTLY");
+const CLOSED_STATUSES = new Set(["CLOSED_PERMANENTLY", "CLOSED_TEMPORARILY"]);
+
+export function closedLabel(businessStatus) {
+  return businessStatus === "CLOSED_TEMPORARILY" ? "暫停營業" : "永久歇業";
+}
+
+export function partitionPlaces(places) {
+  const open = [];
+  const closed = [];
+  for (const place of places) {
+    if (CLOSED_STATUSES.has(place.businessStatus)) closed.push(place);
+    else open.push(place);
+  }
+  return { open, closed };
 }
 
 export async function gatherTextSearch(fetchPage) {
@@ -137,16 +149,26 @@ async function fetchTextPage(apiKey, body, pageToken) {
 // 一次按鈕只查 800 公尺、最多 3 次，並由近到遠排序。
 // 把地圖切成多格再查，會把 SearchTextRequest 的每日配額打完。
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance:open:${SEARCH_RADIUS_M}`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance:operating:${SEARCH_RADIUS_M}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
-  if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
+  if (cached && Date.now() - cached.time < CACHE_TTL_MS) {
+    return { results: cached.results, closed: cached.closed ?? [] };
+  }
 
   const bounds = boundsAround(location, SEARCH_RADIUS_M);
   const places = await gatherTextSearch((pageToken) =>
     fetchTextPage(apiKey, rectangleBody(keyword, bounds), pageToken),
   );
 
-  const results = withoutPermanentlyClosed(places).map(fromRestPlace).map(toCandidate);
-  localStorage.setItem(cacheKey, JSON.stringify({ time: Date.now(), results }));
-  return results;
+  const { open, closed } = partitionPlaces(places);
+  const payload = {
+    results: open.map(fromRestPlace).map(toCandidate),
+    closed: closed.map(toClosedCandidate),
+  };
+  localStorage.setItem(cacheKey, JSON.stringify({ time: Date.now(), ...payload }));
+  return payload;
+}
+
+function toClosedCandidate(place) {
+  return { ...toCandidate(fromRestPlace(place)), detail: closedLabel(place.businessStatus), summary: "" };
 }

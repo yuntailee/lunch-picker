@@ -28,6 +28,15 @@ test("群組只拿到自己的地點", async () => {
   assert.deepEqual(locationsForGroup(config.locations, locations, "公司").map((l) => l.name), ["內湖", "板橋 TPKC"]);
 });
 
+test("data/closed.json 的歇業店有編號、名稱和歇業種類", async () => {
+  const closed = await readJson("../data/closed.json");
+  assert.ok(Array.isArray(closed));
+  for (const restaurant of closed) {
+    assert.ok(restaurant.placeId && restaurant.name, "歇業店缺少 placeId 或名稱");
+    assert.ok(restaurant.detail === "永久歇業" || restaurant.detail === "暫停營業");
+  }
+});
+
 test("data/restaurants.json 是完整的爬蟲結果", async () => {
   const { updatedAt, locations } = await readJson("../data/restaurants.json");
   const config = await readJson("../data/config.json");

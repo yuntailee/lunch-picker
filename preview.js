@@ -20,7 +20,9 @@ function show(item, placeId) {
   const rect = item.getBoundingClientRect();
   const centered = rect.top + rect.height / 2 - frame.offsetHeight / 2;
   frame.style.top = `${Math.min(Math.max(centered, GAP_PX), innerHeight - frame.offsetHeight - GAP_PX)}px`;
-  frame.style.left = `${rect.left - frame.offsetWidth - GAP_PX}px`;
+  const leftOfItem = rect.left - frame.offsetWidth - GAP_PX;
+  const preferred = leftOfItem >= GAP_PX ? leftOfItem : rect.right + GAP_PX;
+  frame.style.left = `${Math.min(Math.max(preferred, GAP_PX), innerWidth - frame.offsetWidth - GAP_PX)}px`;
 }
 
 function scheduleHide() {
@@ -39,12 +41,20 @@ export function initPreview(element) {
   frame.addEventListener("pointerleave", scheduleHide);
 }
 
+export function hidePreview() {
+  clearTimeout(showTimer);
+  clearTimeout(hideTimer);
+  if (frame) frame.hidden = true;
+}
+
 export function previewOnHover(item, placeId) {
+  const resolveId = () => (typeof placeId === "function" ? placeId() : placeId);
   item.addEventListener("pointerenter", () => {
-    if (!matchMedia("(hover: hover) and (min-width: 900px)").matches) return;
+    const id = resolveId();
+    if (!id || !matchMedia("(hover: hover) and (min-width: 900px)").matches) return;
     clearTimeout(hideTimer);
     clearTimeout(showTimer);
-    showTimer = setTimeout(() => show(item, placeId), SHOW_DELAY_MS);
+    showTimer = setTimeout(() => show(item, id), SHOW_DELAY_MS);
   });
   item.addEventListener("pointerleave", () => {
     clearTimeout(showTimer);

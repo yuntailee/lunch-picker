@@ -4,7 +4,7 @@ import { SEARCH_RADIUS_M } from "./geo.js";
 import { locationsForGroup, matchMember } from "./members.js";
 import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
-import { initPreview, previewOnHover } from "./preview.js";
+import { hidePreview, initPreview, previewOnHover } from "./preview.js";
 import {
   excludePlaces,
   excludeTags,
@@ -27,6 +27,7 @@ const SPIN_INTERVAL_MS = 60;
 
 let crawledLocations = [];
 let catalog = { categories: [], locations: [] };
+let closedFile = [];
 
 const state = {
   member: null,
@@ -38,10 +39,12 @@ const state = {
   excluding: false,
   excludedTags: [],
   blacklist: [],
+  closed: [],
   price: null,
   candidates: [],
   requestId: 0,
   spinning: false,
+  resultPlaceId: null,
 };
 
 const els = {
@@ -64,6 +67,7 @@ const els = {
   keyword: document.querySelector("#keyword"),
   random: document.querySelector("#random"),
   blacklistOpen: document.querySelector("#blacklist-open"),
+  closedOpen: document.querySelector("#closed-open"),
   contextMenu: document.querySelector("#context-menu"),
   result: document.querySelector("#result"),
   count: document.querySelector("#count"),
@@ -73,14 +77,16 @@ const els = {
 
 async function init() {
   const fetchJson = (url) => fetch(url, { cache: "no-cache" }).then((response) => response.json());
-  const [directory, data, config] = await Promise.all([
+  const [directory, data, config, closed] = await Promise.all([
     fetchJson("data/members.json"),
     fetchJson("data/restaurants.json"),
     fetchJson("data/config.json"),
+    fetchJson("data/closed.json"),
   ]);
   state.updatedAt = new Date(data.updatedAt);
   crawledLocations = data.locations;
   catalog = config;
+  closedFile = closed;
 
   els.login.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -97,9 +103,11 @@ async function init() {
     location.reload();
   });
   initPreview(els.preview);
+  previewOnHover(els.result, () => state.resultPlaceId);
   initContextMenu(els.contextMenu);
   els.random.addEventListener("click", spin);
   els.blacklistOpen.addEventListener("click", showBlacklist);
+  els.closedOpen.addEventListener("click", showClosed);
   els.locationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = els.locationInput.value.trim();
@@ -136,6 +144,7 @@ function start(member, directory) {
   state.excluding = prefs.excluding ?? false;
   state.excludedTags = prefs.excludedTags ?? [];
   state.blacklist = prefs.blacklist ?? [];
+  state.closed = mergePlaces(closedFile, prefs.closed ?? []);
 
   els.userName.textContent = member.name;
   els.adminOpen.hidden = !member.admin;
@@ -160,6 +169,7 @@ function savePrefs() {
       excluding: state.excluding,
       excludedTags: state.excludedTags,
       blacklist: state.blacklist,
+      closed: state.closed.filter((item) => !closedFile.some((file) => file.placeId === item.placeId)),
     }),
   );
 }
@@ -187,6 +197,8 @@ function render() {
   els.tags.classList.toggle("excluding", excluding);
   els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
+  state.resultPlaceId = null;
+  hidePreview();
   els.result.hidden = true;
   renderBlacklistLink();
   loadCandidates();
@@ -194,6 +206,7 @@ function render() {
 
 function renderBlacklistLink() {
   els.blacklistOpen.textContent = `檢視黑名單（${state.blacklist.length}）`;
+  els.closedOpen.textContent = `檢視歇業（${state.closed.length}）`;
 }
 
 function selectLocation(name) {
@@ -246,7 +259,7 @@ function selectPrice(label) {
 }
 
 function narrow(candidates) {
-  return excludePlaces(filterByPrice(candidates, state.price), state.blacklist);
+  return excludePlaces(filterByPrice(candidates, state.price), [...state.blacklist, ...state.closed]);
 }
 
 async function loadCandidates() {
@@ -266,12 +279,14 @@ async function loadCandidates() {
 
   showMessage("Google 地圖搜尋中…", "magnifying-glass");
   try {
-    const candidates = await searchNearby({
+    const { results, closed } = await searchNearby({
       apiKey: GOOGLE_MAPS_API_KEY,
       location: state.location,
       keyword: state.tag ?? "餐廳",
     });
-    if (requestId === state.requestId) showCandidates(narrow(candidates));
+    if (requestId !== state.requestId) return;
+    rememberClosed(closed);
+    showCandidates(narrow(results));
   } catch (error) {
     if (requestId === state.requestId) showMessage(error.message);
   }
@@ -298,14 +313,40 @@ function showCandidates(candidates) {
 
 function showBlacklist() {
   state.requestId += 1;
+  const back = backButton();
+  const title = state.blacklist.length ? `黑名單共 ${state.blacklist.length} 間` : "黑名單是空的";
+  els.count.replaceChildren(title, " ", back);
+  els.list.replaceChildren(...state.blacklist.map(blacklistItem));
+}
+
+function showClosed() {
+  state.requestId += 1;
+  const back = backButton();
+  const title = state.closed.length ? `歇業共 ${state.closed.length} 間` : "歇業名單是空的";
+  els.count.replaceChildren(title, " ", back);
+  els.list.replaceChildren(...state.closed.map(closedItem));
+}
+
+function backButton() {
   const back = document.createElement("button");
   back.type = "button";
   back.className = "chip small";
   back.textContent = "返回清單";
   back.addEventListener("click", render);
-  const title = state.blacklist.length ? `黑名單共 ${state.blacklist.length} 間` : "黑名單是空的";
-  els.count.replaceChildren(title, " ", back);
-  els.list.replaceChildren(...state.blacklist.map(blacklistItem));
+  return back;
+}
+
+function rememberClosed(found) {
+  const next = mergePlaces(state.closed, found);
+  if (next.length === state.closed.length) return;
+  state.closed = next;
+  savePrefs();
+  renderBlacklistLink();
+}
+
+function mergePlaces(current, extra) {
+  const seen = new Set(current.map((item) => item.placeId));
+  return [...current, ...extra.filter((item) => item.placeId && !seen.has(item.placeId))];
 }
 
 function addToBlacklist(candidate) {
@@ -362,6 +403,10 @@ function listItem(candidate) {
   ]);
 }
 
+function closedItem(candidate) {
+  return candidateItem(candidate, [{ label: "開啟", onSelect: () => openMap(candidate) }]);
+}
+
 function blacklistItem(candidate) {
   const li = candidateItem(candidate, [
     { label: "開啟", onSelect: () => openMap(candidate) },
@@ -409,6 +454,8 @@ function spin() {
   if (state.spinning || candidates.length === 0) return;
 
   state.spinning = true;
+  state.resultPlaceId = null;
+  hidePreview();
   els.random.disabled = true;
   els.random.classList.add("rolling");
   els.result.hidden = false;
@@ -430,6 +477,7 @@ function spin() {
 }
 
 function showResult(candidate) {
+  state.resultPlaceId = candidate.placeId;
   const link = mapLink(candidate.mapUrl, "在 Google 地圖開啟 →");
   link.className = "map-link";
   els.result.replaceChildren(

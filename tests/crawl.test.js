@@ -73,9 +73,12 @@ test("buildRestaurants 依搜尋分類歸類並合併重複店家", () => {
   assert.equal(restaurants[0].mapUrl, "https://maps.google.com/?cid=1");
 });
 
-test("buildRestaurants 排除歇業店家", () => {
+test("buildRestaurants 排除永久歇業和暫時歇業", () => {
   const restaurants = buildRestaurants([
-    { category: "飯", places: [place("1", "倒閉飯館", "CLOSED_PERMANENTLY")] },
+    {
+      category: "飯",
+      places: [place("1", "倒閉飯館", "CLOSED_PERMANENTLY"), place("2", "裝修中", "CLOSED_TEMPORARILY")],
+    },
   ]);
   assert.equal(restaurants.length, 0);
 });

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { describeSearchError, gatherTextSearch, toCandidate, withoutPermanentlyClosed } from "../places.js";
+import { closedLabel, describeSearchError, gatherTextSearch, partitionPlaces, toCandidate } from "../places.js";
 
 test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址", () => {
   const candidate = toCandidate({
@@ -58,17 +58,17 @@ test("describeSearchError 把每日配額用完翻成可讀的句子", () => {
   assert.equal(message, "今天的 Google 搜尋次數用完了，明天 15:00 後再試");
 });
 
-test("withoutPermanentlyClosed 只拿掉永久歇業，暫時歇業仍保留", () => {
-  const places = [
+test("partitionPlaces 把永久歇業和暫停營業分出去", () => {
+  const { open, closed } = partitionPlaces([
     { id: "open", businessStatus: "OPERATIONAL" },
     { id: "gone", businessStatus: "CLOSED_PERMANENTLY" },
     { id: "pause", businessStatus: "CLOSED_TEMPORARILY" },
     { id: "unknown" },
-  ];
-  assert.deepEqual(
-    withoutPermanentlyClosed(places).map((place) => place.id),
-    ["open", "pause", "unknown"],
-  );
+  ]);
+  assert.deepEqual(open.map((place) => place.id), ["open", "unknown"]);
+  assert.deepEqual(closed.map((place) => place.id), ["gone", "pause"]);
+  assert.equal(closedLabel("CLOSED_PERMANENTLY"), "永久歇業");
+  assert.equal(closedLabel("CLOSED_TEMPORARILY"), "暫停營業");
 });
 
 test("toCandidate 沒有評分、價格與營業時間時給空值", () => {
