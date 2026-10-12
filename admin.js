@@ -1,5 +1,5 @@
 import { commitFile } from "./github.js";
-import { addMember, removeMember, serializeMembers } from "./members.js";
+import { addMember, GROUPS, removeMember, serializeMembers, setGroup } from "./members.js";
 
 const TOKEN_KEY = "food-tool:github-token";
 const MEMBERS_PATH = "data/members.json";
@@ -47,13 +47,14 @@ function open() {
 function renderList() {
   els.list.replaceChildren(
     ...draft.map((member) => {
-      const li = document.createElement("li");
-      li.append(member.name);
+      const actions = document.createElement("div");
+      actions.className = "admin-actions";
+      actions.append(groupSelect(member));
       if (member.admin) {
         const badge = document.createElement("span");
         badge.className = "tags";
         badge.textContent = "管理員";
-        li.append(badge);
+        actions.append(badge);
       } else {
         const remove = document.createElement("button");
         remove.type = "button";
@@ -63,12 +64,26 @@ function renderList() {
           draft = removeMember(draft, member.name);
           renderList();
         });
-        li.append(remove);
+        actions.append(remove);
       }
+      const li = document.createElement("li");
+      li.append(member.name, actions);
       return li;
     }),
   );
   els.save.disabled = draft === saved;
+}
+
+function groupSelect(member) {
+  const select = document.createElement("select");
+  select.className = "group-select";
+  select.setAttribute("aria-label", `${member.name} 的單位`);
+  select.append(...GROUPS.map((group) => new Option(group, group, false, group === member.group)));
+  select.addEventListener("change", () => {
+    draft = setGroup(draft, member.name, select.value);
+    renderList();
+  });
+  return select;
 }
 
 async function save() {

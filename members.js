@@ -1,3 +1,5 @@
+export const GROUPS = ["公司", "仁愛醫院"];
+
 const NAME_PATTERN = /^[A-Za-z][A-Za-z .'-]*$/;
 
 const sameName = (a, b) => a.toLowerCase() === b.toLowerCase();
@@ -11,11 +13,16 @@ export function addMember(members, name) {
   const trimmed = name.trim().replace(/\s+/g, " ");
   if (!NAME_PATTERN.test(trimmed)) throw new Error("請輸入英文姓名");
   if (findMember(members, trimmed)) throw new Error(`「${trimmed}」已經存在`);
-  return [...members, { name: trimmed }];
+  return [...members, { name: trimmed, group: GROUPS[0] }];
 }
 
 export function removeMember(members, name) {
   return members.filter((member) => member.name !== name);
+}
+
+export function setGroup(members, name, group) {
+  if (!GROUPS.includes(group)) throw new Error(`沒有「${group}」這個單位`);
+  return members.map((member) => (member.name === name ? { ...member, group } : member));
 }
 
 export function serializeMembers(members) {
