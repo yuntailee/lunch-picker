@@ -78,7 +78,7 @@ function groupSelect(member) {
   const select = document.createElement("select");
   select.className = "admin-group";
   select.setAttribute("aria-label", `${member.name} 的群組`);
-  select.append(...GROUPS.map((group) => new Option(group, group, false, group === member.group)));
+  select.append(...Object.keys(GROUPS).map((group) => new Option(group, group, false, group === member.group)));
   select.addEventListener("change", () => {
     draft = setGroup(draft, member.name, select.value);
     renderList();

@@ -2,7 +2,7 @@ import { initAdmin } from "./admin.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
-import { findMember } from "./members.js";
+import { findMember, GROUPS } from "./members.js";
 import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
 import { initPreview, previewOnHover } from "./preview.js";
@@ -121,7 +121,8 @@ function start(member, members) {
   state.member = member;
   const prefs = JSON.parse(localStorage.getItem(prefsKey()) ?? "{}");
   if (prefs.customLocation) state.locations.push(customLocation(prefs.customLocation));
-  state.location = state.locations.find((l) => l.name === prefs.location) ?? state.locations[0];
+  const home = prefs.location ?? GROUPS[member.group];
+  state.location = state.locations.find((l) => l.name === home) ?? state.locations[0];
   if (!state.location.restaurants) state.mode = "live";
   state.excluding = prefs.excluding ?? false;
   state.excludedTags = prefs.excludedTags ?? [];

@@ -17,7 +17,7 @@ test("findMember 不分大小寫、忽略前後空白", () => {
 });
 
 test("addMember 只收英文姓名、不分大小寫不能重複，預設分在第一個群組", () => {
-  assert.deepEqual(addMember(members, "  Mary   Jane ").at(-1), { name: "Mary Jane", group: GROUPS[0] });
+  assert.deepEqual(addMember(members, "  Mary   Jane ").at(-1), { name: "Mary Jane", group: "公司" });
   assert.throws(() => addMember(members, "stan"), /已經存在/);
   assert.throws(() => addMember(members, "小明"), /英文姓名/);
   assert.throws(() => addMember(members, "   "), /英文姓名/);
@@ -42,5 +42,13 @@ test("members.json 至少有一位管理員，名字合法不重複，群組都�
   const { members: all } = JSON.parse(await readFile(new URL("../data/members.json", import.meta.url)));
   assert.ok(all.some((m) => m.admin));
   all.reduce((list, m) => addMember(list, m.name), []);
-  assert.ok(all.every((m) => GROUPS.includes(m.group)));
+  assert.ok(all.every((m) => m.group in GROUPS));
+});
+
+test("每個群組的預設地點都在 data/config.json 裡", async () => {
+  const { locations } = JSON.parse(await readFile(new URL("../data/config.json", import.meta.url)));
+  const names = locations.map((l) => l.name);
+  for (const [group, location] of Object.entries(GROUPS)) {
+    assert.ok(names.includes(location), `${group} 的預設地點「${location}」不在 config.json`);
+  }
 });
