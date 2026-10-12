@@ -2,7 +2,7 @@ import { initAdmin } from "./admin.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
 import { SEARCH_RADIUS_M } from "./geo.js";
 import { filterByLunch, LUNCH_LABEL, weekdayLabel } from "./hours.js";
-import { findMember } from "./members.js";
+import { locationsForGroup, matchMember } from "./members.js";
 import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
 import { initPreview, previewOnHover } from "./preview.js";
@@ -25,6 +25,9 @@ const ANY_PRICE = "不限";
 const MODES = { list: "每日清單", live: "即時搜尋" };
 const SPIN_TICKS = 12;
 const SPIN_INTERVAL_MS = 60;
+
+let crawledLocations = [];
+let catalog = { categories: [], locations: [] };
 
 const state = {
   member: null,
@@ -71,19 +74,24 @@ const els = {
 
 async function init() {
   const fetchJson = (url) => fetch(url, { cache: "no-cache" }).then((response) => response.json());
-  const [{ members }, data] = await Promise.all([fetchJson("data/members.json"), fetchJson("data/restaurants.json")]);
+  const [directory, data, config] = await Promise.all([
+    fetchJson("data/members.json"),
+    fetchJson("data/restaurants.json"),
+    fetchJson("data/config.json"),
+  ]);
   state.updatedAt = new Date(data.updatedAt);
-  state.locations = data.locations;
+  crawledLocations = data.locations;
+  catalog = config;
 
-  els.login.addEventListener("submit", (event) => {
+  els.login.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const member = findMember(members, els.loginName.value);
+    const member = await matchMember(directory.members, els.loginName.value);
     if (!member) {
       els.loginError.textContent = "找不到這個名字，請找管理員新增帳號";
       return;
     }
     localStorage.setItem(MEMBER_KEY, member.name);
-    start(member, members);
+    start(member, directory);
   });
   els.logout.addEventListener("click", () => {
     localStorage.removeItem(MEMBER_KEY);
@@ -108,19 +116,22 @@ async function init() {
     render();
   });
 
-  const member = findMember(members, localStorage.getItem(MEMBER_KEY));
+  const member = await matchMember(directory.members, localStorage.getItem(MEMBER_KEY));
   if (member) {
-    start(member, members);
+    start(member, directory);
   } else {
     els.login.hidden = false;
     els.loginName.focus();
   }
 }
 
-function start(member, members) {
+function start(member, directory) {
   state.member = member;
+  state.locations = locationsForGroup(catalog.locations, crawledLocations, member.group, catalog.categories);
   const prefs = JSON.parse(localStorage.getItem(prefsKey()) ?? "{}");
-  if (prefs.customLocation) state.locations.push(customLocation(prefs.customLocation));
+  if (prefs.customLocation && !state.locations.some((l) => l.name === prefs.customLocation.name)) {
+    state.locations.push(customLocation(prefs.customLocation));
+  }
   state.location = state.locations.find((l) => l.name === prefs.location) ?? state.locations[0];
   if (!state.location.restaurants) state.mode = "live";
   state.excluding = prefs.excluding ?? false;
@@ -129,7 +140,7 @@ function start(member, members) {
 
   els.userName.textContent = member.name;
   els.adminOpen.hidden = !member.admin;
-  if (member.admin) initAdmin(members, els.adminOpen);
+  if (member.admin) initAdmin(directory, els.adminOpen);
   els.login.hidden = true;
   els.user.hidden = false;
   els.main.hidden = false;
@@ -141,7 +152,7 @@ function prefsKey() {
 }
 
 function savePrefs() {
-  const custom = state.locations.find((l) => !l.restaurants);
+  const custom = state.locations.find((l) => l.custom);
   localStorage.setItem(
     prefsKey(),
     JSON.stringify({
@@ -195,18 +206,18 @@ function selectLocation(name) {
 
 function customLocation({ name, lat, lng }) {
   const tags = [...new Set(state.locations.flatMap((l) => l.tags ?? []))].filter((t) => t !== OTHER_TAG);
-  return { name, lat, lng, tags, restaurants: null };
+  return { name, lat, lng, tags, restaurants: null, custom: true };
 }
 
 async function setCustomLocation(query) {
-  if (state.locations.some((l) => l.name === query && l.restaurants)) {
+  if (state.locations.some((l) => l.name === query && !l.custom)) {
     selectLocation(query);
     return;
   }
   showMessage(`定位「${query}」中…`, "map-pin");
   try {
     const found = await geocode({ apiKey: GOOGLE_MAPS_API_KEY, query });
-    state.locations = [...state.locations.filter((l) => l.restaurants), customLocation(found)];
+    state.locations = [...state.locations.filter((l) => !l.custom), customLocation(found)];
     els.locationInput.value = "";
     selectLocation(found.name);
   } catch (error) {

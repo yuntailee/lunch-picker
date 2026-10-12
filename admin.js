@@ -1,12 +1,15 @@
 import { commitFile } from "./github.js";
-import { addMember, GROUPS, removeMember, serializeMembers, setGroup } from "./members.js";
+import { addMember, GROUPS, openRoster, removeMember, serializeDirectory, setGroup, toDirectory } from "./members.js";
 
 const TOKEN_KEY = "food-tool:github-token";
+const SECRET_KEY = "food-tool:roster-secret";
 const MEMBERS_PATH = "data/members.json";
 
 const els = {
   dialog: document.querySelector("#admin"),
   list: document.querySelector("#admin-list"),
+  unlockForm: document.querySelector("#admin-unlock"),
+  secret: document.querySelector("#admin-secret"),
   addForm: document.querySelector("#admin-add"),
   name: document.querySelector("#admin-name"),
   token: document.querySelector("#admin-token"),
@@ -15,16 +18,24 @@ const els = {
   close: document.querySelector("#admin-close"),
 };
 
+let roster = "";
 let saved = [];
 let draft = [];
+let unlocked = false;
 
-export function initAdmin(members, openButton) {
-  saved = members;
+export function initAdmin(directory, openButton) {
+  roster = directory.roster;
+  els.secret.value = localStorage.getItem(SECRET_KEY) ?? "";
   els.token.value = localStorage.getItem(TOKEN_KEY) ?? "";
   openButton.addEventListener("click", open);
   els.close.addEventListener("click", () => els.dialog.close());
+  els.unlockForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    unlock();
+  });
   els.addForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (!unlocked) return;
     try {
       draft = addMember(draft, els.name.value);
       els.name.value = "";
@@ -38,10 +49,35 @@ export function initAdmin(members, openButton) {
 }
 
 function open() {
-  draft = saved;
+  draft = [];
+  saved = [];
+  unlocked = false;
   setStatus("");
   renderList();
   els.dialog.showModal();
+  if (els.secret.value.trim()) unlock();
+}
+
+async function unlock() {
+  const secret = els.secret.value.trim();
+  if (!secret) {
+    setStatus("請輸入名單密碼");
+    return;
+  }
+  try {
+    draft = await openRoster(roster, secret);
+    saved = draft;
+    unlocked = true;
+    localStorage.setItem(SECRET_KEY, secret);
+    setStatus("");
+    renderList();
+  } catch {
+    draft = [];
+    saved = [];
+    unlocked = false;
+    setStatus("名單密碼不對");
+    renderList();
+  }
 }
 
 function renderList() {
@@ -71,7 +107,9 @@ function renderList() {
       return li;
     }),
   );
-  els.save.disabled = draft === saved;
+  els.name.disabled = !unlocked;
+  els.addForm.querySelector("button").disabled = !unlocked;
+  els.save.disabled = !unlocked || draft === saved;
 }
 
 function groupSelect(member) {
@@ -92,14 +130,22 @@ async function save() {
     setStatus("請先貼上 GitHub token");
     return;
   }
+  const secret = els.secret.value.trim();
+  if (!unlocked || !secret) {
+    setStatus("請先解開名單");
+    return;
+  }
   localStorage.setItem(TOKEN_KEY, token);
+  localStorage.setItem(SECRET_KEY, secret);
   els.save.disabled = true;
   setStatus("儲存中…");
   try {
+    const directory = await toDirectory(draft, secret);
+    roster = directory.roster;
     await commitFile({
       token,
       path: MEMBERS_PATH,
-      content: serializeMembers(draft),
+      content: serializeDirectory(directory),
       message: "Update members",
     });
     saved = draft;

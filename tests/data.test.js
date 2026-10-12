@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
+import { GROUPS, locationsForGroup } from "../members.js";
 
 const readJson = async (path) => JSON.parse(await readFile(new URL(path, import.meta.url), "utf-8"));
 
@@ -13,17 +14,29 @@ test("data/config.json 格式正確", async () => {
     assert.equal(typeof location.area, "string");
     assert.equal(typeof location.lat, "number", `${location.name} 缺少 lat`);
     assert.equal(typeof location.lng, "number", `${location.name} 缺少 lng`);
+    assert.ok(GROUPS.includes(location.group), `${location.name} 的 group 不是已知群組`);
   }
+});
+
+test("群組只拿到自己的地點", async () => {
+  const config = await readJson("../data/config.json");
+  const { locations } = await readJson("../data/restaurants.json");
+  assert.deepEqual(
+    locationsForGroup(config.locations, locations, "仁愛醫院", config.categories).map((l) => l.name),
+    ["仁愛醫院"],
+  );
+  assert.deepEqual(locationsForGroup(config.locations, locations, "公司").map((l) => l.name), ["內湖", "板橋 TPKC"]);
 });
 
 test("data/restaurants.json 是完整的爬蟲結果", async () => {
   const { updatedAt, locations } = await readJson("../data/restaurants.json");
   const config = await readJson("../data/config.json");
   assert.ok(!Number.isNaN(Date.parse(updatedAt)), "updatedAt 必須是日期");
+  const crawledNames = locations.map((l) => l.name);
   assert.deepEqual(
-    locations.map((l) => l.name),
-    config.locations.map((l) => l.name),
-    "地點要和 config.json 一致，改了 config.json 要重新跑 npm run crawl",
+    crawledNames,
+    config.locations.map((l) => l.name).filter((name) => crawledNames.includes(name)),
+    "已爬過的地點要照 config.json 的順序；還沒爬的地點只做即時搜尋",
   );
   for (const location of locations) {
     assert.ok(location.restaurants.length > 0, `${location.name} 沒有餐廳`);

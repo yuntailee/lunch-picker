@@ -1,15 +1,50 @@
 {
   "members": [
-    { "name": "Stan", "group": "公司" },
-    { "name": "Kiro", "group": "公司", "admin": true },
-    { "name": "Annie", "group": "公司" },
-    { "name": "Sophie", "group": "公司" },
-    { "name": "Sammy", "group": "公司" },
-    { "name": "George", "group": "公司" },
-    { "name": "Daniel", "group": "公司" },
-    { "name": "Sean", "group": "公司" },
-    { "name": "Judy", "group": "公司" },
-    { "name": "Vic", "group": "公司" },
-    { "name": "Danny", "group": "仁愛醫院" }
-  ]
+    {
+      "hash": "1a5e497a2bfa7bfd8aab38a1d576ed882f4a82e855ec610880b4c186ec3f4e73",
+      "group": "公司"
+    },
+    {
+      "hash": "6e885b857804f868c79c20c78f03696636427565a4fbac95d7352d8530bfadf1",
+      "group": "公司",
+      "admin": true
+    },
+    {
+      "hash": "71be92cbdfe91357146afad81827a981ec58f5a3e69e9bd4527acd74b1927938",
+      "group": "公司"
+    },
+    {
+      "hash": "5e0176c9d2070a5a2a22bf74b4abed303654690d58d64221ccbd022af827abc4",
+      "group": "公司"
+    },
+    {
+      "hash": "aaf5ad63ac417e5002bdac202e07287cf90f35b1d419464d2c4fc79e508a1e4c",
+      "group": "公司"
+    },
+    {
+      "hash": "0522a55e2d5f0993a3d66d28864b2862a7218a75ea7968b075333434404485c3",
+      "group": "公司"
+    },
+    {
+      "hash": "bd3dae5fb91f88a4f0978222dfd58f59a124257cb081486387cbae9df11fb879",
+      "group": "公司"
+    },
+    {
+      "hash": "2d1d92b1f4cc7fd3ef215da88c2826ab3ec2ced95b388b395b658c41b349c90e",
+      "group": "公司"
+    },
+    {
+      "hash": "71db428976f15f4fcbf4c2179ab12952a014124b557cb58f9b431666f7c7924f",
+      "group": "公司"
+    },
+    {
+      "hash": "866d116d21281a3aa9375c6deca295bfe67c9989581578b10747b59da428e479",
+      "group": "公司"
+    },
+    {
+      "hash": "668e2b73ac556a2f051304702da290160b29bad3392ddcc72074fefbee80c55a",
+      "group": "仁愛醫院"
+    }
+  ],
+  "roster": "jEyiKMIWt0bO6O3L.h2xGpXeHghC7XIC5oMdrCtM/YSIoeYC8k3ULMjXca0by8jteNGqkQbaAMcI0wOnrYWg322WjLArG+4o7HOAcUjGwhWXx67fCJkCRrcwZ37xM+Vh0HVW81RCNSidx+tlCAEL4/bgG2LwYxrWE2mxT1V5BUiC6vSRoNcGwG4Q6lnldlWeFAF8e41TTpS1ntI/NjF5JeoPTYBdhudu5foQ7rd8ZBQ4vh4wwxVKbW8SYIxXJqz6OkeUWii+oK/5jsGhLHIz0moJTj+8vDDrGD5DybF4HQOOOrAOePSYi2aT+ghge1wkNPg+x2jitIo4/5dhn3vkgDL4vxfCPphkNEP7S9RawJ43Up76yOz6zeS0Zcx2CXgRO4kBUwAv1uUYaUZ530YPb6sgnDwdNtfcVudE3vfbKifhOU0RAHcZIuj/cwtirhTr/RVc7H8QUh3sCaPnG9om4TMD8vzmhEQ9dfM616cESHQqmSQPFFFdO+Dm1vpeiwerIEHsCdQjygY25ZcFx4NdPX20lNjuLVlpmPK4Fd+9M0CxAT5A="
 }

@@ -78,6 +78,10 @@
 
     <dialog id="admin" class="admin" aria-labelledby="admin-title">
       <h2 id="admin-title">管理帳號</h2>
+      <form id="admin-unlock" class="keyword-form">
+        <input id="admin-secret" type="password" placeholder="名單密碼" autocomplete="off" />
+        <button type="submit" class="chip">解開</button>
+      </form>
       <ul id="admin-list" class="admin-list"></ul>
       <form id="admin-add" class="keyword-form">
         <input id="admin-name" type="text" placeholder="新成員英文姓名" autocomplete="off" />
