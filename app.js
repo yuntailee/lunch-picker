@@ -43,8 +43,7 @@ const els = {
   locationInput: document.querySelector("#location-input"),
   modes: document.querySelector("#modes"),
   tags: document.querySelector("#tags"),
-  want: document.querySelector("#want"),
-  avoid: document.querySelector("#avoid"),
+  tagsSwitch: document.querySelector("#tags-switch"),
   prices: document.querySelector("#prices"),
   keywordForm: document.querySelector("#keyword-form"),
   keyword: document.querySelector("#keyword"),
@@ -77,15 +76,11 @@ async function init() {
     event.preventDefault();
     selectTag(els.keyword.value.trim() || ALL_TAGS);
   });
-  els.want.addEventListener("click", () => setExcluding(false));
-  els.avoid.addEventListener("click", () => setExcluding(true));
-  render();
-}
-
-function setExcluding(excluding) {
-  if (state.excluding === excluding) return;
-  state.excluding = excluding;
-  resetTags();
+  els.tagsSwitch.addEventListener("click", () => {
+    state.excluding = !state.excluding;
+    resetTags();
+    render();
+  });
   render();
 }
 
@@ -99,9 +94,9 @@ function render() {
     renderChips(els.tags, [ALL_TAGS, ...state.location.tags], is(state.tag ?? ALL_TAGS), selectTag);
   }
   renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], is(state.price ?? ANY_PRICE), selectPrice);
-  els.want.setAttribute("aria-pressed", !state.excluding);
-  els.avoid.setAttribute("aria-pressed", state.excluding);
-  els.avoid.hidden = state.mode !== "list";
+  els.tagsSwitch.setAttribute("aria-checked", !state.excluding);
+  els.tagsSwitch.disabled = state.mode !== "list";
+  els.tagsSwitch.textContent = state.excluding ? "不想吃" : "想吃";
   els.tags.classList.toggle("excluding", state.excluding);
   els.keywordForm.hidden = state.mode !== "live";
   els.keyword.value = state.tag ?? "";
