@@ -1,4 +1,4 @@
-export const SEARCH_RADIUS_M = 1000;
+export const SEARCH_RADIUS_M = 800;
 
 const METERS_PER_DEGREE_LAT = 111_320;
 

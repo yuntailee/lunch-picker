@@ -134,10 +134,10 @@ async function fetchTextPage(apiKey, body, pageToken) {
   return data;
 }
 
-// 一次按鈕只查 1 公里、最多 3 次，並由近到遠排序。
+// 一次按鈕只查 800 公尺、最多 3 次，並由近到遠排序。
 // 把地圖切成多格再查，會把 SearchTextRequest 的每日配額打完。
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance:open`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance:open:${SEARCH_RADIUS_M}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 
