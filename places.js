@@ -12,6 +12,7 @@ const FIELD_MASK = [
   "places.displayName",
   "places.formattedAddress",
   "places.googleMapsUri",
+  "places.businessStatus",
   "places.rating",
   "places.userRatingCount",
   "places.priceRange",
@@ -62,6 +63,10 @@ export async function geocode({ apiKey, query }) {
   const { places } = await Place.searchByText({ textQuery: query, fields: ["location"], maxResultCount: 1 });
   if (!places.length) throw new Error(`找不到「${query}」`);
   return { name: query, lat: places[0].location.lat(), lng: places[0].location.lng() };
+}
+
+export function withoutPermanentlyClosed(places) {
+  return places.filter((place) => place.businessStatus !== "CLOSED_PERMANENTLY");
 }
 
 export async function gatherTextSearch(fetchPage) {
@@ -132,7 +137,7 @@ async function fetchTextPage(apiKey, body, pageToken) {
 // 一次按鈕只查 1 公里、最多 3 次，並由近到遠排序。
 // 把地圖切成多格再查，會把 SearchTextRequest 的每日配額打完。
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance:open`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 
@@ -141,7 +146,7 @@ export async function searchNearby({ apiKey, location, keyword }) {
     fetchTextPage(apiKey, rectangleBody(keyword, bounds), pageToken),
   );
 
-  const results = places.map(fromRestPlace).map(toCandidate);
+  const results = withoutPermanentlyClosed(places).map(fromRestPlace).map(toCandidate);
   localStorage.setItem(cacheKey, JSON.stringify({ time: Date.now(), results }));
   return results;
 }
