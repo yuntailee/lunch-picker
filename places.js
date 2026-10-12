@@ -76,7 +76,9 @@ export async function gatherTextSearch(fetchPage) {
     pageToken = data.nextPageToken;
     if (!pageToken) break;
   }
-  return { places, truncated: Boolean(pageToken) };
+  // 滿 60 筆時 Google 不再給下一頁 token，但範圍裡可能還有店，所以一樣要再切格。
+  const cap = PAGE_SIZE * TEXT_SEARCH_PAGES;
+  return { places, truncated: Boolean(pageToken) || places.length >= cap };
 }
 
 export function dedupePlaces(places) {
@@ -145,7 +147,7 @@ async function fetchTextPage(apiKey, body, pageToken) {
 }
 
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:split${MAX_SPLIT_DEPTH}`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:split${MAX_SPLIT_DEPTH}:cap`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) return cached.results;
 

@@ -41,6 +41,14 @@ test("gatherTextSearch 翻頁直到沒有下一頁，最多 3 頁", async () => 
   assert.deepEqual(places.map((place) => place.id), ["p1", "p2", "p3"]);
 });
 
+test("gatherTextSearch 滿 60 筆且沒有下一頁時仍視為被截斷", async () => {
+  const { places, truncated } = await gatherTextSearch(async () => ({
+    places: Array.from({ length: 60 }, (_, index) => ({ id: `p${index}` })),
+  }));
+  assert.equal(places.length, 60);
+  assert.equal(truncated, true);
+});
+
 test("gatherTextSearch 第 3 頁還有下一頁時標記為被截斷", async () => {
   const { truncated } = await gatherTextSearch(async () => ({
     places: [{ id: "p" }],
