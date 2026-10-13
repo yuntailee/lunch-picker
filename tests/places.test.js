@@ -24,6 +24,8 @@ test("toCandidate 轉出店名、評分、價格、地址與 Google 地圖網址
     rating: "4.3（1,234）",
     address: "台北市內湖區某路 1 號",
     mapUrl: "https://maps.google.com/?cid=1",
+    lat: null,
+    lng: null,
     price: { start: 1, end: 200 },
     summary: "招牌雞肉飯很香。",
   });

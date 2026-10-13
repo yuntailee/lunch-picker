@@ -47,6 +47,8 @@ test("buildRestaurants 保留價格、評分與評論摘要第一段", () => {
   assert.equal(restaurant.rating, 4.2);
   assert.equal(restaurant.ratingCount, 88);
   assert.equal(restaurant.summary, "雞肉飯的招牌菜很受歡迎。");
+  assert.equal(restaurant.lat, null);
+  assert.equal(restaurant.lng, null);
 });
 
 test("buildRestaurants 保留晚餐店和沒有營業時間的店", () => {

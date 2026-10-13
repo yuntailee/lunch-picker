@@ -12,6 +12,7 @@ const FIELD_MASK = [
   "places.displayName",
   "places.formattedAddress",
   "places.googleMapsUri",
+  "places.location",
   "places.businessStatus",
   "places.rating",
   "places.userRatingCount",
@@ -52,6 +53,8 @@ export function toCandidate(place) {
     rating: formatRating(place.rating, place.userRatingCount),
     address: place.formattedAddress ?? "",
     mapUrl: place.googleMapsURI,
+    lat: place.lat ?? place.location?.latitude ?? null,
+    lng: place.lng ?? place.location?.longitude ?? null,
     price,
     summary: summaryHighlight(place.reviewSummary?.text),
   };
@@ -107,6 +110,8 @@ function fromRestPlace(place) {
     displayName: place.displayName?.text ?? place.displayName,
     formattedAddress: place.formattedAddress,
     googleMapsURI: place.googleMapsUri,
+    lat: place.location?.latitude ?? null,
+    lng: place.location?.longitude ?? null,
     rating: place.rating,
     userRatingCount: place.userRatingCount,
     priceRange: place.priceRange,
@@ -149,7 +154,7 @@ async function fetchTextPage(apiKey, body, pageToken) {
 // 一次按鈕只查 800 公尺、最多 3 次，並由近到遠排序。
 // 把地圖切成多格再查，會把 SearchTextRequest 的每日配額打完。
 export async function searchNearby({ apiKey, location, keyword }) {
-  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:distance:operating:${SEARCH_RADIUS_M}`;
+  const cacheKey = `food-tool:places:${location.lat},${location.lng}:${keyword}:walk:${SEARCH_RADIUS_M}`;
   const cached = JSON.parse(localStorage.getItem(cacheKey) ?? "null");
   if (cached && Date.now() - cached.time < CACHE_TTL_MS) {
     return { results: cached.results, closed: cached.closed ?? [] };

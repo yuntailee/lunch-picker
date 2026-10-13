@@ -1,6 +1,6 @@
 import { initAdmin } from "./admin.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
-import { SEARCH_RADIUS_M } from "./geo.js";
+import { distanceMeters, formatDistance, SEARCH_RADIUS_M } from "./geo.js";
 import { locationsForGroup, matchMember } from "./members.js";
 import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
@@ -295,6 +295,8 @@ function fromList(restaurant) {
     rating: formatRating(restaurant.rating, restaurant.ratingCount),
     address: restaurant.address,
     mapUrl: restaurant.mapUrl,
+    lat: restaurant.lat ?? null,
+    lng: restaurant.lng ?? null,
     price: restaurant.price,
     summary: formatHighlight(restaurant),
   };
@@ -419,7 +421,7 @@ function blacklistItem(candidate) {
 function candidateItem(candidate, menuItems) {
   const heading = document.createElement("div");
   heading.className = "heading";
-  heading.append(mapLink(candidate.mapUrl, candidate.name), detailEl("span", candidate));
+  heading.append(...nameWithDistance(candidate), detailEl("span", candidate));
   const li = document.createElement("li");
   li.append(heading);
   if (candidate.summary) li.append(summaryEl("summary", candidate.summary));
@@ -471,12 +473,29 @@ function spin() {
   }, SPIN_INTERVAL_MS);
 }
 
+function nameWithDistance(candidate) {
+  const distance = formatDistance(distanceMeters(state.location, candidate));
+  if (!distance) return [mapLink(candidate.mapUrl, candidate.name)];
+  const el = document.createElement("span");
+  el.className = "distance";
+  el.textContent = distance;
+  return [mapLink(candidate.mapUrl, candidate.name), el];
+}
+
 function showResult(candidate) {
   state.resultPlaceId = candidate.placeId;
   const link = mapLink(candidate.mapUrl, "在 Google 地圖開啟 →");
   link.className = "map-link";
+  const name = textEl("p", "result-name", candidate.name);
+  const distance = formatDistance(distanceMeters(state.location, candidate));
+  if (distance) {
+    const el = document.createElement("span");
+    el.className = "distance";
+    el.textContent = ` ${distance}`;
+    name.append(el);
+  }
   els.result.replaceChildren(
-    textEl("p", "result-name", candidate.name),
+    name,
     detailEl("p", candidate),
     ...(candidate.address ? [textEl("p", "tags", candidate.address)] : []),
     ...(candidate.summary ? [summaryEl("result-summary", candidate.summary)] : []),
