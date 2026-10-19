@@ -1,4 +1,4 @@
-export const SEARCH_RADIUS_M = 800;
+export const SEARCH_RADIUS_M = 700;
 const EARTH_RADIUS_M = 6_371_000;
 const WALK_METERS_PER_MINUTE = 80;
 
@@ -15,10 +15,16 @@ export function distanceMeters(from, to) {
   return Math.round(2 * EARTH_RADIUS_M * Math.asin(Math.min(1, Math.sqrt(h))));
 }
 
+function roundToHundreds(meters) {
+  if (meters === 0) return 0;
+  return Math.max(100, Math.round(meters / 100) * 100);
+}
+
 export function formatDistance(meters) {
   if (meters == null) return "";
-  const minutes = meters === 0 ? 0 : Math.max(1, Math.round(meters / WALK_METERS_PER_MINUTE));
-  return `${meters}公尺 · ${minutes}分鐘`;
+  const rounded = roundToHundreds(meters);
+  const minutes = rounded === 0 ? 0 : Math.max(1, Math.round(rounded / WALK_METERS_PER_MINUTE));
+  return `${rounded}公尺 · ${minutes}分鐘`;
 }
 
 export function boundsAround({ lat, lng }, radiusMeters) {

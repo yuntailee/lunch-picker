@@ -19,8 +19,9 @@ test("distanceMeters 算兩點直線距離，缺座標就沒有距離", () => {
   assert.equal(distanceMeters(origin, {}), null);
 });
 
-test("formatDistance 用價格那種間隔，並以每分鐘 80 公尺估走路時間", () => {
-  assert.equal(formatDistance(800), "800公尺 · 10分鐘");
-  assert.equal(formatDistance(50), "50公尺 · 1分鐘");
+test("formatDistance 收成一百公尺，並以每分鐘 80 公尺估走路時間", () => {
+  assert.equal(formatDistance(740), "700公尺 · 9分鐘");
+  assert.equal(formatDistance(150), "200公尺 · 3分鐘");
+  assert.equal(formatDistance(50), "100公尺 · 1分鐘");
   assert.equal(formatDistance(null), "");
 });
