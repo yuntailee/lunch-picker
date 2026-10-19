@@ -1,6 +1,6 @@
 import { initAdmin } from "./admin.js";
 import { GOOGLE_MAPS_API_KEY } from "./config.js";
-import { distanceMeters, formatDistance, SEARCH_RADIUS_M } from "./geo.js";
+import { distanceMeters, filterByDistance, formatDistance, formatDistanceLimit, SEARCH_RADIUS_M, sortByDistance } from "./geo.js";
 import { locationsForGroup, matchMember } from "./members.js";
 import { initContextMenu, openContextMenu } from "./menu.js";
 import { geocode, searchNearby } from "./places.js";
@@ -41,6 +41,8 @@ const state = {
   blacklist: [],
   closed: [],
   price: null,
+  maxDistance: SEARCH_RADIUS_M,
+  pool: [],
   candidates: [],
   requestId: 0,
   spinning: false,
@@ -63,6 +65,8 @@ const els = {
   tags: document.querySelector("#tags"),
   tagsSwitch: document.querySelector("#tags-switch"),
   prices: document.querySelector("#prices"),
+  distance: document.querySelector("#distance"),
+  distanceLabel: document.querySelector("#distance-label"),
   keywordForm: document.querySelector("#keyword-form"),
   keyword: document.querySelector("#keyword"),
   random: document.querySelector("#random"),
@@ -108,6 +112,7 @@ async function init() {
   els.random.addEventListener("click", spin);
   els.blacklistOpen.addEventListener("click", showBlacklist);
   els.closedOpen.addEventListener("click", showClosed);
+  els.distance.addEventListener("input", () => selectDistance(Number(els.distance.value)));
   els.locationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = els.locationInput.value.trim();
@@ -142,6 +147,7 @@ function start(member, directory) {
   state.excludedTags = prefs.excludedTags ?? [];
   state.blacklist = prefs.blacklist ?? [];
   state.closed = mergePlaces(closedFile, prefs.closed ?? []);
+  state.maxDistance = clampDistance(prefs.maxDistance);
 
   els.userName.textContent = member.name;
   els.adminOpen.hidden = !member.admin;
@@ -164,6 +170,7 @@ function savePrefs() {
       excluding: state.excluding,
       excludedTags: state.excludedTags,
       blacklist: state.blacklist,
+      maxDistance: state.maxDistance,
       closed: state.closed.filter((item) => !closedFile.some((file) => file.placeId === item.placeId)),
     }),
   );
@@ -186,6 +193,7 @@ function render() {
     renderChips(els.tags, [ALL_TAGS, ...state.location.tags], is(state.tag ?? ALL_TAGS), selectTag);
   }
   renderChips(els.prices, [ANY_PRICE, ...PRICE_BUCKETS.map((b) => b.label)], is(state.price ?? ANY_PRICE), selectPrice);
+  syncDistanceControl();
   els.tagsSwitch.setAttribute("aria-checked", !excluding);
   els.tagsSwitch.disabled = state.mode !== "list";
   els.tagsSwitch.textContent = excluding ? "不想吃" : "想吃";
@@ -253,6 +261,28 @@ function selectPrice(label) {
   render();
 }
 
+function selectDistance(meters) {
+  state.maxDistance = clampDistance(meters);
+  syncDistanceControl();
+  savePrefs();
+  state.resultPlaceId = null;
+  hidePreview();
+  els.result.hidden = true;
+  paintCandidates();
+}
+
+function clampDistance(meters) {
+  const step = 100;
+  const value = Number(meters);
+  if (!Number.isFinite(value)) return SEARCH_RADIUS_M;
+  return Math.min(SEARCH_RADIUS_M, Math.max(step, Math.round(value / step) * step));
+}
+
+function syncDistanceControl() {
+  els.distance.value = String(state.maxDistance);
+  els.distanceLabel.textContent = formatDistanceLimit(state.maxDistance);
+}
+
 function narrow(candidates) {
   return excludePlaces(filterByPrice(candidates, state.price), [...state.blacklist, ...state.closed]);
 }
@@ -303,9 +333,18 @@ function fromList(restaurant) {
 }
 
 function showCandidates(candidates) {
-  state.candidates = candidates;
-  els.count.textContent = countText(candidates.length);
-  els.list.replaceChildren(...candidates.map(listItem));
+  state.pool = candidates;
+  paintCandidates();
+}
+
+function paintCandidates() {
+  const visible = sortByDistance(
+    filterByDistance(state.pool, state.location, state.maxDistance),
+    state.location,
+  );
+  state.candidates = visible;
+  els.count.textContent = countText(visible.length);
+  els.list.replaceChildren(...visible.map(listItem));
 }
 
 function showBlacklist() {
@@ -359,6 +398,7 @@ function removeFromBlacklist(candidate) {
 }
 
 function showMessage(text, icon) {
+  state.pool = [];
   state.candidates = [];
   els.count.replaceChildren(...(icon ? [iconEl(icon), " "] : []), text);
   els.list.replaceChildren();
@@ -366,12 +406,13 @@ function showMessage(text, icon) {
 
 function countText(count) {
   const budget = state.price ? `${state.price}的` : "";
+  const reach = `${formatDistanceLimit(state.maxDistance)}內`;
   if (state.mode === "list") {
     const updated = state.updatedAt.toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" });
-    return `${budget}${listTarget()}共 ${count} 間（${updated} 更新）`;
+    return `${reach}${budget}${listTarget()}共 ${count} 間（${updated} 更新）`;
   }
   const target = state.tag ? `「${state.tag}」` : "餐廳";
-  return `${SEARCH_RADIUS_M} 公尺內${budget}${target}共 ${count} 間`;
+  return `${reach}${budget}${target}共 ${count} 間`;
 }
 
 function listTarget() {

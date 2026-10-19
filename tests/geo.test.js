@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { boundsAround, distanceMeters, formatDistance } from "../geo.js";
+import { boundsAround, distanceMeters, filterByDistance, formatDistance, sortByDistance } from "../geo.js";
 
 test("boundsAround 以中心點往外擴出指定公尺的矩形", () => {
   const bounds = boundsAround({ lat: 25, lng: 121.5 }, 1113.2);
@@ -24,4 +24,15 @@ test("formatDistance 收成一百公尺，並以每分鐘 80 公尺估走路時�
   assert.equal(formatDistance(150), "200公尺 · 3分鐘");
   assert.equal(formatDistance(50), "100公尺 · 1分鐘");
   assert.equal(formatDistance(null), "");
+});
+
+test("filterByDistance 只留上限以內的店，sortByDistance 由近到遠", () => {
+  const origin = { lat: 25, lng: 121.5 };
+  const near = { name: "近", lat: 25.001, lng: 121.5 };
+  const far = { name: "遠", lat: 25.004, lng: 121.5 };
+  const mid = { name: "中", lat: 25.002, lng: 121.5 };
+  assert.deepEqual(
+    sortByDistance(filterByDistance([far, near, mid], origin, 300), origin).map((item) => item.name),
+    ["近", "中"],
+  );
 });

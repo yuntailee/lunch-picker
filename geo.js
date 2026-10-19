@@ -1,4 +1,4 @@
-export const SEARCH_RADIUS_M = 700;
+export const SEARCH_RADIUS_M = 1000;
 const EARTH_RADIUS_M = 6_371_000;
 const WALK_METERS_PER_MINUTE = 80;
 
@@ -25,6 +25,21 @@ export function formatDistance(meters) {
   const rounded = roundToHundreds(meters);
   const minutes = rounded === 0 ? 0 : Math.max(1, Math.round(rounded / WALK_METERS_PER_MINUTE));
   return `${rounded}公尺 · ${minutes}分鐘`;
+}
+
+export function formatDistanceLimit(meters) {
+  return meters >= 1000 ? "1 公里" : `${meters}公尺`;
+}
+
+export function filterByDistance(items, origin, maxMeters) {
+  return items.filter((item) => {
+    const meters = distanceMeters(origin, item);
+    return meters != null && meters <= maxMeters;
+  });
+}
+
+export function sortByDistance(items, origin) {
+  return [...items].sort((a, b) => distanceMeters(origin, a) - distanceMeters(origin, b));
 }
 
 export function boundsAround({ lat, lng }, radiusMeters) {

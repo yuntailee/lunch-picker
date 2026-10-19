@@ -285,6 +285,12 @@ h2 {
   gap: 8px;
 }
 
+.distance-range {
+  width: 100%;
+  margin: 4px 0 0;
+  accent-color: var(--accent);
+}
+
 .chip {
   padding: 8px 16px;
   border: 1px solid var(--border);
